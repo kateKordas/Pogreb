@@ -1,0 +1,34 @@
+#Visual Code  directory
+.vscode
+
+# Jet Brains IDE directory
+.idea/
+
+# Node modules directory
+node_modules/
+
+# Bower dependencies directory
+bower_components/
+
+# Sass cache directory
+.sass-cache/
+
+# Compiled output
+tmp/
+dist/
+
+# TypeScript Definition Manager directory
+typings/
+
+# e2e
+e2e/*.js
+e2e/*.map
+
+# Log files
+*.log
+
+# OSX Desktop Service Store files
+.DS_Store
+
+#Info directory
+info/
