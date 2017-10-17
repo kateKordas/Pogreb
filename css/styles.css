@@ -14,11 +14,13 @@
 /*============================================================================*    @@HEADER
 \*============================================================================*/
 header {
+  position: fixed;
   padding: 15px 85px;
-  width: 100vw;
+  width: 100%;
   height: 105px;
-  background: #333333;
-  font-family: "Jura-Regular", sans-serif; }
+  background: rgba(51, 51, 51, 0.95);
+  font-family: "Jura-Regular", sans-serif;
+  z-index: 10; }
 
 .header__contacts {
   text-align: right;
@@ -78,6 +80,23 @@ header {
     .nav-bar .order:active {
       transform: scale(0.99);
       box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); }
+
+/*============================================================================*    @@JUMBOTRON
+\*============================================================================*/
+.jumbotron video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -10; }
+
+.jumbotron__container {
+  position: absolute;
+  top: 150px;
+  left: 8vw;
+  width: 75vw;
+  height: 75vh;
+  background: rgba(0, 0, 0, 0.5); }
 
 /*============================================================================*    @@JUMBOTRON
 \*============================================================================*/
