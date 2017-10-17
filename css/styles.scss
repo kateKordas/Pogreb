@@ -1,0 +1,113 @@
+/*============================================================================*\
+    @@FONTS
+\*============================================================================*/
+
+@font-face {
+  font-family: "Jura-Regular";
+  src: url("../fonts/Jura-Regular.ttf");
+}
+
+/*============================================================================*\
+    @@COMMON PROPERTIES
+\*============================================================================*/
+
+* {
+  text-decoration: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/*============================================================================*\
+    @@HEADER
+\*============================================================================*/
+
+header {
+  padding: 15px 85px;
+  width: 100vw;
+  height: 105px;
+  background: rgb(51,51,51);
+  font-family: "Jura-Regular", sans-serif;
+}
+
+.header__contacts {
+  text-align: right;
+  font-size: 18px;
+  color: #ffffff;
+
+  & .contacts__phone {
+    display: inline-block;
+    margin: 0 60px 0 0;
+    padding: 2px 0;
+    width: 185px;
+    height: 35px;
+    background: url("../img/b-jumbotron/icon-phone.png") no-repeat;
+  }
+
+  & .contacts__address {
+    display: inline-block;
+    width: 185px;
+    height: 35px;
+    background: url("../img/b-jumbotron/icon-address.png") no-repeat;
+  }
+}
+
+.logo {
+  display: inline-block;
+  margin: 0 50px;
+}
+
+.nav-bar {
+  display: inline-block;
+  margin: 5px 0;
+  float: right;
+
+
+  & .nav-bar__list {
+    display: inline-block;
+
+    & .nav-bar__item {
+      display: inline-block;
+      margin: 5px 30px;
+      padding: 8px 10px;
+      border-radius: 5px;
+      background: rgba(255,255,255,.05);
+      font-size: 14px;
+      color: #ffffff;
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(255,255,255,.2);
+      }
+    }
+  }
+
+  & .order {
+    display: inline-block;
+    margin: 5px 0 5px 30px;
+    width: 160px;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(250,149,30) url("../img/check.svg") no-repeat 12px 9px /10%;
+    text-indent: 20px;
+    font-family: "Jura-Regular", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #353535;
+    cursor: pointer;
+    box-shadow: 0 0 5px 3px rgba(0,0,0,.2);
+
+    &:hover {
+      background: rgb(247,194,5) url("../img/check.svg") no-repeat 12px 9px /10%;
+    }
+    &:active {
+      transform: scale(.99);
+      box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+    }
+  }
+}
+
+
+/*============================================================================*\
+    @@JUMBOTRON
+\*============================================================================*/
