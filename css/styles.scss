@@ -3,6 +3,11 @@
 \*============================================================================*/
 
 @font-face {
+  font-family: "Orbitron-Light";
+  src: url("../fonts/Orbitron-Light.ttf");
+}
+
+@font-face {
   font-family: "Jura-Regular";
   src: url("../fonts/Jura-Regular.ttf");
 }
@@ -23,12 +28,16 @@
 
 header {
   position: fixed;
-  padding: 15px 85px;
+  padding: 1vw 8vw;
   width: 100%;
   height: 105px;
   background: rgba(51,51,51,.95);
   font-family: "Jura-Regular", sans-serif;
   z-index: 10;
+
+  @media (max-width: 1150px) {
+    padding: 1vw;
+  }
 }
 
 .header__contacts {
@@ -40,22 +49,36 @@ header {
     display: inline-block;
     margin: 0 60px 0 0;
     padding: 2px 0;
-    width: 185px;
+    width: 170px;
     height: 35px;
     background: url("../img/b-jumbotron/icon-phone.png") no-repeat;
+
+    @media (max-width: 910px) {
+      width: 160px;
+      font-size: 16px;
+    }
   }
 
   & .contacts__address {
     display: inline-block;
-    width: 185px;
+    width: 170px;
     height: 35px;
     background: url("../img/b-jumbotron/icon-address.png") no-repeat;
+
+    @media (max-width: 910px) {
+      width: 160px;
+      font-size: 16px;
+    }
   }
 }
 
 .logo {
   display: inline-block;
-  margin: 0 50px;
+  margin: 0 4vw;
+
+  @media (max-width: 1150px) {
+    margin: 0;
+  }
 }
 
 .nav-bar {
@@ -69,7 +92,7 @@ header {
 
     & .nav-bar__item {
       display: inline-block;
-      margin: 5px 30px;
+      margin: 5px 2vw;
       padding: 8px 10px;
       border-radius: 5px;
       background: rgba(255,255,255,.05);
@@ -80,24 +103,29 @@ header {
       &:hover {
         background: rgba(255,255,255,.2);
       }
+
+      @media (max-width: 910px) {
+        margin: 5px 1vw;
+        font-size: 12px;
+      }
     }
   }
 
-  & .order {
+  .nav-bar__order {
     display: inline-block;
-    margin: 5px 0 5px 30px;
+    margin: 5px 0 5px 2vw;
     width: 160px;
     height: 32px;
     border: none;
     border-radius: 5px;
     background: rgb(250,149,30) url("../img/check.svg") no-repeat 12px 9px /10%;
+    box-shadow: 0 0 5px 3px rgba(0,0,0,.2);
     text-indent: 20px;
     font-family: "Jura-Regular", sans-serif;
     font-size: 14px;
     font-weight: bold;
-    color: #353535;
+    color: #535353;
     cursor: pointer;
-    box-shadow: 0 0 5px 3px rgba(0,0,0,.2);
 
     &:hover {
       background: rgb(247,194,5) url("../img/check.svg") no-repeat 12px 9px /10%;
@@ -105,6 +133,10 @@ header {
     &:active {
       transform: scale(.99);
       box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+    }
+
+    @media (max-width: 910px) {
+      margin: 5px 0 5px 1vw;
     }
   }
 }
@@ -124,12 +156,69 @@ header {
 
 .jumbotron__container {
   position: absolute;
-  top: 150px;
-  left: 8vw;
-  width: 75vw;
-  height: 75vh;
+  top: 115px;
+  left: 3vw;
+  padding: 2vw 5vw;
+  width: 85vw;
+  height: 40vw;
   background: rgba(0,0,0,.5);
+  font-family: "Jura-Regular", sans-serif;
+  color: #ffffff;
 }
+
+.jumbotron__title {
+  background: url("../img/logo-white.png") no-repeat 0 0 /13vw;
+
+  & .jumbotron__title_logo {
+    padding: 1vw 0 0 9vw;
+    font-size: 2.5vw;
+  }
+
+  & h1 {
+    padding: .5vw 0;
+    text-transform: uppercase;
+    font-family: "Orbitron-Light", sans-serif;
+    font-size: 11vw;
+  }
+
+  & .jumbotron__title_descr {
+    padding: 0 0 1vw 0;
+    background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 47vw 3vw /3.5vw;
+    font-size: 2vw;
+    font-weight: 700;
+
+    & span {
+      font-size: 1.5vw;
+      font-weight: 500;
+    }
+  }
+}
+
+.jumbotron__order {
+  margin: 1vw 31vw;
+  width: 235px;
+  height: 4.5vw;
+  border: none;
+  border-radius: 5px;
+  background: rgb(250,149,30);
+  box-shadow: 0 0 5px 3px rgba(0,0,0,.2);
+  font-family: "Jura-Regular", sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  color: #535353;
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(247,194,5);
+  }
+  &:active {
+    transform: scale(.99);
+    box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+  }
+}
+
+
+
 
 
 
