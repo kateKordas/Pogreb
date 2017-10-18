@@ -442,3 +442,67 @@ header {
     font-family: "Orbitron-Light", sans-serif;
     font-size: 2.5vw;
     color: #333333; }
+
+/*============================================================================*    @@DISCOUNTS
+\*============================================================================*/
+.b-discounts {
+  font-family: "Jura-Regular", sans-serif;
+  color: white; }
+  .b-discounts h2 {
+    padding: 23px;
+    background: #cccccc;
+    text-align: center;
+    font-family: "Orbitron-Light", sans-serif;
+    font-size: 3vw;
+    color: #333333; }
+
+.b-discounts__container {
+  padding: 30px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  background: #333333; }
+  .b-discounts__container .discounts__birthday,
+  .b-discounts__container .discounts__2nd-room {
+    display: inline-block;
+    width: 40vw;
+    text-align: center; }
+    .b-discounts__container .discounts__birthday p,
+    .b-discounts__container .discounts__2nd-room p {
+      white-space: pre-wrap;
+      font-size: 1.7vw; }
+      .b-discounts__container .discounts__birthday p span,
+      .b-discounts__container .discounts__2nd-room p span {
+        font-size: 1.2vw; }
+    .b-discounts__container .discounts__birthday img,
+    .b-discounts__container .discounts__2nd-room img {
+      width: 40vw; }
+
+/*============================================================================*    @@CONTACTS
+\*============================================================================*/
+.b-contacts {
+  font-family: "Jura-Regular", sans-serif;
+  color: white; }
+
+.b-callback {
+  padding: 30px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  background: #333333; }
+  .b-callback .b-callback__text,
+  .b-callback .b-callback__form {
+    text-align: center; }
+    .b-callback .b-callback__text h3,
+    .b-callback .b-callback__form h3 {
+      font-size: 3.5vw;
+      font-weight: 700; }
+    .b-callback .b-callback__text p,
+    .b-callback .b-callback__form p {
+      font-size: 1.6vw;
+      line-height: 1.3; }
+
+/*============================================================================*    @@FOOTER
+\*============================================================================*/
