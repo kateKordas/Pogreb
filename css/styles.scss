@@ -59,10 +59,28 @@ button.callback-btn {
 
 button.order {
   background: rgb(250,149,30) url("../img/check.svg") no-repeat 12px 9px /15px;
+
+  &:hover {
+    background: rgb(247,194,5) url("../img/check.svg") no-repeat 12px 9px /15px;
+  }
+  &:active {
+    background: rgb(247,194,5) url("../img/check.svg") no-repeat 12px 9px /15px;
+  }
 }
 
 button.callback-btn {
   background: rgb(250,149,30) url("../img/phone.svg") no-repeat 12px 9px /15px;
+
+  &:hover {
+    background: rgb(247,194,5) url("../img/phone.svg") no-repeat 12px 9px /15px;
+  }
+  &:active {
+    background: rgb(247,194,5) url("../img/phone.svg") no-repeat 12px 9px /15px;
+  }
+
+  @media (max-width: 1060px) {
+    margin: 5px 7vw;
+  }
 }
 
 button.continue {
@@ -357,107 +375,119 @@ header {
   width: 52vw;
   font-family: "Jura-Regular", sans-serif;
   color: #ffffff;
+}
 
-  & .quest__info_title,
-  & .oth-serv__info_title {
-    white-space: pre-wrap;
-    font-size: 4.1vw;
-    font-weight: 700;
-    text-transform: uppercase;
+.quest__info_title,
+.oth-serv__info_title {
+  white-space: pre-wrap;
+  font-size: 4.1vw;
+  font-weight: 700;
+  text-transform: uppercase;
 
-    & span {
-      font-size: 16px;
-      font-weight: 500;
-      text-transform: none;
-      line-height: 2.5;
-    }
+  & span {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: none;
+    line-height: 2.5;
   }
+}
+
+.oth-serv__info_title {
+  margin: 30px 0;
+  line-height: .7;
+}
 
 /*============================================================================*\
     @@QUEST ROOM & OTHER SERVICES - BRIEF
 \*============================================================================*/
 
-  & .quest__info_brief,
-  & .oth-serv__info_brief {
-    margin: 15px 3vw 15px 0;
-    padding: 5px 15px;
-    background: rgba(102,102,102,.25);
+.quest__info_brief,
+.oth-serv__info_brief {
+  margin: 15px 3vw 15px 0;
+  padding: 5px 15px;
+  background: rgba(102,102,102,.25);
 
-    & .quest__info_brief-cost,
-    & .quest__info_brief-team,
-    & .oth-serv__info_brief-cost,
-    & .oth-serv__info_brief-team,
-    & .oth-serv__info_brief-duration {
-      display: inline-block;
-      width: 13vw;
-      white-space: pre-wrap;
-      font-size: 1.6vw;
-      line-height: 1.5;
+  & .quest__info_brief-cost,
+  & .quest__info_brief-team,
+  & .oth-serv__info_brief-cost.child-party,
+  & .oth-serv__info_brief-cost1.cars,
+  & .oth-serv__info_brief-cost2.cars,
+  & .oth-serv__info_brief-team,
+  & .oth-serv__info_brief-duration {
+    display: inline-block;
+    width: 13vw;
+    white-space: pre-wrap;
+    font-size: 1.6vw;
+    line-height: 1.5;
 
-      & span {
-        font-size: 1.2vw;
-      }
-    }
-
-    & .quest__info_brief-level {
-      display: inline-block;
-      width: 19vw;
-      height: 70px;
-      white-space: pre-wrap;
+    & span {
       font-size: 1.2vw;
-      line-height: 2;
-    }
-
-    & .quest__info_brief-level.safe,
-    & .quest__info_brief-level.ventilation {
-      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
-                  url("../img/b-quest-rooms/level-1.png") no-repeat 6.5vw 38px /5vw,
-                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 13vw 38px /5vw;
-    }
-    & .quest__info_brief-level.control-center {
-      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
-                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 6.5vw 38px /5vw,
-                  url("../img/b-quest-rooms/level-0.png") no-repeat 13vw 38px /5vw;
-    }
-    & .quest__info_brief-level.sanitary {
-      background: url("../img/b-quest-rooms/level-0.png") no-repeat 0 38px /5vw,
-                  url("../img/b-quest-rooms/level-0.png") no-repeat 6.5vw 38px /5vw,
-                  url("../img/b-quest-rooms/level-0.png") no-repeat 13vw 38px /5vw;
-    }
-
-    & .quest__info_brief-fn {
-      margin: 8px 0;
-      font-size: 0.95vw;
     }
   }
+
+  & .oth-serv__info_brief-cost.cars {
+    font-size: 1.2vw;
+    line-height: 1.5;
+  }
+
+  & .quest__info_brief-level {
+    display: inline-block;
+    width: 19vw;
+    height: 70px;
+    white-space: pre-wrap;
+    font-size: 1.2vw;
+    line-height: 2;
+  }
+
+  & .quest__info_brief-level.safe,
+  & .quest__info_brief-level.ventilation {
+    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
+                url("../img/b-quest-rooms/level-1.png") no-repeat 6.5vw 38px /5vw,
+                url("../img/b-quest-rooms/level-0.5.png") no-repeat 13vw 38px /5vw;
+  }
+  & .quest__info_brief-level.control-center {
+    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
+                url("../img/b-quest-rooms/level-0.5.png") no-repeat 6.5vw 38px /5vw,
+                url("../img/b-quest-rooms/level-0.png") no-repeat 13vw 38px /5vw;
+  }
+  & .quest__info_brief-level.sanitary {
+    background: url("../img/b-quest-rooms/level-0.png") no-repeat 0 38px /5vw,
+                url("../img/b-quest-rooms/level-0.png") no-repeat 6.5vw 38px /5vw,
+                url("../img/b-quest-rooms/level-0.png") no-repeat 13vw 38px /5vw;
+  }
+
+  & .quest__info_brief-fn {
+    margin: 8px 0;
+    font-size: 0.95vw;
+  }
+}
 
 
 /*============================================================================*\
     @@QUEST ROOM & OTHER SERVICES - DESCRIPTION
 \*============================================================================*/
 
-  & .quest__info_descr,
-  & .oth-serv__info_descr {
-    padding: 10px 0;
+.quest__info_descr,
+.oth-serv__info_descr {
+  padding: 10px 0;
 
-    & .quest__info_descr-title,
-    & .oth-serv__info_descr-title {
-      display: inline-block;
-      padding: 5px 4vw 5px 0;
-      vertical-align: top;
-      font-size: 1.2vw;
+  & .quest__info_descr-title,
+  & .oth-serv__info_descr-title {
+    display: inline-block;
+    padding: 5px 4vw 5px 0;
+    vertical-align: top;
+    font-size: 1.2vw;
+  }
 
-    }
-
-    & .quest__info_descr-text,
-    & .oth-serv__info_descr-text {
-      display: inline-block;
-      width: 30vw;
-      font-size: 1.15vw;
-      line-height: 1.4;
-    }
+  & .quest__info_descr-text,
+  & .oth-serv__info_descr-text {
+    display: inline-block;
+    width: 30vw;
+    font-size: 1.15vw;
+    line-height: 1.4;
   }
 }
+
 
 /*============================================================================*\
     @@QUEST ROOM & OTHER SERVICES - FORM

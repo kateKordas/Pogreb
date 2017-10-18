@@ -45,9 +45,20 @@ button.callback-btn {
 
 button.order {
   background: #fa951e url("../img/check.svg") no-repeat 12px 9px/15px; }
+  button.order:hover {
+    background: #f7c205 url("../img/check.svg") no-repeat 12px 9px/15px; }
+  button.order:active {
+    background: #f7c205 url("../img/check.svg") no-repeat 12px 9px/15px; }
 
 button.callback-btn {
   background: #fa951e url("../img/phone.svg") no-repeat 12px 9px/15px; }
+  button.callback-btn:hover {
+    background: #f7c205 url("../img/phone.svg") no-repeat 12px 9px/15px; }
+  button.callback-btn:active {
+    background: #f7c205 url("../img/phone.svg") no-repeat 12px 9px/15px; }
+  @media (max-width: 1060px) {
+    button.callback-btn {
+      margin: 5px 7vw; } }
 
 button.continue {
   display: block;
@@ -270,144 +281,115 @@ header {
   margin: 0 0 0 3vw;
   width: 52vw;
   font-family: "Jura-Regular", sans-serif;
-  color: #ffffff;
-  /*============================================================================*    @@QUEST ROOM & OTHER SERVICES - BRIEF
+  color: #ffffff; }
+
+.quest__info_title,
+.oth-serv__info_title {
+  white-space: pre-wrap;
+  font-size: 4.1vw;
+  font-weight: 700;
+  text-transform: uppercase; }
+  .quest__info_title span,
+  .oth-serv__info_title span {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: none;
+    line-height: 2.5; }
+
+.oth-serv__info_title {
+  margin: 30px 0;
+  line-height: .7; }
+
+/*============================================================================*    @@QUEST ROOM & OTHER SERVICES - BRIEF
 \*============================================================================*/
-  /*============================================================================*    @@QUEST ROOM & OTHER SERVICES - DESCRIPTION
-\*============================================================================*/ }
-  .quest__info .quest__info_title,
-  .quest__info .oth-serv__info_title,
-  .oth-serv__info .quest__info_title,
-  .oth-serv__info .oth-serv__info_title {
+.quest__info_brief,
+.oth-serv__info_brief {
+  margin: 15px 3vw 15px 0;
+  padding: 5px 15px;
+  background: rgba(102, 102, 102, 0.25); }
+  .quest__info_brief .quest__info_brief-cost,
+  .quest__info_brief .quest__info_brief-team,
+  .quest__info_brief .oth-serv__info_brief-cost.child-party,
+  .quest__info_brief .oth-serv__info_brief-cost1.cars,
+  .quest__info_brief .oth-serv__info_brief-cost2.cars,
+  .quest__info_brief .oth-serv__info_brief-team,
+  .quest__info_brief .oth-serv__info_brief-duration,
+  .oth-serv__info_brief .quest__info_brief-cost,
+  .oth-serv__info_brief .quest__info_brief-team,
+  .oth-serv__info_brief .oth-serv__info_brief-cost.child-party,
+  .oth-serv__info_brief .oth-serv__info_brief-cost1.cars,
+  .oth-serv__info_brief .oth-serv__info_brief-cost2.cars,
+  .oth-serv__info_brief .oth-serv__info_brief-team,
+  .oth-serv__info_brief .oth-serv__info_brief-duration {
+    display: inline-block;
+    width: 13vw;
     white-space: pre-wrap;
-    font-size: 4.1vw;
-    font-weight: 700;
-    text-transform: uppercase; }
-    .quest__info .quest__info_title span,
-    .quest__info .oth-serv__info_title span,
-    .oth-serv__info .quest__info_title span,
-    .oth-serv__info .oth-serv__info_title span {
-      font-size: 16px;
-      font-weight: 500;
-      text-transform: none;
-      line-height: 2.5; }
-  .quest__info .quest__info_brief,
-  .quest__info .oth-serv__info_brief,
-  .oth-serv__info .quest__info_brief,
-  .oth-serv__info .oth-serv__info_brief {
-    margin: 15px 3vw 15px 0;
-    padding: 5px 15px;
-    background: rgba(102, 102, 102, 0.25); }
-    .quest__info .quest__info_brief .quest__info_brief-cost,
-    .quest__info .quest__info_brief .quest__info_brief-team,
-    .quest__info .quest__info_brief .oth-serv__info_brief-cost,
-    .quest__info .quest__info_brief .oth-serv__info_brief-team,
-    .quest__info .quest__info_brief .oth-serv__info_brief-duration,
-    .quest__info .oth-serv__info_brief .quest__info_brief-cost,
-    .quest__info .oth-serv__info_brief .quest__info_brief-team,
-    .quest__info .oth-serv__info_brief .oth-serv__info_brief-cost,
-    .quest__info .oth-serv__info_brief .oth-serv__info_brief-team,
-    .quest__info .oth-serv__info_brief .oth-serv__info_brief-duration,
-    .oth-serv__info .quest__info_brief .quest__info_brief-cost,
-    .oth-serv__info .quest__info_brief .quest__info_brief-team,
-    .oth-serv__info .quest__info_brief .oth-serv__info_brief-cost,
-    .oth-serv__info .quest__info_brief .oth-serv__info_brief-team,
-    .oth-serv__info .quest__info_brief .oth-serv__info_brief-duration,
-    .oth-serv__info .oth-serv__info_brief .quest__info_brief-cost,
-    .oth-serv__info .oth-serv__info_brief .quest__info_brief-team,
-    .oth-serv__info .oth-serv__info_brief .oth-serv__info_brief-cost,
-    .oth-serv__info .oth-serv__info_brief .oth-serv__info_brief-team,
-    .oth-serv__info .oth-serv__info_brief .oth-serv__info_brief-duration {
-      display: inline-block;
-      width: 13vw;
-      white-space: pre-wrap;
-      font-size: 1.6vw;
-      line-height: 1.5; }
-      .quest__info .quest__info_brief .quest__info_brief-cost span,
-      .quest__info .quest__info_brief .quest__info_brief-team span,
-      .quest__info .quest__info_brief .oth-serv__info_brief-cost span,
-      .quest__info .quest__info_brief .oth-serv__info_brief-team span,
-      .quest__info .quest__info_brief .oth-serv__info_brief-duration span,
-      .quest__info .oth-serv__info_brief .quest__info_brief-cost span,
-      .quest__info .oth-serv__info_brief .quest__info_brief-team span,
-      .quest__info .oth-serv__info_brief .oth-serv__info_brief-cost span,
-      .quest__info .oth-serv__info_brief .oth-serv__info_brief-team span,
-      .quest__info .oth-serv__info_brief .oth-serv__info_brief-duration span,
-      .oth-serv__info .quest__info_brief .quest__info_brief-cost span,
-      .oth-serv__info .quest__info_brief .quest__info_brief-team span,
-      .oth-serv__info .quest__info_brief .oth-serv__info_brief-cost span,
-      .oth-serv__info .quest__info_brief .oth-serv__info_brief-team span,
-      .oth-serv__info .quest__info_brief .oth-serv__info_brief-duration span,
-      .oth-serv__info .oth-serv__info_brief .quest__info_brief-cost span,
-      .oth-serv__info .oth-serv__info_brief .quest__info_brief-team span,
-      .oth-serv__info .oth-serv__info_brief .oth-serv__info_brief-cost span,
-      .oth-serv__info .oth-serv__info_brief .oth-serv__info_brief-team span,
-      .oth-serv__info .oth-serv__info_brief .oth-serv__info_brief-duration span {
-        font-size: 1.2vw; }
-    .quest__info .quest__info_brief .quest__info_brief-level,
-    .quest__info .oth-serv__info_brief .quest__info_brief-level,
-    .oth-serv__info .quest__info_brief .quest__info_brief-level,
-    .oth-serv__info .oth-serv__info_brief .quest__info_brief-level {
-      display: inline-block;
-      width: 19vw;
-      height: 70px;
-      white-space: pre-wrap;
-      font-size: 1.2vw;
-      line-height: 2; }
-    .quest__info .quest__info_brief .quest__info_brief-level.safe,
-    .quest__info .quest__info_brief .quest__info_brief-level.ventilation,
-    .quest__info .oth-serv__info_brief .quest__info_brief-level.safe,
-    .quest__info .oth-serv__info_brief .quest__info_brief-level.ventilation,
-    .oth-serv__info .quest__info_brief .quest__info_brief-level.safe,
-    .oth-serv__info .quest__info_brief .quest__info_brief-level.ventilation,
-    .oth-serv__info .oth-serv__info_brief .quest__info_brief-level.safe,
-    .oth-serv__info .oth-serv__info_brief .quest__info_brief-level.ventilation {
-      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px/5vw, url("../img/b-quest-rooms/level-1.png") no-repeat 6.5vw 38px/5vw, url("../img/b-quest-rooms/level-0.5.png") no-repeat 13vw 38px/5vw; }
-    .quest__info .quest__info_brief .quest__info_brief-level.control-center,
-    .quest__info .oth-serv__info_brief .quest__info_brief-level.control-center,
-    .oth-serv__info .quest__info_brief .quest__info_brief-level.control-center,
-    .oth-serv__info .oth-serv__info_brief .quest__info_brief-level.control-center {
-      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px/5vw, url("../img/b-quest-rooms/level-0.5.png") no-repeat 6.5vw 38px/5vw, url("../img/b-quest-rooms/level-0.png") no-repeat 13vw 38px/5vw; }
-    .quest__info .quest__info_brief .quest__info_brief-level.sanitary,
-    .quest__info .oth-serv__info_brief .quest__info_brief-level.sanitary,
-    .oth-serv__info .quest__info_brief .quest__info_brief-level.sanitary,
-    .oth-serv__info .oth-serv__info_brief .quest__info_brief-level.sanitary {
-      background: url("../img/b-quest-rooms/level-0.png") no-repeat 0 38px/5vw, url("../img/b-quest-rooms/level-0.png") no-repeat 6.5vw 38px/5vw, url("../img/b-quest-rooms/level-0.png") no-repeat 13vw 38px/5vw; }
-    .quest__info .quest__info_brief .quest__info_brief-fn,
-    .quest__info .oth-serv__info_brief .quest__info_brief-fn,
-    .oth-serv__info .quest__info_brief .quest__info_brief-fn,
-    .oth-serv__info .oth-serv__info_brief .quest__info_brief-fn {
-      margin: 8px 0;
-      font-size: 0.95vw; }
-  .quest__info .quest__info_descr,
-  .quest__info .oth-serv__info_descr,
-  .oth-serv__info .quest__info_descr,
-  .oth-serv__info .oth-serv__info_descr {
-    padding: 10px 0; }
-    .quest__info .quest__info_descr .quest__info_descr-title,
-    .quest__info .quest__info_descr .oth-serv__info_descr-title,
-    .quest__info .oth-serv__info_descr .quest__info_descr-title,
-    .quest__info .oth-serv__info_descr .oth-serv__info_descr-title,
-    .oth-serv__info .quest__info_descr .quest__info_descr-title,
-    .oth-serv__info .quest__info_descr .oth-serv__info_descr-title,
-    .oth-serv__info .oth-serv__info_descr .quest__info_descr-title,
-    .oth-serv__info .oth-serv__info_descr .oth-serv__info_descr-title {
-      display: inline-block;
-      padding: 5px 4vw 5px 0;
-      vertical-align: top;
+    font-size: 1.6vw;
+    line-height: 1.5; }
+    .quest__info_brief .quest__info_brief-cost span,
+    .quest__info_brief .quest__info_brief-team span,
+    .quest__info_brief .oth-serv__info_brief-cost.child-party span,
+    .quest__info_brief .oth-serv__info_brief-cost1.cars span,
+    .quest__info_brief .oth-serv__info_brief-cost2.cars span,
+    .quest__info_brief .oth-serv__info_brief-team span,
+    .quest__info_brief .oth-serv__info_brief-duration span,
+    .oth-serv__info_brief .quest__info_brief-cost span,
+    .oth-serv__info_brief .quest__info_brief-team span,
+    .oth-serv__info_brief .oth-serv__info_brief-cost.child-party span,
+    .oth-serv__info_brief .oth-serv__info_brief-cost1.cars span,
+    .oth-serv__info_brief .oth-serv__info_brief-cost2.cars span,
+    .oth-serv__info_brief .oth-serv__info_brief-team span,
+    .oth-serv__info_brief .oth-serv__info_brief-duration span {
       font-size: 1.2vw; }
-    .quest__info .quest__info_descr .quest__info_descr-text,
-    .quest__info .quest__info_descr .oth-serv__info_descr-text,
-    .quest__info .oth-serv__info_descr .quest__info_descr-text,
-    .quest__info .oth-serv__info_descr .oth-serv__info_descr-text,
-    .oth-serv__info .quest__info_descr .quest__info_descr-text,
-    .oth-serv__info .quest__info_descr .oth-serv__info_descr-text,
-    .oth-serv__info .oth-serv__info_descr .quest__info_descr-text,
-    .oth-serv__info .oth-serv__info_descr .oth-serv__info_descr-text {
-      display: inline-block;
-      width: 30vw;
-      font-size: 1.15vw;
-      line-height: 1.4; }
+  .quest__info_brief .oth-serv__info_brief-cost.cars,
+  .oth-serv__info_brief .oth-serv__info_brief-cost.cars {
+    font-size: 1.2vw;
+    line-height: 1.5; }
+  .quest__info_brief .quest__info_brief-level,
+  .oth-serv__info_brief .quest__info_brief-level {
+    display: inline-block;
+    width: 19vw;
+    height: 70px;
+    white-space: pre-wrap;
+    font-size: 1.2vw;
+    line-height: 2; }
+  .quest__info_brief .quest__info_brief-level.safe,
+  .quest__info_brief .quest__info_brief-level.ventilation,
+  .oth-serv__info_brief .quest__info_brief-level.safe,
+  .oth-serv__info_brief .quest__info_brief-level.ventilation {
+    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px/5vw, url("../img/b-quest-rooms/level-1.png") no-repeat 6.5vw 38px/5vw, url("../img/b-quest-rooms/level-0.5.png") no-repeat 13vw 38px/5vw; }
+  .quest__info_brief .quest__info_brief-level.control-center,
+  .oth-serv__info_brief .quest__info_brief-level.control-center {
+    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px/5vw, url("../img/b-quest-rooms/level-0.5.png") no-repeat 6.5vw 38px/5vw, url("../img/b-quest-rooms/level-0.png") no-repeat 13vw 38px/5vw; }
+  .quest__info_brief .quest__info_brief-level.sanitary,
+  .oth-serv__info_brief .quest__info_brief-level.sanitary {
+    background: url("../img/b-quest-rooms/level-0.png") no-repeat 0 38px/5vw, url("../img/b-quest-rooms/level-0.png") no-repeat 6.5vw 38px/5vw, url("../img/b-quest-rooms/level-0.png") no-repeat 13vw 38px/5vw; }
+  .quest__info_brief .quest__info_brief-fn,
+  .oth-serv__info_brief .quest__info_brief-fn {
+    margin: 8px 0;
+    font-size: 0.95vw; }
+
+/*============================================================================*    @@QUEST ROOM & OTHER SERVICES - DESCRIPTION
+\*============================================================================*/
+.quest__info_descr,
+.oth-serv__info_descr {
+  padding: 10px 0; }
+  .quest__info_descr .quest__info_descr-title,
+  .quest__info_descr .oth-serv__info_descr-title,
+  .oth-serv__info_descr .quest__info_descr-title,
+  .oth-serv__info_descr .oth-serv__info_descr-title {
+    display: inline-block;
+    padding: 5px 4vw 5px 0;
+    vertical-align: top;
+    font-size: 1.2vw; }
+  .quest__info_descr .quest__info_descr-text,
+  .quest__info_descr .oth-serv__info_descr-text,
+  .oth-serv__info_descr .quest__info_descr-text,
+  .oth-serv__info_descr .oth-serv__info_descr-text {
+    display: inline-block;
+    width: 30vw;
+    font-size: 1.15vw;
+    line-height: 1.4; }
 
 /*============================================================================*    @@QUEST ROOM & OTHER SERVICES - FORM
 \*============================================================================*/
