@@ -28,12 +28,12 @@ $color-graphite: rgb(51,51,51);
   box-sizing: border-box;
 }
 
-button.order {
+button.order,
+button.callback-btn {
   display: inline-block;
   padding: 7px 20px;
   border: 1px solid $color-graphite;
   border-radius: 5px;
-  background: rgb(250,149,30) url("../img/check.svg") no-repeat 12px 9px /15px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
   text-indent: 20px;
   font-family: "Jura-Regular", sans-serif;
@@ -57,9 +57,17 @@ button.order {
   }
 }
 
+button.order {
+  background: rgb(250,149,30) url("../img/check.svg") no-repeat 12px 9px /15px;
+}
+
+button.callback-btn {
+  background: rgb(250,149,30) url("../img/phone.svg") no-repeat 12px 9px /15px;
+}
+
 button.continue {
-  display: inline-block;
-  margin: 5px 0 0 8vw;
+  display: block;
+  margin: 0 30vw;
   padding: 5px 12px;
   width: 125px;
   height: 32px;
@@ -87,6 +95,7 @@ button.continue {
     box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.25);
   }
 }
+
 
 /*============================================================================*\
     @@HEADER
@@ -288,10 +297,11 @@ header {
 
 
 /*============================================================================*\
-    @@QUEST-ROOM - SAFE OF BANKER
+    @@QUEST-ROOMS & OTHER SERVICES
 \*============================================================================*/
 
-.quest-safe {
+.quest,
+.oth-serv {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -299,35 +309,59 @@ header {
   background: $color-graphite;
 }
 
-.quest-safe__img {
+
+/*============================================================================*\
+    @@QUEST ROOM & OTHER SERVICES- IMAGE
+\*============================================================================*/
+
+.quest__img,
+.oth-serv__img {
   margin: 5vw 0;
-  width: 48vw;
+  width: 43vw;
   height: 28vw;
+}
+
+.quest__img.safe {
   background: url("../img/b-quest-rooms/img-safe.png");
   background-size: cover;
 }
-
-.quest-ventilation__img {
-  margin: 5vw 0;
-  width: 48vw;
-  height: 28vw;
+.quest__img.ventilation {
   background: url("../img/b-quest-rooms/img-ventilation.png");
+  background-size: cover;
+}
+.quest__img.control-center {
+  background: url("../img/b-quest-rooms/img-control-center.png");
+  background-size: cover;
+}
+.quest__img.sanitary {
+  background: url("../img/b-quest-rooms/img-sanitary.png");
+  background-size: cover;
+}
+.oth-serv__img.child-party {
+  background: url("../img/b-other-servises/img-ch-party.png");
+  background-size: cover;
+}
+.oth-serv__img.cars {
+  background: url("../img/b-other-servises/img-cars.png");
   background-size: cover;
 }
 
 
+/*============================================================================*\
+    @@QUEST ROOM & OTHER SERVICES- INFO
+\*============================================================================*/
 
-
-
-
-.quest-safe__info {
-  width: 48vw;
+.quest__info,
+.oth-serv__info {
+  margin: 0 0 0 3vw;
+  width: 52vw;
   font-family: "Jura-Regular", sans-serif;
   color: #ffffff;
 
-  & .quest-safe__info_title {
+  & .quest__info_title,
+  & .oth-serv__info_title {
     white-space: pre-wrap;
-    font-size: 56px;
+    font-size: 4.1vw;
     font-weight: 700;
     text-transform: uppercase;
 
@@ -339,72 +373,99 @@ header {
     }
   }
 
-  & .quest-safe__info_brief {
+/*============================================================================*\
+    @@QUEST ROOM & OTHER SERVICES - BRIEF
+\*============================================================================*/
+
+  & .quest__info_brief,
+  & .oth-serv__info_brief {
     margin: 15px 3vw 15px 0;
     padding: 5px 15px;
     background: rgba(102,102,102,.25);
 
-    & .quest-safe__info_brief-cost,
-    & .quest-safe__info_brief-team {
+    & .quest__info_brief-cost,
+    & .quest__info_brief-team,
+    & .oth-serv__info_brief-cost,
+    & .oth-serv__info_brief-team,
+    & .oth-serv__info_brief-duration {
       display: inline-block;
       width: 13vw;
       white-space: pre-wrap;
-      font-size: 22px;
+      font-size: 1.6vw;
+      line-height: 1.5;
 
       & span {
-        font-size: 16px;
-        line-height: 2;
+        font-size: 1.2vw;
       }
     }
 
-    & .quest-safe__info_brief-level {
+    & .quest__info_brief-level {
       display: inline-block;
-      width: 201px;
+      width: 19vw;
       height: 70px;
       white-space: pre-wrap;
-      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /60px,
-                  url("../img/b-quest-rooms/level-1.png") no-repeat 70px 38px /60px,
-                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 140px 38px /60px;
-      font-size: 15.5px;
+      font-size: 1.2vw;
       line-height: 2;
     }
 
-    & .quest-safe__info_brief-fn {
+    & .quest__info_brief-level.safe,
+    & .quest__info_brief-level.ventilation {
+      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
+                  url("../img/b-quest-rooms/level-1.png") no-repeat 6.5vw 38px /5vw,
+                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 13vw 38px /5vw;
+    }
+    & .quest__info_brief-level.control-center {
+      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
+                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 6.5vw 38px /5vw,
+                  url("../img/b-quest-rooms/level-0.png") no-repeat 13vw 38px /5vw;
+    }
+    & .quest__info_brief-level.sanitary {
+      background: url("../img/b-quest-rooms/level-0.png") no-repeat 0 38px /5vw,
+                  url("../img/b-quest-rooms/level-0.png") no-repeat 6.5vw 38px /5vw,
+                  url("../img/b-quest-rooms/level-0.png") no-repeat 13vw 38px /5vw;
+    }
+
+    & .quest__info_brief-fn {
       margin: 8px 0;
-      font-size: 13.5px;
+      font-size: 0.95vw;
     }
   }
 
-  & .quest-safe__info_descr {
+
+/*============================================================================*\
+    @@QUEST ROOM & OTHER SERVICES - DESCRIPTION
+\*============================================================================*/
+
+  & .quest__info_descr,
+  & .oth-serv__info_descr {
     padding: 10px 0;
 
-    & .quest-safe__info_descr-title {
+    & .quest__info_descr-title,
+    & .oth-serv__info_descr-title {
       display: inline-block;
       padding: 5px 4vw 5px 0;
       vertical-align: top;
-      font-size: 15.5px;
+      font-size: 1.2vw;
 
     }
 
-    & .quest-safe__info_descr-text {
+    & .quest__info_descr-text,
+    & .oth-serv__info_descr-text {
       display: inline-block;
       width: 30vw;
-      font-size: 13.5px;
-      line-height: 1.4;
-    }
-
-    & .quest-safe__info_descr-text-extra {
-      display: inline-block;
-      margin: 0 0 0 132px;
-      width: 11vw;
-      font-size: 13.5px;
+      font-size: 1.15vw;
       line-height: 1.4;
     }
   }
 }
 
-.quest-safe__info_form {
-  padding: 20px 0;
+/*============================================================================*\
+    @@QUEST ROOM & OTHER SERVICES - FORM
+\*============================================================================*/
+
+.quest__info_form,
+.oth-serv__info_form {
+  padding: 10px 0;
 
   & div {
     display: inline-block;
@@ -422,7 +483,7 @@ header {
     & input {
       margin: 3px 5px 0 0;
       padding: 6px 12px;
-      width: 200px;
+      width: 16vw;
       height: 32px;
       border: 1px solid rgb(204,204,204);
       border-radius: 4px;
@@ -453,8 +514,21 @@ header {
 
 
 /*============================================================================*\
-    @@QUEST-ROOM - VENTILATION
+    @@OTHER SERVICES
 \*============================================================================*/
+
+.b-other-services {
+  font-family: "Jura-Regular", sans-serif;
+
+  & h2 {
+    padding: 23px;
+    background: rgb(204,204,204);
+    text-align: center;
+    font-family: "Orbitron-Light", sans-serif;
+    font-size: 2.5vw;
+    color: $color-graphite;
+  }
+}
 
 
 

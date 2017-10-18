@@ -56,31 +56,33 @@
 
     <!--QUEST-ROOM - SAFE OF BANKER-->
     <div class="quest safe">
-      <div class="quest-img safe"></div>
+      <div class="quest__img safe"></div>
 
-      <div class="quest-info safe">
-        <p class="quest-info_title safe"><span>Квест-комната</span>
+      <div class="quest__info safe">
+        <p class="quest__info_title safe"><span>Квест-комната</span>
 Сейф банкира</p>
 
-        <div class="quest-info_brief safe">
-          <p class="quest-info_brief-cost safe"><span>Стоимость</span>
+        <div class="quest__info_brief safe">
+          <p class="quest__info_brief-cost safe"><span>Стоимость</span>
 350-550 грн</p>
-          <p class="quest-info_brief-team safe"><span>Команда</span>
+          <p class="quest__info_brief-team safe"><span>Команда</span>
 от 2 человек</p>
-          <p class="quest-info_brief-level safe">Уровень сложности
+          <p class="quest__info_brief-level safe">Уровень сложности
           </p>
-          <p class="quest-info_brief-fn safe">* доплата за каждого игрока в команде свыше 4 человек - 50 грн</p>
+          <p class="quest__info_brief-fn safe">* доплата за каждого игрока в команде свыше 4 человек - 50 грн</p>
         </div>
 
-        <div class="quest-info_descr safe">
-          <p class="quest-info_descr-title safe">Описание</p>
-          <p class="quest-info_descr-text safe">Хотите почувствовать себя в роли Джокера, самого яркого представителя преступного мира?
-            Для этого не обязательно красить волосы в зеленый цвет! Достаточно пройти квест-комнату "Сейф Банкира"!</p>
-          <p class="quest-info_descr-text-extra safe">Только представьте...</p>
+        <div class="quest__info_descr safe">
+          <p class="quest__info_descr-title safe">Описание</p>
+          <p class="quest__info_descr-text safe">Хотите почувствовать себя в роли Джокера, самого яркого представителя преступного мира?
+            Для этого не обязательно красить волосы в зеленый цвет! Достаточно пройти квест-комнату "Сейф Банкира"!
+            <br>Только представьте...
+          </p>
+
           <button class="continue">Продолжение</button>
         </div>
 
-        <form class="quest-info_form safe">
+        <form class="quest__info_form safe">
           <div>
             <label for="quest-safe__name">Имя и Фамилия <span>*</span></label>
             <input id="quest-safe__name" type="text" required minlength="2">
@@ -91,7 +93,7 @@
             <input id="quest-safe__phone" type="tel" required>
           </div>
 
-          <button class="order" type="submit">Забронировать игру</button>
+          <button class="order" type="submit">Забронировать</button>
         </form>
       </div>
     </div>
@@ -101,32 +103,31 @@
       <h3>Многосерийный квест "77 Завод"</h3>
 
       <!--QUEST-ROOM - VENTILATION-->
-      <div class="quest-ventilation">
-        <div class="quest-ventilation__info">
-          <p class="quest-ventilation__info_title"><span>Квест-комната</span>
+      <div class="quest ventilation">
+        <div class="quest__info ventilation">
+          <p class="quest__info_title ventilation"><span>Квест-комната</span>
 Вентиляционная</p>
 
-          <div class="quest-ventilation__info_brief">
-            <p class="quest-ventilation__info_brief-cost"><span>Стоимость</span>
+          <div class="quest__info_brief ventilation">
+            <p class="quest__info_brief-cost ventilation"><span>Стоимость</span>
 350-550 грн</p>
-            <p class="quest-ventilation__info_brief-team"><span>Команда</span>
+            <p class="quest__info_brief-team ventilation"><span>Команда</span>
 от 2 человек</p>
-            <p class="quest-ventilation__info_brief-level">Уровень сложности
+            <p class="quest__info_brief-level ventilation">Уровень сложности
             </p>
-            <p class="quest-ventilation__info_brief-fn">* доплата за каждого игрока в команде свыше 4 человек - 50 грн</p>
+            <p class="quest__info_brief-fn ventilation">* доплата за каждого игрока в команде свыше 4 человек - 50 грн</p>
           </div>
 
-          <div class="quest-ventilation__info_descr">
-            <p class="quest-ventilation__info_descr-title">Описание</p>
-            <p class="quest-ventilation__info_descr-text">Вы давно заметили в центре города странное здание,
+          <div class="quest__info_descr ventilation">
+            <p class="quest__info_descr-title ventilation">Описание</p>
+            <p class="quest__info_descr-text ventilation">Вы давно заметили в центре города странное здание,
               вокруг которого ходит много легенд и историй. "77 завод” - таинственное старое здание, в котором ни Вы,
               ни Ваши друзья никогда не были. Любопытство сильнее.
-              </p>
-            <p class="quest-safe__info_descr-text-extra">Что же находится внутри...</p>
+              <br>Что же находится внутри...</p>
             <button class="continue">Продолжение</button>
           </div>
 
-          <form class="quest-ventilation__info_form">
+          <form class="quest__info_form ventilation">
             <div>
               <label for="quest-ventilation__name">Имя и Фамилия <span>*</span></label>
               <input id="quest-ventilation__name" type="text" required minlength="2">
@@ -136,153 +137,166 @@
               <label for="quest-ventilation__phone">Ваш Телефон <span>*</span></label>
               <input id="quest-ventilation__phone" type="tel" required>
             </div>
+            <button class="order" type="submit">Забронировать</button>
           </form>
         </div>
 
-        <div class="quest-ventilation__img"></div>
+        <div class="quest__img ventilation"></div>
       </div>
 
       <!--QUEST-ROOM - CONTROL CENTER-->
-      <!--<div class="quest-center">
-        <div class="quest-center__img"></div>
+      <div class="quest control-center">
+        <div class="quest__img control-center"></div>
 
-        <div class="quest-center__info">
-          <p class="quest-center__info_title"><span>Квест-комната</span> Центр управления</p>
+        <div class="quest__info control-center">
+          <p class="quest__info_title control-center"><span>Квест-комната</span>
+Центр управления</p>
 
-          <div class="quest-center__info_brief">
-            <p class="quest-center__info_brief-cost"><span>Стоимость</span> 350-550 грн</p>
-            <p class="quest-center__info_brief-team"><span>Команда</span> от 2 человек</p>
-            <div class="quest-center__info_brief-level">
-              <p>Уровень сложности</p>
-            </div>
-            <p class="quest-center__info_brief-fn">* доплата за каждого игрока в команде свыше 4 человек - 50 грн</p>
+          <div class="quest__info_brief control-center">
+            <p class="quest__info_brief-cost control-center"><span>Стоимость</span>
+350-550 грн</p>
+            <p class="quest__info_brief-team control-center"><span>Команда</span>
+от 2 человек</p>
+            <p class="quest__info_brief-level control-center">Уровень сложности
+            </p>
+            <p class="quest__info_brief-fn control-center">* доплата за каждого игрока в команде свыше 4 человек - 50 грн</p>
           </div>
 
-          <div class="quest-center__info_descr">
-            <p class="quest-center__info_descr-title">Описание</p>
-            <p class="quest-center__info_descr-text">Это продолжение квеста "77-й завод" - 2-я серия.
+          <div class="quest__info_descr">
+            <p class="quest__info_descr-title control-center">Описание</p>
+            <p class="quest__info_descr-text control-center">Это продолжение квеста "77-й завод" - 2-я серия.
               Если Вы прошли квест-рум "Вентиляционная", Вы знаете часть истории про рабочих, которые оставили массу шифров.
-              Но что же сподвигло...</p>
+              <br>Но что же сподвигло...</p>
             <button class="continue">Продолжение</button>
           </div>
 
-          <form class="quest-center__info_form">
-            <label>
-              Имя и Фамилия <span>*</span>
-              <input type="text" required minlength="2">
-            </label>
-            <label>
-              Ваш Телефон <span>*</span>
-              <input type="number" required>
-            </label>
-            <button class="order">Забронировать</button>
+          <form class="quest__info_form control-center">
+            <div>
+              <label for="control-center__name">Имя и Фамилия <span>*</span></label>
+              <input id="control-center__name" type="text" required minlength="2">
+            </div>
+            <div>
+              <label for="control-center__phone">Ваш Телефон <span>*</span></label>
+              <input id="control-center__phone" type="number" required>
+            </div>
+            <button class="order" type="submit">Забронировать</button>
           </form>
         </div>
-      </div>-->
+      </div>
 
       <!--QUEST-ROOM - SANITARY-->
-      <!--<div class="quest-sanitary">
-        <div class="quest-sanitary__info">
-          <p class="quest-sanitary__info_title"><span>Квест-комната</span> Санитарная</p>
+      <div class="quest sanitary">
+        <div class="quest__info sanitary">
+          <p class="quest__info_title sanitary"><span>Квест-комната</span>
+Санитарная</p>
 
-          <div class="quest-sanitary__info_brief">
-            <p class="quest-sanitary__info_brief-cost"><span>Стоимость</span> 350-550 грн</p>
-            <p class="quest-sanitary__info_brief-team"><span>Команда</span> от 2 человек</p>
-            <div class="quest-sanitary__info_brief-level">
-              <p>Уровень сложности</p>
-            </div>
-            <p class="quest-sanitary__info_brief-fn">* доплата за каждого игрока в команде свыше 4 человек - 50 грн</p>
+          <div class="quest__info_brief sanitary">
+            <p class="quest__info_brief-cost sanitary"><span>Стоимость</span>
+350-550 грн</p>
+            <p class="quest__info_brief-team sanitary"><span>Команда</span>
+от 2 человек</p>
+            <p class="quest__info_brief-level sanitary">Уровень сложности
+            </p>
+            <p class="quest__info_brief-fn sanitary">* доплата за каждого игрока в команде свыше 4 человек - 50 грн</p>
           </div>
 
-          <div class="quest-sanitary__info_descr">
-            <p class="quest-sanitary__info_descr-title">Описание</p>
-            <p class="quest-sanitary__info_descr-text">Это продолжение квеста "77-й завод" - 3-я серия.
+          <div class="quest__info_descr sanitary">
+            <p class="quest__info_descr-title sanitary">Описание</p>
+            <p class="quest__info_descr-text sanitary">Это продолжение квеста "77-й завод" - 3-я серия.
               Если Вы прошли квест-румы "Вентиляционная"  и "Центр Управления", Вы почти у цели.
-              Осталось последнее испытание....</p>
+              <br>Осталось последнее испытание...</p>
           </div>
         </div>
 
-        <div class="quest-sanitary__img"></div>
-      </div>-->
+        <div class="quest__img sanitary"></div>
+      </div>
     </div>
   </section>
 
 
   <!--OTHER SERVICES-->
-  <!--<section class="b-other-services">
+  <section class="b-other-services">
     <h2>А еще у нас есть...</h2>
 
-    &lt;!&ndash;OTHER SERVICES - CHILDREN'S PARTY&ndash;&gt;
-    <div class="child-party">
-      <div class="child-party__img"></div>
+    <!--OTHER SERVICES - CHILDREN'S PARTY-->
+    <div class="oth-serv child-party">
+      <div class="oth-serv__img child-party"></div>
 
-      <div class="child-party__info">
-        <p class="child-party__info_title">Детский праздник <span>с аниматорами</span></p>
+      <div class="oth-serv__info child-party">
+        <p class="oth-serv__info_title child-party">Детский праздник
+<span>с аниматорами</span></p>
 
-        <div class="child-party__info_brief">
-          <p class="child-party__info_brief-cost"><span>Стоимость</span> 1300 грн</p>
-          <p class="child-party__info_brief-team"><span>Количество</span> до 10 человек</p>
-          <p class="child-party__info_brief-duration"><span>Длительность</span> 2 часа 30 мин</p>
+        <div class="oth-serv__info_brief child-party">
+          <p class="oth-serv__info_brief-cost child-party"><span>Стоимость</span>
+1300 грн</p>
+          <p class="oth-serv__info_brief-team child-party"><span>Количество</span>
+до 10 человек</p>
+          <p class="oth-serv__info_brief-duration child-party"><span>Длительность</span>
+2 часа 30 мин</p>
         </div>
 
-        <div class="child-party__info_descr">
-          <p class="child-party__info_descr-title">Описание</p>
-          <p class="child-party__info_descr-text">За все время существования Лаборатории квестов "Погреб",
+        <div class="oth-serv__info_descr child-party">
+          <p class="oth-serv__info_descr-title child-party">Описание</p>
+          <p class="oth-serv__info_descr-text child-party">За все время существования Лаборатории квестов "Погреб",
             наши аниматоры провели больше 20 детских праздников и все, кому по душе сложные загадки, необычные места
             и жажда к приключениям, остались довольны!<br>
             Мы точно можем сказать, что 70% наших клиентов приходят по рекомендации. Приходите и Вы!</p>
         </div>
 
-        <form class="child-party__info_form">
-          <label>
-            Имя и Фамилия <span>*</span>
-            <input type="text" required minlength="2">
-          </label>
-          <label>
-            Ваш Телефон <span>*</span>
-            <input type="number" required>
-          </label>
+        <form class="oth-serv__info_form child-party">
+          <div>
+            <label for="child-party__name">Имя и Фамилия <span>*</span></label>
+            <input id="child-party__name" type="text" required minlength="2">
+          </div>
+          <div>
+            <label for="child-party__phone">Ваш Телефон <span>*</span></label>
+            <input id="child-party__phone" type="number" required>
+          </div>
           <button class="callback-btn">Свяжитесь со мной</button>
         </form>
       </div>
     </div>
 
-    &lt;!&ndash;OTHER SERVICES - CARS&ndash;&gt;
-    <div class="cars">
-      <div class="cars__info">
-        <p class="cars__info_title">Машинки <span>на радиоуправлении</span></p>
+    <!--OTHER SERVICES - CARS-->
+    <div class="oth-serv cars">
+      <div class="oth-serv__info cars">
+        <p class="oth-serv__info_title cars">Машинки
+<span>на радиоуправлении</span></p>
 
-        <div class="cars__info_brief">
-          <p class="cars__info_brief-cost">Стоимость</p>
-          <p class="cars__info_brief-cost1">25 грн <span>(5 мин / 1 машинка)</span></p>
-          <p class="cars__info_brief-cost2">600 грн <span>(1 час / 4 машинки)</span></p>
+        <div class="oth-serv__info_brief cars">
+          <p class="oth-serv__info_brief-cost cars">Стоимость</p>
+          <p class="oth-serv__info_brief-cost1 cars">25 грн
+<span>(5 мин / 1 машинка)</span></p>
+          <p class="oth-serv__info_brief-cost2 cars">600 грн
+<span>(1 час / 4 машинки)</span></p>
         </div>
 
-        <div class="cars__info_descr">
-          <p class="cars__info_descr-title">Почему это круто:</p>
-          <ol class="cars__info_descr-text">
+        <div class="oth-serv__info_descr cars">
+          <p class="oth-serv__info_descr-title cars">Почему это круто:</p>
+          <ol class="oth-serv__info_descr-text cars">
             <li>Копии настоящих гоночных машин</li>
             <li>Профессиональный гоночный трек</li>
             <li>5 видов гоночных соревнований</li>
           </ol>
         </div>
 
-        <form class="cars__info_form">
-          <label>
-            Имя и Фамилия <span>*</span>
-            <input type="text" required minlength="2">
-          </label>
-          <label>
-            Ваш Телефон <span>*</span>
-            <input type="number" required>
-          </label>
+        <form class="oth-serv__info_form cars">
+          <div>
+            <label for="cars__name">Имя и Фамилия <span>*</span></label>
+            <input id="cars__name" type="text" required minlength="2">
+          </div>
+          <div>
+            <label for="cars__phone">Ваш Телефон <span>*</span></label>
+            <input id="cars__phone" type="number" required>
+          </div>
+
           <button class="callback-btn">Свяжитесь со мной</button>
         </form>
       </div>
 
-      <div class="cars__img"></div>
+      <div class="oth-serv__img cars"></div>
     </div>
-  </section>-->
+  </section>
 
 
   <!--DISCOUNTS-->

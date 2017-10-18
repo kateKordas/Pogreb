@@ -17,12 +17,12 @@
   outline: none;
   box-sizing: border-box; }
 
-button.order {
+button.order,
+button.callback-btn {
   display: inline-block;
   padding: 7px 20px;
   border: 1px solid #333333;
   border-radius: 5px;
-  background: #fa951e url("../img/check.svg") no-repeat 12px 9px/15px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
   text-indent: 20px;
   font-family: "Jura-Regular", sans-serif;
@@ -30,20 +30,28 @@ button.order {
   font-weight: bold;
   color: #333333;
   cursor: pointer; }
-  button.order:hover {
+  button.order:hover,
+  button.callback-btn:hover {
     background: #f7c205 url("../img/check.svg") no-repeat 12px 9px/15px;
     border: 1px solid #2a2a2a;
     color: black; }
-  button.order:active {
+  button.order:active,
+  button.callback-btn:active {
     transform: scale(0.99);
     background: #f7c205 url("../img/check.svg") no-repeat 12px 9px/15px;
     border: 1px solid #c69b04;
     color: black;
     box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.25); }
 
+button.order {
+  background: #fa951e url("../img/check.svg") no-repeat 12px 9px/15px; }
+
+button.callback-btn {
+  background: #fa951e url("../img/phone.svg") no-repeat 12px 9px/15px; }
+
 button.continue {
-  display: inline-block;
-  margin: 5px 0 0 8vw;
+  display: block;
+  margin: 0 30vw;
   padding: 5px 12px;
   width: 125px;
   height: 32px;
@@ -213,101 +221,215 @@ header {
     font-size: 5vw;
     color: #333333; }
 
-/*============================================================================*    @@QUEST-ROOM - SAFE OF BANKER
+/*============================================================================*    @@QUEST-ROOMS & OTHER SERVICES
 \*============================================================================*/
-.quest-safe {
+.quest,
+.oth-serv {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: stretch;
   background: #333333; }
 
-.quest-safe__img {
+/*============================================================================*    @@QUEST ROOM & OTHER SERVICES- IMAGE
+\*============================================================================*/
+.quest__img,
+.oth-serv__img {
   margin: 5vw 0;
-  width: 48vw;
-  height: 28vw;
+  width: 43vw;
+  height: 28vw; }
+
+.quest__img.safe {
   background: url("../img/b-quest-rooms/img-safe.png");
   background-size: cover; }
 
-.quest-ventilation__img {
-  margin: 5vw 0;
-  width: 48vw;
-  height: 28vw;
+.quest__img.ventilation {
   background: url("../img/b-quest-rooms/img-ventilation.png");
   background-size: cover; }
 
-.quest-safe__info {
-  width: 48vw;
+.quest__img.control-center {
+  background: url("../img/b-quest-rooms/img-control-center.png");
+  background-size: cover; }
+
+.quest__img.sanitary {
+  background: url("../img/b-quest-rooms/img-sanitary.png");
+  background-size: cover; }
+
+.oth-serv__img.child-party {
+  background: url("../img/b-other-servises/img-ch-party.png");
+  background-size: cover; }
+
+.oth-serv__img.cars {
+  background: url("../img/b-other-servises/img-cars.png");
+  background-size: cover; }
+
+/*============================================================================*    @@QUEST ROOM & OTHER SERVICES- INFO
+\*============================================================================*/
+.quest__info,
+.oth-serv__info {
+  margin: 0 0 0 3vw;
+  width: 52vw;
   font-family: "Jura-Regular", sans-serif;
-  color: #ffffff; }
-  .quest-safe__info .quest-safe__info_title {
+  color: #ffffff;
+  /*============================================================================*    @@QUEST ROOM & OTHER SERVICES - BRIEF
+\*============================================================================*/
+  /*============================================================================*    @@QUEST ROOM & OTHER SERVICES - DESCRIPTION
+\*============================================================================*/ }
+  .quest__info .quest__info_title,
+  .quest__info .oth-serv__info_title,
+  .oth-serv__info .quest__info_title,
+  .oth-serv__info .oth-serv__info_title {
     white-space: pre-wrap;
-    font-size: 56px;
+    font-size: 4.1vw;
     font-weight: 700;
     text-transform: uppercase; }
-    .quest-safe__info .quest-safe__info_title span {
+    .quest__info .quest__info_title span,
+    .quest__info .oth-serv__info_title span,
+    .oth-serv__info .quest__info_title span,
+    .oth-serv__info .oth-serv__info_title span {
       font-size: 16px;
       font-weight: 500;
       text-transform: none;
       line-height: 2.5; }
-  .quest-safe__info .quest-safe__info_brief {
+  .quest__info .quest__info_brief,
+  .quest__info .oth-serv__info_brief,
+  .oth-serv__info .quest__info_brief,
+  .oth-serv__info .oth-serv__info_brief {
     margin: 15px 3vw 15px 0;
     padding: 5px 15px;
     background: rgba(102, 102, 102, 0.25); }
-    .quest-safe__info .quest-safe__info_brief .quest-safe__info_brief-cost,
-    .quest-safe__info .quest-safe__info_brief .quest-safe__info_brief-team {
+    .quest__info .quest__info_brief .quest__info_brief-cost,
+    .quest__info .quest__info_brief .quest__info_brief-team,
+    .quest__info .quest__info_brief .oth-serv__info_brief-cost,
+    .quest__info .quest__info_brief .oth-serv__info_brief-team,
+    .quest__info .quest__info_brief .oth-serv__info_brief-duration,
+    .quest__info .oth-serv__info_brief .quest__info_brief-cost,
+    .quest__info .oth-serv__info_brief .quest__info_brief-team,
+    .quest__info .oth-serv__info_brief .oth-serv__info_brief-cost,
+    .quest__info .oth-serv__info_brief .oth-serv__info_brief-team,
+    .quest__info .oth-serv__info_brief .oth-serv__info_brief-duration,
+    .oth-serv__info .quest__info_brief .quest__info_brief-cost,
+    .oth-serv__info .quest__info_brief .quest__info_brief-team,
+    .oth-serv__info .quest__info_brief .oth-serv__info_brief-cost,
+    .oth-serv__info .quest__info_brief .oth-serv__info_brief-team,
+    .oth-serv__info .quest__info_brief .oth-serv__info_brief-duration,
+    .oth-serv__info .oth-serv__info_brief .quest__info_brief-cost,
+    .oth-serv__info .oth-serv__info_brief .quest__info_brief-team,
+    .oth-serv__info .oth-serv__info_brief .oth-serv__info_brief-cost,
+    .oth-serv__info .oth-serv__info_brief .oth-serv__info_brief-team,
+    .oth-serv__info .oth-serv__info_brief .oth-serv__info_brief-duration {
       display: inline-block;
       width: 13vw;
       white-space: pre-wrap;
-      font-size: 22px; }
-      .quest-safe__info .quest-safe__info_brief .quest-safe__info_brief-cost span,
-      .quest-safe__info .quest-safe__info_brief .quest-safe__info_brief-team span {
-        font-size: 16px;
-        line-height: 2; }
-    .quest-safe__info .quest-safe__info_brief .quest-safe__info_brief-level {
+      font-size: 1.6vw;
+      line-height: 1.5; }
+      .quest__info .quest__info_brief .quest__info_brief-cost span,
+      .quest__info .quest__info_brief .quest__info_brief-team span,
+      .quest__info .quest__info_brief .oth-serv__info_brief-cost span,
+      .quest__info .quest__info_brief .oth-serv__info_brief-team span,
+      .quest__info .quest__info_brief .oth-serv__info_brief-duration span,
+      .quest__info .oth-serv__info_brief .quest__info_brief-cost span,
+      .quest__info .oth-serv__info_brief .quest__info_brief-team span,
+      .quest__info .oth-serv__info_brief .oth-serv__info_brief-cost span,
+      .quest__info .oth-serv__info_brief .oth-serv__info_brief-team span,
+      .quest__info .oth-serv__info_brief .oth-serv__info_brief-duration span,
+      .oth-serv__info .quest__info_brief .quest__info_brief-cost span,
+      .oth-serv__info .quest__info_brief .quest__info_brief-team span,
+      .oth-serv__info .quest__info_brief .oth-serv__info_brief-cost span,
+      .oth-serv__info .quest__info_brief .oth-serv__info_brief-team span,
+      .oth-serv__info .quest__info_brief .oth-serv__info_brief-duration span,
+      .oth-serv__info .oth-serv__info_brief .quest__info_brief-cost span,
+      .oth-serv__info .oth-serv__info_brief .quest__info_brief-team span,
+      .oth-serv__info .oth-serv__info_brief .oth-serv__info_brief-cost span,
+      .oth-serv__info .oth-serv__info_brief .oth-serv__info_brief-team span,
+      .oth-serv__info .oth-serv__info_brief .oth-serv__info_brief-duration span {
+        font-size: 1.2vw; }
+    .quest__info .quest__info_brief .quest__info_brief-level,
+    .quest__info .oth-serv__info_brief .quest__info_brief-level,
+    .oth-serv__info .quest__info_brief .quest__info_brief-level,
+    .oth-serv__info .oth-serv__info_brief .quest__info_brief-level {
       display: inline-block;
-      width: 201px;
+      width: 19vw;
       height: 70px;
       white-space: pre-wrap;
-      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px/60px, url("../img/b-quest-rooms/level-1.png") no-repeat 70px 38px/60px, url("../img/b-quest-rooms/level-0.5.png") no-repeat 140px 38px/60px;
-      font-size: 15.5px;
+      font-size: 1.2vw;
       line-height: 2; }
-    .quest-safe__info .quest-safe__info_brief .quest-safe__info_brief-fn {
+    .quest__info .quest__info_brief .quest__info_brief-level.safe,
+    .quest__info .quest__info_brief .quest__info_brief-level.ventilation,
+    .quest__info .oth-serv__info_brief .quest__info_brief-level.safe,
+    .quest__info .oth-serv__info_brief .quest__info_brief-level.ventilation,
+    .oth-serv__info .quest__info_brief .quest__info_brief-level.safe,
+    .oth-serv__info .quest__info_brief .quest__info_brief-level.ventilation,
+    .oth-serv__info .oth-serv__info_brief .quest__info_brief-level.safe,
+    .oth-serv__info .oth-serv__info_brief .quest__info_brief-level.ventilation {
+      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px/5vw, url("../img/b-quest-rooms/level-1.png") no-repeat 6.5vw 38px/5vw, url("../img/b-quest-rooms/level-0.5.png") no-repeat 13vw 38px/5vw; }
+    .quest__info .quest__info_brief .quest__info_brief-level.control-center,
+    .quest__info .oth-serv__info_brief .quest__info_brief-level.control-center,
+    .oth-serv__info .quest__info_brief .quest__info_brief-level.control-center,
+    .oth-serv__info .oth-serv__info_brief .quest__info_brief-level.control-center {
+      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px/5vw, url("../img/b-quest-rooms/level-0.5.png") no-repeat 6.5vw 38px/5vw, url("../img/b-quest-rooms/level-0.png") no-repeat 13vw 38px/5vw; }
+    .quest__info .quest__info_brief .quest__info_brief-level.sanitary,
+    .quest__info .oth-serv__info_brief .quest__info_brief-level.sanitary,
+    .oth-serv__info .quest__info_brief .quest__info_brief-level.sanitary,
+    .oth-serv__info .oth-serv__info_brief .quest__info_brief-level.sanitary {
+      background: url("../img/b-quest-rooms/level-0.png") no-repeat 0 38px/5vw, url("../img/b-quest-rooms/level-0.png") no-repeat 6.5vw 38px/5vw, url("../img/b-quest-rooms/level-0.png") no-repeat 13vw 38px/5vw; }
+    .quest__info .quest__info_brief .quest__info_brief-fn,
+    .quest__info .oth-serv__info_brief .quest__info_brief-fn,
+    .oth-serv__info .quest__info_brief .quest__info_brief-fn,
+    .oth-serv__info .oth-serv__info_brief .quest__info_brief-fn {
       margin: 8px 0;
-      font-size: 13.5px; }
-  .quest-safe__info .quest-safe__info_descr {
+      font-size: 0.95vw; }
+  .quest__info .quest__info_descr,
+  .quest__info .oth-serv__info_descr,
+  .oth-serv__info .quest__info_descr,
+  .oth-serv__info .oth-serv__info_descr {
     padding: 10px 0; }
-    .quest-safe__info .quest-safe__info_descr .quest-safe__info_descr-title {
+    .quest__info .quest__info_descr .quest__info_descr-title,
+    .quest__info .quest__info_descr .oth-serv__info_descr-title,
+    .quest__info .oth-serv__info_descr .quest__info_descr-title,
+    .quest__info .oth-serv__info_descr .oth-serv__info_descr-title,
+    .oth-serv__info .quest__info_descr .quest__info_descr-title,
+    .oth-serv__info .quest__info_descr .oth-serv__info_descr-title,
+    .oth-serv__info .oth-serv__info_descr .quest__info_descr-title,
+    .oth-serv__info .oth-serv__info_descr .oth-serv__info_descr-title {
       display: inline-block;
       padding: 5px 4vw 5px 0;
       vertical-align: top;
-      font-size: 15.5px; }
-    .quest-safe__info .quest-safe__info_descr .quest-safe__info_descr-text {
+      font-size: 1.2vw; }
+    .quest__info .quest__info_descr .quest__info_descr-text,
+    .quest__info .quest__info_descr .oth-serv__info_descr-text,
+    .quest__info .oth-serv__info_descr .quest__info_descr-text,
+    .quest__info .oth-serv__info_descr .oth-serv__info_descr-text,
+    .oth-serv__info .quest__info_descr .quest__info_descr-text,
+    .oth-serv__info .quest__info_descr .oth-serv__info_descr-text,
+    .oth-serv__info .oth-serv__info_descr .quest__info_descr-text,
+    .oth-serv__info .oth-serv__info_descr .oth-serv__info_descr-text {
       display: inline-block;
       width: 30vw;
-      font-size: 13.5px;
-      line-height: 1.4; }
-    .quest-safe__info .quest-safe__info_descr .quest-safe__info_descr-text-extra {
-      display: inline-block;
-      margin: 0 0 0 132px;
-      width: 11vw;
-      font-size: 13.5px;
+      font-size: 1.15vw;
       line-height: 1.4; }
 
-.quest-safe__info_form {
-  padding: 20px 0; }
-  .quest-safe__info_form div {
+/*============================================================================*    @@QUEST ROOM & OTHER SERVICES - FORM
+\*============================================================================*/
+.quest__info_form,
+.oth-serv__info_form {
+  padding: 10px 0; }
+  .quest__info_form div,
+  .oth-serv__info_form div {
     display: inline-block; }
-    .quest-safe__info_form div label {
+    .quest__info_form div label,
+    .oth-serv__info_form div label {
       display: block;
       font-size: 15.5px; }
-      .quest-safe__info_form div label span {
+      .quest__info_form div label span,
+      .oth-serv__info_form div label span {
         font-size: 17px;
         color: #993333; }
-    .quest-safe__info_form div input {
+    .quest__info_form div input,
+    .oth-serv__info_form div input {
       margin: 3px 5px 0 0;
       padding: 6px 12px;
-      width: 200px;
+      width: 16vw;
       height: 32px;
       border: 1px solid #cccccc;
       border-radius: 4px;
@@ -327,5 +449,14 @@ header {
     font-size: 3vw;
     color: #333333; }
 
-/*============================================================================*    @@QUEST-ROOM - VENTILATION
+/*============================================================================*    @@OTHER SERVICES
 \*============================================================================*/
+.b-other-services {
+  font-family: "Jura-Regular", sans-serif; }
+  .b-other-services h2 {
+    padding: 23px;
+    background: #cccccc;
+    text-align: center;
+    font-family: "Orbitron-Light", sans-serif;
+    font-size: 2.5vw;
+    color: #333333; }
