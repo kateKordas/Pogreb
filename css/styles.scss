@@ -1,4 +1,10 @@
 /*============================================================================*\
+    @@VARIABLES
+\*============================================================================*/
+
+$color-graphite: rgb(51,51,51);
+
+/*============================================================================*\
     @@FONTS
 \*============================================================================*/
 
@@ -20,6 +26,66 @@
   text-decoration: none;
   outline: none;
   box-sizing: border-box;
+}
+
+button.order {
+  display: inline-block;
+  padding: 7px 20px;
+  border: 1px solid $color-graphite;
+  border-radius: 5px;
+  background: rgb(250,149,30) url("../img/check.svg") no-repeat 12px 9px /15px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+  text-indent: 20px;
+  font-family: "Jura-Regular", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: $color-graphite;
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(247,194,5) url("../img/check.svg") no-repeat 12px 9px /15px;
+    border: 1px solid rgb(42,42,42);
+    color: rgb(0,0,0);
+  }
+
+  &:active {
+    transform: scale(.99);
+    background: rgb(247,194,5) url("../img/check.svg") no-repeat 12px 9px /15px;
+    border: 1px solid rgb(198,155,4);
+    color: rgb(0,0,0);
+    box-shadow: inset 0 2px 5px 0 rgba(0,0,0,.25);
+  }
+}
+
+button.continue {
+  display: inline-block;
+  margin: 5px 0 0 8vw;
+  padding: 5px 12px;
+  width: 125px;
+  height: 32px;
+  vertical-align: top;
+  border: 1px solid $color-graphite;
+  border-radius: 5px;
+  background: rgb(66,66,66);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+  font-family: "Jura-Regular", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(235, 235, 235);
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(82,82,82);
+    border: 1px solid rgb(42,42,42);
+    color: rgb(255,255,255);
+  }
+
+  &:active {
+    background: rgb(207,207,207);
+    border: 1px solid rgb(65,65,65);
+    color: rgb(0,0,0);
+    box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  }
 }
 
 /*============================================================================*\
@@ -112,29 +178,6 @@ header {
   }
 
   .nav-bar__order {
-    display: inline-block;
-    margin: 5px 0 5px 2vw;
-    width: 160px;
-    height: 32px;
-    border: none;
-    border-radius: 5px;
-    background: rgb(250,149,30) url("../img/check.svg") no-repeat 12px 9px /10%;
-    box-shadow: 0 0 5px 3px rgba(0,0,0,.2);
-    text-indent: 20px;
-    font-family: "Jura-Regular", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    color: #535353;
-    cursor: pointer;
-
-    &:hover {
-      background: rgb(247,194,5) url("../img/check.svg") no-repeat 12px 9px /10%;
-    }
-    &:active {
-      transform: scale(.99);
-      box-shadow: inset 0 0 5px rgba(0,0,0,.2);
-    }
-
     @media (max-width: 910px) {
       margin: 5px 0 5px 1vw;
     }
@@ -146,31 +189,38 @@ header {
     @@JUMBOTRON
 \*============================================================================*/
 
-.jumbotron video {
-  position: absolute;
-  top: 0;
-  left: 0;
+.video-container {
+  position: relative;
   width: 100%;
-  z-index: -10;
-}
 
-.jumbotron__container {
-  position: absolute;
-  top: 115px;
-  left: 3vw;
-  padding: 2vw 5vw;
-  width: 85vw;
-  height: 40vw;
-  background: rgba(0,0,0,.5);
-  font-family: "Jura-Regular", sans-serif;
-  color: #ffffff;
+  & video {
+    width: 100%;
+    z-index: -10;
+    vertical-align: bottom;
+  }
+
+  & .video-container__opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom:0;
+    background: rgba(0,0,0,.5);
+  }
 }
 
 .jumbotron__title {
+  position: absolute;
+  top: 115px;
+  left: 3vw;
+  margin: 2vw 5vw;
   background: url("../img/logo-white.png") no-repeat 0 0 /13vw;
+  font-family: "Jura-Regular", sans-serif;
+  color: #ffffff;
 
   & .jumbotron__title_logo {
-    padding: 1vw 0 0 9vw;
+    padding: 1vw 0 0 15vw;
+    white-space: pre-wrap;
     font-size: 2.5vw;
   }
 
@@ -178,12 +228,13 @@ header {
     padding: .5vw 0;
     text-transform: uppercase;
     font-family: "Orbitron-Light", sans-serif;
-    font-size: 11vw;
+    font-size: 10vw;
   }
 
   & .jumbotron__title_descr {
     padding: 0 0 1vw 0;
-    background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 47vw 3vw /3.5vw;
+    white-space: pre-wrap;
+    background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 47vw 5vw /3.5vw;
     font-size: 2vw;
     font-weight: 700;
 
@@ -205,7 +256,7 @@ header {
   font-family: "Jura-Regular", sans-serif;
   font-size: 21px;
   font-weight: bold;
-  color: #535353;
+  color: $color-graphite;
   cursor: pointer;
 
   &:hover {
@@ -218,32 +269,218 @@ header {
 }
 
 
+/*============================================================================*\
+    @@QUEST-ROOMS
+\*============================================================================*/
 
+.b-quest-rooms {
+  font-family: "Jura-Regular", sans-serif;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  & h2 {
+    padding: 15px;
+    background: rgb(204,204,204);
+    text-align: center;
+    font-family: "Orbitron-Light", sans-serif;
+    font-size: 5vw;
+    color: $color-graphite;
+  }
+}
 
 
 /*============================================================================*\
-    @@JUMBOTRON
+    @@QUEST-ROOM - SAFE OF BANKER
 \*============================================================================*/
+
+.quest-safe {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  background: $color-graphite;
+}
+
+.quest-safe__img {
+  margin: 5vw 0;
+  width: 48vw;
+  height: 28vw;
+  background: url("../img/b-quest-rooms/img-safe.png");
+  background-size: cover;
+}
+
+.quest-ventilation__img {
+  margin: 5vw 0;
+  width: 48vw;
+  height: 28vw;
+  background: url("../img/b-quest-rooms/img-ventilation.png");
+  background-size: cover;
+}
+
+
+
+
+
+
+.quest-safe__info {
+  width: 48vw;
+  font-family: "Jura-Regular", sans-serif;
+  color: #ffffff;
+
+  & .quest-safe__info_title {
+    white-space: pre-wrap;
+    font-size: 56px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    & span {
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: none;
+      line-height: 2.5;
+    }
+  }
+
+  & .quest-safe__info_brief {
+    margin: 15px 3vw 15px 0;
+    padding: 5px 15px;
+    background: rgba(102,102,102,.25);
+
+    & .quest-safe__info_brief-cost,
+    & .quest-safe__info_brief-team {
+      display: inline-block;
+      width: 13vw;
+      white-space: pre-wrap;
+      font-size: 22px;
+
+      & span {
+        font-size: 16px;
+        line-height: 2;
+      }
+    }
+
+    & .quest-safe__info_brief-level {
+      display: inline-block;
+      width: 201px;
+      height: 70px;
+      white-space: pre-wrap;
+      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /60px,
+                  url("../img/b-quest-rooms/level-1.png") no-repeat 70px 38px /60px,
+                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 140px 38px /60px;
+      font-size: 15.5px;
+      line-height: 2;
+    }
+
+    & .quest-safe__info_brief-fn {
+      margin: 8px 0;
+      font-size: 13.5px;
+    }
+  }
+
+  & .quest-safe__info_descr {
+    padding: 10px 0;
+
+    & .quest-safe__info_descr-title {
+      display: inline-block;
+      padding: 5px 4vw 5px 0;
+      vertical-align: top;
+      font-size: 15.5px;
+
+    }
+
+    & .quest-safe__info_descr-text {
+      display: inline-block;
+      width: 30vw;
+      font-size: 13.5px;
+      line-height: 1.4;
+    }
+
+    & .quest-safe__info_descr-text-extra {
+      display: inline-block;
+      margin: 0 0 0 132px;
+      width: 11vw;
+      font-size: 13.5px;
+      line-height: 1.4;
+    }
+  }
+}
+
+.quest-safe__info_form {
+  padding: 20px 0;
+
+  & div {
+    display: inline-block;
+
+    label {
+      display: block;
+      font-size: 15.5px;
+
+      & span {
+        font-size: 17px;
+        color: rgb(153,51,51);
+      }
+    }
+
+    & input {
+      margin: 3px 5px 0 0;
+      padding: 6px 12px;
+      width: 200px;
+      height: 32px;
+      border: 1px solid rgb(204,204,204);
+      border-radius: 4px;
+      font-size: 14px;
+      color: rgb(128,128,128);
+      overflow: hidden;
+    }
+  }
+}
+
+
+/*============================================================================*\
+    @@QUEST-ROOMS GROUP - 77-th FACTORY
+\*============================================================================*/
+
+.quest-rooms-group-77th-factory {
+  font-family: "Jura-Regular", sans-serif;
+
+  & h3 {
+    padding: 23px;
+    background: rgb(204,204,204);
+    text-align: center;
+    font-family: "Orbitron-Light", sans-serif;
+    font-size: 3vw;
+    color: $color-graphite;
+  }
+}
+
+
+/*============================================================================*\
+    @@QUEST-ROOM - VENTILATION
+\*============================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
