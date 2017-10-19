@@ -614,7 +614,7 @@ header {
 \*============================================================================*/
 
 .b-callback {
-  padding: 40px 0;
+  padding: 50px 0 100px 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -684,21 +684,87 @@ header {
 }
 
 
-
-
-
-
-
-
-
-
 /*============================================================================*\
     @@CONTACTS
 \*============================================================================*/
+
+.b-contacts {
+  position: relative;
+  width: 100%;
+  height: 365px;
+  background: url("../img/b-contacts/map.png") 120px -50px;
+}
+
+.contacts__container {
+  position: absolute;
+  top: 0;
+  left: 160px;
+  padding: 10px 60px;
+  width: 310px;
+  height: 100%;
+  background: rgba($color-graphite,.6);
+  font-family: "Jura-Regular", sans-serif;
+  color: rgb(255,255,255);
+
+  & h3 {
+    padding: 15px 0;
+    font-size: 40px;
+  }
+
+  & p {
+    padding: 10px 0;
+    line-height: 1.2;
+    font-size: 15px;
+
+    & span {
+      font-size: 17px;
+    }
+  }
+
+  .contacts__social-media {
+    & div {
+      display: inline-block;
+      margin: 0 12px 0 0 ;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    & .contacts__social-media_vk {
+      background: rgb(255,255,255) url("../img/b-contacts/vk-social-media.svg") no-repeat 5px 7px/28px;
+    }
+
+    & .contacts__social-media_fb {
+      background: rgb(255,255,255) url("../img/b-contacts/facebook-social-media.svg") no-repeat 6px 7px/28px;
+    }
+
+    & .contacts__social-media_insta {
+      background: rgb(255,255,255) url("../img/b-contacts/instagram-social-media.svg") no-repeat 6px 6px/28px;
+    }
+  }
+}
+
 
 /*============================================================================*\
     @@FOOTER
 \*============================================================================*/
 
+footer {
+  padding: 10px 30px;
+  width: 100%;
+  height: 80px;
+  background: $color-graphite;
+  font-family: "Jura-Regular", sans-serif;
+  color: rgb(255,255,255);
+
+  & p {
+    float: right;
+    width: 350px;
+    height: 50px;
+    background: url("../img/logo-white-sm.png") no-repeat 255px 0;
+    font-size: 16px;
+    line-height: 3;
+  }
+}
 
 
