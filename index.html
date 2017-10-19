@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Лаборатория квестов ПОГРЕБ</title>
   <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
   <link rel="stylesheet" href="./css/reset.css">
@@ -15,25 +16,44 @@
       <p class="contacts__phone">(099) 772-13-81</p>
       <p class="contacts__address">ул. Победы, 61</p>
     </div>
-
-    <img src="./img/logo-white-sm.png" alt="Погреб" class="logo">
+    
+    <a href="#jumbotron">
+      <img class="logo" src="./img/logo-white-sm.png" alt="Погреб">
+    </a>
     <div class="nav-bar">
       <ul class="nav-bar__list">
-        <li class="nav-bar__item">Квест-румы</li>
-        <li class="nav-bar__item">А еще можно...</li>
-        <li class="nav-bar__item">Акции и скидки</li>
-        <li class="nav-bar__item">Наши контакты</li>
+        <li class="nav-bar__item">
+          Квест-румы
+          <a href="#b-quest-rooms"></a>
+        </li>
+        <li class="nav-bar__item">
+          А еще можно...
+          <a href="#b-other-services"></a>
+        </li>
+        <li class="nav-bar__item">
+          Акции и скидки
+          <a href="#b-discounts"></a>
+        </li>
+        <li class="nav-bar__item">
+          Наши контакты
+          <a href="#b-contacts"></a>
+        </li>
       </ul>
-      <button class="order nav-bar__order">Забронировать</button>
+
+      <button class="order nav-bar__order">
+        Забронировать
+        <a href="#b-callback"></a>
+      </button>
     </div>
   </header>
 
 
   <!--JUMBOTRON-->
   <section class="jumbotron">
-    <div class="video-container">
+    <a name="jumbotron"></a>
+    <div class="media-container">
       <video src="./img/b-jumbotron/promo-video.mp4" autoplay loop muted></video>
-      <div class="video-container__opacity"></div>
+      <div class="media-container__opacity"></div>
     </div>
 
     <div class="jumbotron__title">
@@ -44,14 +64,19 @@
       <p class="jumbotron__title_descr">
  Место, где сосредоточено сразу несколько квест-румов
  <span>Жми кнопку и узнай какие в Погребе есть квест-румы!</span>
-        </p>
-      <button class="jumbotron__order">Забронировать</button>
+      </p>
+      <p class="jumbotron__title_descr-mobile">Смотри дальше и узнай какие в Погребе есть квест-румы!</p>
+      <button class="jumbotron__order">
+        <a href="#b-callback"></a>
+        Забронировать
+      </button>
     </div>
   </section>
 
 
   <!--QUEST-ROOMS-->
   <section class="b-quest-rooms">
+    <a name="b-quest-rooms" class="tag"></a>
     <h2>Квест-комнаты</h2>
 
     <!--QUEST-ROOM - SAFE OF BANKER-->
@@ -144,6 +169,8 @@
         <div class="quest__img ventilation"></div>
       </div>
 
+      <div class="separator"></div>
+
       <!--QUEST-ROOM - CONTROL CENTER-->
       <div class="quest control-center">
         <div class="quest__img control-center"></div>
@@ -184,6 +211,8 @@
         </div>
       </div>
 
+      <div class="separator"></div>
+
       <!--QUEST-ROOM - SANITARY-->
       <div class="quest sanitary">
         <div class="quest__info sanitary">
@@ -216,6 +245,7 @@
 
   <!--OTHER SERVICES-->
   <section class="b-other-services">
+    <a name="b-other-services" class="tag"></a>
     <h2>А еще у нас есть...</h2>
 
     <!--OTHER SERVICES - CHILDREN'S PARTY-->
@@ -256,6 +286,9 @@
         </form>
       </div>
     </div>
+
+    <div class="separator"></div>
+
 
     <!--OTHER SERVICES - CARS-->
     <div class="oth-serv cars">
@@ -301,6 +334,7 @@
 
   <!--DISCOUNTS-->
   <section class="b-discounts">
+    <a name="b-discounts" class="tag"></a>
     <h2>Акции и скидки</h2>
 
     <div class="b-discounts__container">
@@ -321,6 +355,7 @@
 
   <!--CALLBACK-->
   <section class="b-callback">
+    <a name="b-callback" class="tag"></a>
     <div class="b-callback__text">
       <h3>Мы всё расскажем!</h3>
       <p>Получите всю необходимую информацию прямо сейчас. Оставьте свои контакты,
@@ -343,6 +378,7 @@
 
   <!--CONTACTS-->
   <section class="b-contacts">
+    <a name="b-contacts" class="tag"></a>
     <div class="contacts__container">
       <h3>Контакты</h3>
       <p>А д р е с :<br><span>ул. Победы, 61</span></p>
@@ -351,9 +387,15 @@
 
       <div class="contacts__social-media">
         <p>П о д п и с ы в а й с я:</p>
-        <div class="contacts__social-media_vk"></div>
-        <div class="contacts__social-media_fb"></div>
-        <div class="contacts__social-media_insta"></div>
+        <div class="contacts__social-media_vk">
+          <a href="https://vk.com/pogreb_laboratory" target="_blank"></a>
+        </div>
+        <div class="contacts__social-media_fb">
+          <a href="https://www.facebook.com/lq.pogreb" target="_blank"></a>
+        </div>
+        <div class="contacts__social-media_insta">
+          <a href="https://www.instagram.com/qlpogreb/" target="_blank"></a>
+        </div>
       </div>
     </div>
   </section>

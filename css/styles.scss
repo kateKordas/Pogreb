@@ -31,6 +31,7 @@ $color-graphite: rgb(51,51,51);
 button.order,
 button.callback-btn {
   display: inline-block;
+  margin: 10px auto;
   padding: 7px 20px;
   border: 1px solid $color-graphite;
   border-radius: 5px;
@@ -81,11 +82,14 @@ button.callback-btn {
   @media (max-width: 1060px) {
     margin: 5px 7vw;
   }
+  @media (max-width: 930px) {
+    margin: 0;
+  }
 }
 
 button.continue {
   display: block;
-  margin: 0 30vw;
+  margin: 0 0 0 30vw;
   padding: 5px 12px;
   width: 125px;
   height: 32px;
@@ -112,6 +116,25 @@ button.continue {
     color: rgb(0,0,0);
     box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.25);
   }
+
+  @media (max-width: 930px) {
+    margin: 0 0 0 55vw;
+  }
+}
+
+div.separator {
+  display: none;
+
+  @media (max-width: 930px) {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rgba(0,0,0,.5);
+  }
+}
+
+a.tag {
+  margin: -100px 0 0 0;
 }
 
 
@@ -168,6 +191,7 @@ header {
 .logo {
   display: inline-block;
   margin: 0 4vw;
+  cursor: pointer;
 
   @media (max-width: 1150px) {
     margin: 0;
@@ -184,6 +208,7 @@ header {
     display: inline-block;
 
     & .nav-bar__item {
+      position: relative;
       display: inline-block;
       margin: 5px 2vw;
       padding: 8px 10px;
@@ -201,12 +226,74 @@ header {
         margin: 5px 1vw;
         font-size: 12px;
       }
+
+      & a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 120px;
+        height: 30px;
+
+        @media (max-width: 910px) {
+          width: 106px;
+          height: 28px;
+        }
+      }
     }
   }
 
   .nav-bar__order {
+    position: relative;
+
+    & a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 167px;
+      height: 33px;
+    }
+
     @media (max-width: 910px) {
       margin: 5px 0 5px 1vw;
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  header {
+    height: 70px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .header__contacts {
+    margin: 15px;
+    display: inline-block;
+    text-align: left;
+
+    & .contacts__phone {
+      width: 180px;
+      text-indent: 40px;
+      font-size: 20px;
+    }
+    & .contacts__address {
+      display: none;
+    }
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .nav-bar {
+    & .nav-bar__list .nav-bar__item {
+      display: none;
+    }
+    & .nav-bar__order {
+      font-size: 17px;
     }
   }
 }
@@ -216,7 +303,7 @@ header {
     @@JUMBOTRON
 \*============================================================================*/
 
-.video-container {
+.media-container {
   position: relative;
   width: 100%;
 
@@ -226,7 +313,7 @@ header {
     vertical-align: bottom;
   }
 
-  & .video-container__opacity {
+  & .media-container__opacity {
     position: absolute;
     top: 0;
     left: 0;
@@ -241,13 +328,13 @@ header {
   top: 115px;
   left: 3vw;
   margin: 2vw 5vw;
-  background: url("../img/logo-white.png") no-repeat 0 0 /13vw;
   font-family: "Jura-Regular", sans-serif;
   color: #ffffff;
 
   & .jumbotron__title_logo {
     padding: 1vw 0 0 15vw;
     white-space: pre-wrap;
+    background: url("../img/logo-white.png") no-repeat 0 0 /13vw;
     font-size: 2.5vw;
   }
 
@@ -268,12 +355,27 @@ header {
     & span {
       font-size: 1.5vw;
       font-weight: 500;
+
+      @media (max-width: 930px) {
+        font-size: 17px;
+      }
     }
+
+    @media (max-width: 930px) {
+      background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 91% 6.5vw /37px;
+      font-size: 20px;
+      line-height: 1.1;
+    }
+  }
+
+  & .jumbotron__title_descr-mobile {
+    display: none;
   }
 }
 
 .jumbotron__order {
-  margin: 1vw 31vw;
+  position: relative;
+  margin: 1vw 0 0 31vw;
   width: 235px;
   height: 4.5vw;
   border: none;
@@ -292,6 +394,58 @@ header {
   &:active {
     transform: scale(.99);
     box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+  }
+
+  & a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: inherit;
+    height:inherit;
+  }
+}
+
+@media (max-width: 840px) {
+  .media-container {
+    height: 600px;
+    background: url("../img/b-jumbotron/background-mobile.png");
+    background-size: cover;
+
+    & video {
+      display: none;
+    }
+  }
+
+  .jumbotron__title {
+    left: 0;
+
+    & .jumbotron__title_logo {
+      padding: 1vw 0 0 35vw;
+      background: url("../img/logo-white.png") no-repeat 0 0 /25vw;
+      font-size: 5vw;
+    }
+
+    & h1 {
+      margin: 5vw 0;
+      font-size: 15vw;
+    }
+
+    & .jumbotron__title_descr {
+      display: none;
+    }
+
+    .jumbotron__title_descr-mobile {
+      display: block;
+      margin: 2.5vw 0;
+      height: 13vw;
+      background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 70vw 5vw /50px;
+      font-size: 22px;
+    }
+  }
+
+  .jumbotron__order {
+    display: none;
   }
 }
 
@@ -337,31 +491,70 @@ header {
   margin: 5vw 0;
   width: 43vw;
   height: 28vw;
+
+  @media (max-width: 930px) {
+    margin: 2vw auto;
+    width: 53vw;
+    height: 50vw;
+  }
 }
 
 .quest__img.safe {
   background: url("../img/b-quest-rooms/img-safe.png");
   background-size: cover;
+
+  @media (max-width: 930px) {
+    background: url("../img/b-quest-rooms/img-safe-mobile.png") no-repeat;
+    background-size: cover;
+  }
 }
 .quest__img.ventilation {
   background: url("../img/b-quest-rooms/img-ventilation.png");
   background-size: cover;
+
+  @media (max-width: 930px) {
+    background: url("../img/b-quest-rooms/img-ventilation-mobile.png") no-repeat;
+    background-size: cover;
+    order: 0;
+  }
 }
 .quest__img.control-center {
   background: url("../img/b-quest-rooms/img-control-center.png");
   background-size: cover;
+
+  @media (max-width: 930px) {
+    background: url("../img/b-quest-rooms/img-control-center-mobile.png") no-repeat;
+    background-size: cover;
+  }
 }
 .quest__img.sanitary {
   background: url("../img/b-quest-rooms/img-sanitary.png");
   background-size: cover;
+
+  @media (max-width: 930px) {
+    background: url("../img/b-quest-rooms/img-sanitary-mobile.png") no-repeat;
+    background-size: cover;
+    order: 0;
+  }
 }
 .oth-serv__img.child-party {
   background: url("../img/b-other-servises/img-ch-party.png");
   background-size: cover;
+
+  @media (max-width: 930px) {
+    background: url("../img/b-other-servises/img-ch-party-mobile.png") no-repeat;
+    background-size: cover;
+  }
 }
 .oth-serv__img.cars {
   background: url("../img/b-other-servises/img-cars.png");
   background-size: cover;
+
+  @media (max-width: 930px) {
+    background: url("../img/b-other-servises/img-cars-mobile.png") no-repeat;
+    background-size: cover;
+    order: 0;
+  }
 }
 
 
@@ -377,6 +570,24 @@ header {
   color: #ffffff;
 }
 
+@media (max-width: 930px) {
+  .quest__info,
+  .oth-serv__info {
+    margin: 0 auto;
+    width: 80vw;
+  }
+
+  .quest__info.ventilation {
+    order: 1;
+  }
+  .quest__info.sanitary {
+    order: 1;
+  }
+  .oth-serv__info.cars {
+    order: 1;
+  }
+}
+
 .quest__info_title,
 .oth-serv__info_title {
   white-space: pre-wrap;
@@ -390,11 +601,21 @@ header {
     text-transform: none;
     line-height: 2.5;
   }
+
+  @media (max-width: 930px) {
+    white-space: normal;
+    text-align: center;
+    font-size: 45px;
+  }
 }
 
 .oth-serv__info_title {
   margin: 30px 0;
   line-height: .7;
+}
+
+@media (max-width: 930px) {
+  text-align: center;
 }
 
 /*============================================================================*\
@@ -406,59 +627,78 @@ header {
   margin: 15px 3vw 15px 0;
   padding: 5px 15px;
   background: rgba(102,102,102,.25);
-
-  & .oth-serv__info_brief-cost.cars {
-    font-size: 1.2vw;
-    line-height: 2;
-  }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
 
   & .quest__info_brief-cost,
   & .quest__info_brief-team,
-  & .oth-serv__info_brief-cost.child-party,
+  & .oth-serv__info_brief-cost,
   & .oth-serv__info_brief-cost1.cars,
   & .oth-serv__info_brief-cost2.cars,
   & .oth-serv__info_brief-team,
   & .oth-serv__info_brief-duration {
-    display: inline-block;
-    width: 13vw;
     white-space: pre-wrap;
-    font-size: 1.6vw;
+    font-size: 21px;
     line-height: 1.5;
 
     & span {
-      font-size: 1.2vw;
+      font-size: 16px;
     }
   }
 
   & .quest__info_brief-level {
-    display: inline-block;
-    width: 19vw;
+    width: 17vw;
     height: 70px;
     white-space: pre-wrap;
-    font-size: 1.2vw;
+    font-size: 16px;
     line-height: 2;
   }
 
   & .quest__info_brief-level.safe,
   & .quest__info_brief-level.ventilation {
     background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
-                url("../img/b-quest-rooms/level-1.png") no-repeat 6.5vw 38px /5vw,
-                url("../img/b-quest-rooms/level-0.5.png") no-repeat 13vw 38px /5vw;
+                url("../img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
+                url("../img/b-quest-rooms/level-0.5.png") no-repeat 10vw 38px /5vw;
+
+    @media (max-width: 930px) {
+      width: 23vw;
+      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
+                  url("../img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
+                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 16vw 38px /7vw;
+    }
   }
+
   & .quest__info_brief-level.control-center {
     background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
-                url("../img/b-quest-rooms/level-0.5.png") no-repeat 6.5vw 38px /5vw,
-                url("../img/b-quest-rooms/level-0.png") no-repeat 13vw 38px /5vw;
+                url("../img/b-quest-rooms/level-0.5.png") no-repeat 5vw 38px /5vw,
+                url("../img/b-quest-rooms/level-0.png") no-repeat 10vw 38px /5vw;
+
+    @media (max-width: 930px) {
+      width: 23vw;
+      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
+                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 8vw 38px /7vw,
+                  url("../img/b-quest-rooms/level-0.png") no-repeat 16vw 38px /7vw;
+    }
   }
+
   & .quest__info_brief-level.sanitary {
     background: url("../img/b-quest-rooms/level-0.png") no-repeat 0 38px /5vw,
-                url("../img/b-quest-rooms/level-0.png") no-repeat 6.5vw 38px /5vw,
-                url("../img/b-quest-rooms/level-0.png") no-repeat 13vw 38px /5vw;
+                url("../img/b-quest-rooms/level-0.png") no-repeat 5vw 38px /5vw,
+                url("../img/b-quest-rooms/level-0.png") no-repeat 10vw 38px /5vw;
+
+    @media (max-width: 930px) {
+      width: 23vw;
+      background: url("../img/b-quest-rooms/level-0.png") no-repeat 0 38px /7vw,
+                  url("../img/b-quest-rooms/level-0.png") no-repeat 8vw 38px /7vw,
+                  url("../img/b-quest-rooms/level-0.png") no-repeat 16vw 38px /7vw;
+    }
   }
 
   & .quest__info_brief-fn {
     margin: 8px 0;
-    font-size: 0.95vw;
+    font-size: 13px;
   }
 }
 
@@ -476,15 +716,23 @@ header {
     display: inline-block;
     padding: 5px 4vw 5px 0;
     vertical-align: top;
-    font-size: 1.2vw;
+    font-size: 16px;
   }
 
   & .quest__info_descr-text,
   & .oth-serv__info_descr-text {
     display: inline-block;
-    width: 30vw;
-    font-size: 1.15vw;
+    width: 36vw;
+    font-size: 15px;
     line-height: 1.4;
+
+    @media (max-width: 930px) {
+      width: 64vw;
+    }
+  }
+
+  & .oth-serv__info_descr-text.cars {
+    width: auto;
   }
 }
 
@@ -495,7 +743,7 @@ header {
 
 .quest__info_form,
 .oth-serv__info_form {
-  padding: 10px 0;
+  margin: 10px 0 30px 0;
 
   & div {
     display: inline-block;
@@ -521,6 +769,10 @@ header {
       color: rgb(128,128,128);
       overflow: hidden;
     }
+  }
+
+  @media (max-width: 930px) {
+    margin: 10px 0 30px 13vw;
   }
 }
 
@@ -583,27 +835,42 @@ header {
   padding: 40px 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: stretch;
   background: $color-graphite;
 
   .discounts__birthday,
   .discounts__2nd-room {
     display: inline-block;
-    width: 40vw;
+    width: 48vw;
     text-align: center;
 
     & p {
       white-space: pre-wrap;
-      font-size: 1.8vw;
+      font-size: 23px;
 
       & span {
-        font-size: 1.3vw;
+        font-size: 18px;
       }
     }
 
     & img {
       width: 43vw;
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  .b-discounts__container .discounts__birthday,
+  .b-discounts__container .discounts__2nd-room {
+    width: 80vw;
+
+    & p {
+      font-size: 27px;
+    }
+
+    & img {
+      width: 70vw;
     }
   }
 }
@@ -626,24 +893,29 @@ header {
 
 
 .b-callback__text {
-  padding: 0 5vw;
+  padding: 0 5vw 0 0;
   width: 55vw;
   text-align: center;
 
+  @media (max-width: 840px) {
+    padding: 0 0 30px 0;
+    width: 80vw;
+  }
+
   & h3 {
     margin: 20px 0;
-    font-size: 3.5vw;
+    font-size: 40px;
     font-weight: 700;
   }
 
   & p {
-    font-size: 1.65vw;
+    font-size: 18px;
     line-height: 1.3;
   }
 }
 
 .b-callback__form {
-  width: 30vw;
+  width: 300px;
 
   & label {
     display: block;
@@ -657,7 +929,7 @@ header {
   & input {
     margin: 10px 0;
     padding: 10px 12px;
-    width: 22vw;
+    width: 300px;
     height: 44px;
     border: 2px solid rgb(204,204,204);
     border-radius: 6px;
@@ -667,7 +939,8 @@ header {
   }
 
   & .callback-btn_big {
-    width: 22vw;
+    margin: 0;
+    width: 300px;
     height: 44px;
     border-radius: 6px;
     background: rgb(250,149,30);
@@ -728,6 +1001,13 @@ header {
       width: 40px;
       height: 40px;
       border-radius: 50%;
+      cursor: pointer;
+
+      & a {
+        display: inline-block;
+        width: inherit;
+        height: inherit;
+      }
     }
 
     & .contacts__social-media_vk {
