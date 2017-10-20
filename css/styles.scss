@@ -119,19 +119,6 @@ button.continue {
   }
 }
 
-button.close {
-  position: absolute;
-  top: 5px;
-  left: 47vw;
-  border: none;
-  background: none;
-  font-family: "Jura-Regular", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: rgba(0,0,0,.4);
-  cursor: pointer;
-}
-
 div.separator {
   display: none;
 
@@ -145,14 +132,6 @@ div.separator {
 
 a.tag {
   margin: -200px 0 0 0;
-}
-
-.js-show {
-  display: block;
-}
-
-.js-not-show {
-  display: none;
 }
 
 
@@ -927,7 +906,7 @@ header {
 .quest__info_descr_continue {
   position: absolute;
   top: -230px;
-  padding: 30px 15px;
+  padding: 15px 15px 30px 15px;
   width: 50vw;
   border: 1px solid rgba(0,0,0,.2);
   border-radius: 6px;
@@ -935,12 +914,23 @@ header {
   font-family: "Jura-Regular", sans-serif;
   color: $color-graphite;
 
-  &.safe,
-  &.control-center {
+  &.safePopUp,
+  &.controlCenterPopUp {
     left: -22vw;
   }
-  &.ventilation {
+  &.ventilationPopUp {
     left: 22vw;
+  }
+
+  button.close {
+    position: absolute;
+    top: 16px;
+    left: 47vw;
+    width: 10px;
+    height: 10px;
+    border: none;
+    background: url("../img/close.svg") no-repeat 0 0 /10px;
+    cursor: pointer;
   }
 
   & .quest__info_descr_continue-title {

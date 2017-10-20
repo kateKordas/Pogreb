@@ -91,18 +91,6 @@ button.continue {
     button.continue {
       display: none; } }
 
-button.close {
-  position: absolute;
-  top: 5px;
-  left: 47vw;
-  border: none;
-  background: none;
-  font-family: "Jura-Regular", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.4);
-  cursor: pointer; }
-
 div.separator {
   display: none; }
   @media (max-width: 930px) {
@@ -114,12 +102,6 @@ div.separator {
 
 a.tag {
   margin: -200px 0 0 0; }
-
-.js-show {
-  display: block; }
-
-.js-not-show {
-  display: none; }
 
 /*============================================================================*    @@HEADER
 \*============================================================================*/
@@ -726,17 +708,26 @@ header {
 .quest__info_descr_continue {
   position: absolute;
   top: -230px;
-  padding: 30px 15px;
+  padding: 15px 15px 30px 15px;
   width: 50vw;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   background: white;
   font-family: "Jura-Regular", sans-serif;
   color: #333333; }
-  .quest__info_descr_continue.safe, .quest__info_descr_continue.control-center {
+  .quest__info_descr_continue.safePopUp, .quest__info_descr_continue.controlCenterPopUp {
     left: -22vw; }
-  .quest__info_descr_continue.ventilation {
+  .quest__info_descr_continue.ventilationPopUp {
     left: 22vw; }
+  .quest__info_descr_continue button.close {
+    position: absolute;
+    top: 16px;
+    left: 47vw;
+    width: 10px;
+    height: 10px;
+    border: none;
+    background: url("../img/close.svg") no-repeat 0 0/10px;
+    cursor: pointer; }
   .quest__info_descr_continue .quest__info_descr_continue-title {
     padding: 15px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);

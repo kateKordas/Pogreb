@@ -1,9 +1,9 @@
 "use strict";
 
-function fillInDetailView(btn) {
+function addDetailView(btn) {
 
   var detailView = {
-    questSafe: {
+    safePopUp: {
       title: "Квест-комната \"Сейф Банкира\"",
       text: "Хотите почувствовать себя в роли Джокера, самого яркого представителя преступного мира? Для этого не обязательно красить волосы в зеленый цвет!Достаточно пройти квест-комнату \"Сейф Банкира\"!\n" +
       "Только представьте в своих руках десятки тысяч... нет! Миллионы долларов!!!\n" +
@@ -12,14 +12,14 @@ function fillInDetailView(btn) {
       "Но выход есть всегда, нужно лишь обнаружить правильные подсказки, забрать богатство до прихода полиции!\n" +
       "А главный враг - это время. Действуйте! У Вас всего 60 минут!"
     },
-    questVentilation: {
+    ventilationPopUp: {
       title: "Квест-комната \"Вентиляционная\"",
       text: "Вы давно заметили в центре города странное здание вокруг которого ходит много легенд и историй. \"77 завод” завод “Гамма” - все знают, что это за здание. Но ни Вы, ни Ваши друзья никогда не были внутри. Что там? Ваше любопытство в очередной раз привело Вас к этому строению, немного побродив вокруг Вы нашли странную дыру в основании здания, заглянув туда стало понятно, что залезть можно. 2 минуты и Вы с друзьями внутри в странном помещении…\n" +
       "Несколько дверей, странные проходы и вы заметили горящую лампочку и гул работающей вентиляции. Странно, что тут до сих пор горит свет и что-то работает. Вы прошли очередную дверь и тот кто шел последним, по ошибке захлопнул ее!\n" +
       "Шум вентиляции стал ближе и через пару минут Вы поняли, что эта огромная вытяжка. Большой вентилятор вытягивает воздух из помещения!\n" +
       "Нужно поскорее выбираться отсюда! Но что-то подсказывает, что это не последняя ловушка в этом здании…"
     },
-    questControlCenter: {
+    controlCenterPopUp: {
       title: "Квест-комната \"Центр Управления\"",
       text: "Это продолжение квеста \"77-й завод\" - 2-я серия. Если Вы прошли квест-рум \"Вентиляционная\", Вы знаете часть истории про рабочих, которые оставили массу шифров и разных загадок после себя.\n" +
       "Но зачем им необходимо было прятаться, что сподвигло их на этот шаг? Почему они не выбрались и почему писали так много писем? Где они сейчас? Что с ними произошло?\n" +
@@ -30,9 +30,9 @@ function fillInDetailView(btn) {
 
   var containerDetailView = document.createElement("div");
   containerDetailView.innerHTML =
-  `<div class="quest__info_descr_continue">
+  `<div class="quest__info_descr_continue ${btn.getAttribute("id")}">
     <p class="quest__info_descr_continue-title">${detailView[btn.getAttribute("id")].title}</p>
-    <button class="close">x</button>
+    <button class="close"></button>
     <p class="quest__info_descr_continue-text">${detailView[btn.getAttribute("id")].text}</p>
 
     <form class="quest__info_descr_continue-form">
@@ -45,11 +45,18 @@ function fillInDetailView(btn) {
   btn.parentElement.appendChild(containerDetailView);
 }
 
+function removeDetailView(btn) {
+  var containerDetailView = document.querySelector(".quest__info_descr_continue");
+  btn.parentElement.removeChild(containerDetailView);
+}
+
+
+
 [].forEach.call(document.querySelectorAll(".continue"), function (element) {
   element.addEventListener("click", function (event) {
     var btn = event.target;
 
-    fillInDetailView(btn);
+    addDetailView(btn);
 
   });
 });
