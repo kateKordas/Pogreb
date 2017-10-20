@@ -62,7 +62,7 @@ button.callback-btn {
       margin: 5px 7vw; } }
   @media (max-width: 930px) {
     button.callback-btn {
-      margin: 0; } }
+      margin: 5px 0; } }
 
 button.continue {
   display: block;
@@ -92,6 +92,9 @@ button.continue {
   @media (max-width: 930px) {
     button.continue {
       margin: 0 0 0 55vw; } }
+  @media (max-width: 520px) {
+    button.continue {
+      display: none; } }
 
 div.separator {
   display: none; }
@@ -209,6 +212,7 @@ header {
     display: inline-block;
     text-align: left; }
     .header__contacts .contacts__phone {
+      margin: 0;
       width: 180px;
       text-indent: 40px;
       font-size: 20px; }
@@ -219,7 +223,28 @@ header {
   .nav-bar .nav-bar__list .nav-bar__item {
     display: none; }
   .nav-bar .nav-bar__order {
-    font-size: 17px; } }
+    margin: 5px 0;
+    font-size: 17px; }
+    .nav-bar .nav-bar__order a {
+      width: 190px;
+      height: 36px; } }
+
+@media (max-width: 520px) {
+  .header__contacts {
+    margin: 15px 0; }
+    .header__contacts .contacts__phone {
+      width: 145px;
+      text-indent: 30px;
+      font-size: 16px; }
+  .nav-bar .nav-bar__order {
+    background: #fa951e;
+    font-size: 14px;
+    text-indent: 0; }
+    .nav-bar .nav-bar__order:hover, .nav-bar .nav-bar__order:active {
+      background: #f7c205; }
+    .nav-bar .nav-bar__order a {
+      width: 147px;
+      height: 33px; } }
 
 /*============================================================================*    @@JUMBOTRON
 \*============================================================================*/
@@ -323,11 +348,39 @@ header {
     .jumbotron__title .jumbotron__title_descr-mobile {
       display: block;
       margin: 2.5vw 0;
-      height: 13vw;
+      width: 95vw;
+      height: 20vw;
       background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 70vw 5vw/50px;
       font-size: 22px; }
   .jumbotron__order {
     display: none; } }
+
+@media (max-width: 620px) {
+  .media-container {
+    background-position-x: -150px; }
+  .jumbotron__title .jumbotron__title_logo {
+    padding: 1vw 0 0 35vw;
+    background: url("../img/logo-white.png") no-repeat 0 0/30vw;
+    font-size: 7vw; }
+  .jumbotron__title h1 {
+    margin: 10vw 0;
+    font-size: 17vw; }
+  .jumbotron__title .jumbotron__title_descr-mobile {
+    margin: 6vw 0;
+    background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 80vw 7vw/50px;
+    font-size: 25px; } }
+
+@media (max-width: 420px) {
+  .media-container {
+    height: 500px;
+    background-position-x: -250px; }
+  .jumbotron__title h1 {
+    font-size: 18vw; }
+  .jumbotron__title .jumbotron__title_descr-mobile {
+    height: 50vw;
+    margin: 6vw 0;
+    background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 77vw 16vw/50px;
+    font-size: 23px; } }
 
 /*============================================================================*    @@QUEST-ROOMS
 \*============================================================================*/
@@ -338,13 +391,14 @@ header {
     background: #cccccc;
     text-align: center;
     font-family: "Orbitron-Light", sans-serif;
-    font-size: 5vw;
+    font-size: 35px;
     color: #333333; }
 
 /*============================================================================*    @@QUEST-ROOMS & OTHER SERVICES
 \*============================================================================*/
 .quest,
 .oth-serv {
+  padding: 5vw 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -355,7 +409,6 @@ header {
 \*============================================================================*/
 .quest__img,
 .oth-serv__img {
-  margin: 5vw 0;
   width: 43vw;
   height: 28vw; }
   @media (max-width: 930px) {
@@ -364,6 +417,11 @@ header {
       margin: 2vw auto;
       width: 53vw;
       height: 50vw; } }
+  @media (max-width: 520px) {
+    .quest__img,
+    .oth-serv__img {
+      width: 85vw;
+      height: 80vw; } }
 
 .quest__img.safe {
   background: url("../img/b-quest-rooms/img-safe.png");
@@ -429,7 +487,7 @@ header {
   .quest__info,
   .oth-serv__info {
     margin: 0 auto;
-    width: 80vw; }
+    width: 95vw; }
   .quest__info.ventilation {
     order: 1; }
   .quest__info.sanitary {
@@ -452,16 +510,19 @@ header {
   @media (max-width: 930px) {
     .quest__info_title,
     .oth-serv__info_title {
-      white-space: normal;
       text-align: center;
       font-size: 45px; } }
+
+@media (max-width: 520px) {
+  .quest__info_title.ventilation {
+    font-size: 35px; } }
 
 .oth-serv__info_title {
   margin: 30px 0;
   line-height: .7; }
-
-@media (max-width: 930px) {
-  text-align: center; }
+  @media (max-width: 520px) {
+    .oth-serv__info_title {
+      line-height: 1; } }
 
 /*============================================================================*    @@QUEST ROOM & OTHER SERVICES - BRIEF
 \*============================================================================*/
@@ -474,6 +535,10 @@ header {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: stretch; }
+  @media (max-width: 930px) {
+    .quest__info_brief,
+    .oth-serv__info_brief {
+      margin: 15px 0; } }
   .quest__info_brief .quest__info_brief-cost,
   .quest__info_brief .quest__info_brief-team,
   .quest__info_brief .oth-serv__info_brief-cost,
@@ -506,6 +571,30 @@ header {
     .oth-serv__info_brief .oth-serv__info_brief-team span,
     .oth-serv__info_brief .oth-serv__info_brief-duration span {
       font-size: 16px; }
+    @media (max-width: 520px) {
+      .quest__info_brief .quest__info_brief-cost,
+      .quest__info_brief .quest__info_brief-team,
+      .quest__info_brief .oth-serv__info_brief-cost,
+      .quest__info_brief .oth-serv__info_brief-cost1.cars,
+      .quest__info_brief .oth-serv__info_brief-cost2.cars,
+      .quest__info_brief .oth-serv__info_brief-team,
+      .quest__info_brief .oth-serv__info_brief-duration,
+      .oth-serv__info_brief .quest__info_brief-cost,
+      .oth-serv__info_brief .quest__info_brief-team,
+      .oth-serv__info_brief .oth-serv__info_brief-cost,
+      .oth-serv__info_brief .oth-serv__info_brief-cost1.cars,
+      .oth-serv__info_brief .oth-serv__info_brief-cost2.cars,
+      .oth-serv__info_brief .oth-serv__info_brief-team,
+      .oth-serv__info_brief .oth-serv__info_brief-duration {
+        text-align: center; } }
+  @media (max-width: 520px) {
+    .quest__info_brief .oth-serv__info_brief-duration,
+    .oth-serv__info_brief .oth-serv__info_brief-duration {
+      display: none; } }
+  @media (max-width: 520px) {
+    .quest__info_brief .oth-serv__info_brief-cost.cars,
+    .oth-serv__info_brief .oth-serv__info_brief-cost.cars {
+      width: 100%; } }
   .quest__info_brief .quest__info_brief-level,
   .oth-serv__info_brief .quest__info_brief-level {
     width: 17vw;
@@ -513,6 +602,10 @@ header {
     white-space: pre-wrap;
     font-size: 16px;
     line-height: 2; }
+    @media (max-width: 520px) {
+      .quest__info_brief .quest__info_brief-level,
+      .oth-serv__info_brief .quest__info_brief-level {
+        display: none; } }
   .quest__info_brief .quest__info_brief-level.safe,
   .quest__info_brief .quest__info_brief-level.ventilation,
   .oth-serv__info_brief .quest__info_brief-level.safe,
@@ -525,6 +618,13 @@ header {
       .oth-serv__info_brief .quest__info_brief-level.ventilation {
         width: 23vw;
         background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px/7vw, url("../img/b-quest-rooms/level-1.png") no-repeat 8vw 38px/7vw, url("../img/b-quest-rooms/level-0.5.png") no-repeat 16vw 38px/7vw; } }
+    @media (max-width: 670px) {
+      .quest__info_brief .quest__info_brief-level.safe,
+      .quest__info_brief .quest__info_brief-level.ventilation,
+      .oth-serv__info_brief .quest__info_brief-level.safe,
+      .oth-serv__info_brief .quest__info_brief-level.ventilation {
+        width: 30vw;
+        background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px/9vw, url("../img/b-quest-rooms/level-1.png") no-repeat 9vw 38px/9vw, url("../img/b-quest-rooms/level-0.5.png") no-repeat 18vw 38px/9vw; } }
   .quest__info_brief .quest__info_brief-level.control-center,
   .oth-serv__info_brief .quest__info_brief-level.control-center {
     background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px/5vw, url("../img/b-quest-rooms/level-0.5.png") no-repeat 5vw 38px/5vw, url("../img/b-quest-rooms/level-0.png") no-repeat 10vw 38px/5vw; }
@@ -533,6 +633,11 @@ header {
       .oth-serv__info_brief .quest__info_brief-level.control-center {
         width: 23vw;
         background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px/7vw, url("../img/b-quest-rooms/level-0.5.png") no-repeat 8vw 38px/7vw, url("../img/b-quest-rooms/level-0.png") no-repeat 16vw 38px/7vw; } }
+    @media (max-width: 670px) {
+      .quest__info_brief .quest__info_brief-level.control-center,
+      .oth-serv__info_brief .quest__info_brief-level.control-center {
+        width: 30vw;
+        background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px/9vw, url("../img/b-quest-rooms/level-0.5.png") no-repeat 9vw 38px/9vw, url("../img/b-quest-rooms/level-0.png") no-repeat 18vw 38px/9vw; } }
   .quest__info_brief .quest__info_brief-level.sanitary,
   .oth-serv__info_brief .quest__info_brief-level.sanitary {
     background: url("../img/b-quest-rooms/level-0.png") no-repeat 0 38px/5vw, url("../img/b-quest-rooms/level-0.png") no-repeat 5vw 38px/5vw, url("../img/b-quest-rooms/level-0.png") no-repeat 10vw 38px/5vw; }
@@ -541,10 +646,19 @@ header {
       .oth-serv__info_brief .quest__info_brief-level.sanitary {
         width: 23vw;
         background: url("../img/b-quest-rooms/level-0.png") no-repeat 0 38px/7vw, url("../img/b-quest-rooms/level-0.png") no-repeat 8vw 38px/7vw, url("../img/b-quest-rooms/level-0.png") no-repeat 16vw 38px/7vw; } }
+    @media (max-width: 670px) {
+      .quest__info_brief .quest__info_brief-level.sanitary,
+      .oth-serv__info_brief .quest__info_brief-level.sanitary {
+        width: 30vw;
+        background: url("../img/b-quest-rooms/level-0.png") no-repeat 0 38px/9vw, url("../img/b-quest-rooms/level-0.png") no-repeat 9vw 38px/9vw, url("../img/b-quest-rooms/level-0.png") no-repeat 18vw 38px/9vw; } }
   .quest__info_brief .quest__info_brief-fn,
   .oth-serv__info_brief .quest__info_brief-fn {
     margin: 8px 0;
     font-size: 13px; }
+    @media (max-width: 930px) {
+      .quest__info_brief .quest__info_brief-fn,
+      .oth-serv__info_brief .quest__info_brief-fn {
+        text-align: center; } }
 
 /*============================================================================*    @@QUEST ROOM & OTHER SERVICES - DESCRIPTION
 \*============================================================================*/
@@ -559,6 +673,14 @@ header {
     padding: 5px 4vw 5px 0;
     vertical-align: top;
     font-size: 16px; }
+    @media (max-width: 930px) {
+      .quest__info_descr .quest__info_descr-title,
+      .quest__info_descr .oth-serv__info_descr-title,
+      .oth-serv__info_descr .quest__info_descr-title,
+      .oth-serv__info_descr .oth-serv__info_descr-title {
+        display: block;
+        padding: 10px 0;
+        text-align: center; } }
   .quest__info_descr .quest__info_descr-text,
   .quest__info_descr .oth-serv__info_descr-text,
   .oth-serv__info_descr .quest__info_descr-text,
@@ -572,7 +694,10 @@ header {
       .quest__info_descr .oth-serv__info_descr-text,
       .oth-serv__info_descr .quest__info_descr-text,
       .oth-serv__info_descr .oth-serv__info_descr-text {
-        width: 64vw; } }
+        display: block;
+        padding: 10px;
+        width: 95vw;
+        text-align: center; } }
   .quest__info_descr .oth-serv__info_descr-text.cars,
   .oth-serv__info_descr .oth-serv__info_descr-text.cars {
     width: auto; }
@@ -581,7 +706,7 @@ header {
 \*============================================================================*/
 .quest__info_form,
 .oth-serv__info_form {
-  margin: 10px 0 30px 0; }
+  margin: 10px 0; }
   .quest__info_form div,
   .oth-serv__info_form div {
     display: inline-block; }
@@ -604,10 +729,14 @@ header {
       font-size: 14px;
       color: gray;
       overflow: hidden; }
+      @media (max-width: 930px) {
+        .quest__info_form div input,
+        .oth-serv__info_form div input {
+          width: 165px; } }
   @media (max-width: 930px) {
     .quest__info_form,
     .oth-serv__info_form {
-      margin: 10px 0 30px 13vw; } }
+      text-align: center; } }
 
 /*============================================================================*    @@QUEST-ROOMS GROUP - 77-th FACTORY
 \*============================================================================*/
@@ -618,8 +747,11 @@ header {
     background: #cccccc;
     text-align: center;
     font-family: "Orbitron-Light", sans-serif;
-    font-size: 3vw;
+    font-size: 35px;
     color: #333333; }
+    @media (max-width: 520px) {
+      .quest-rooms-group-77th-factory h3 {
+        font-size: 25px; } }
 
 /*============================================================================*    @@OTHER SERVICES
 \*============================================================================*/
@@ -630,7 +762,7 @@ header {
     background: #cccccc;
     text-align: center;
     font-family: "Orbitron-Light", sans-serif;
-    font-size: 2.5vw;
+    font-size: 35px;
     color: #333333; }
 
 /*============================================================================*    @@DISCOUNTS
@@ -643,7 +775,7 @@ header {
     background: #cccccc;
     text-align: center;
     font-family: "Orbitron-Light", sans-serif;
-    font-size: 3vw;
+    font-size: 35px;
     color: #333333; }
 
 .b-discounts__container {
@@ -691,6 +823,9 @@ header {
   background: #333333;
   font-family: "Jura-Regular", sans-serif;
   color: white; }
+  @media (max-width: 520px) {
+    .b-callback {
+      border-top: 1px solid grey; } }
 
 .b-callback__text {
   padding: 0 5vw 0 0;
@@ -710,6 +845,9 @@ header {
 
 .b-callback__form {
   width: 300px; }
+  @media (max-width: 520px) {
+    .b-callback__form {
+      text-align: center; } }
   .b-callback__form label {
     display: block;
     font-size: 21px; }
@@ -745,17 +883,42 @@ header {
   width: 100%;
   height: 365px;
   background: url("../img/b-contacts/map.png") 120px -50px; }
+  @media (max-width: 1000px) {
+    .b-contacts {
+      background-position-x: -10px; } }
+  @media (max-width: 800px) {
+    .b-contacts {
+      background-position-x: -170px; } }
+  @media (max-width: 650px) {
+    .b-contacts {
+      background-position-x: -250px; } }
+  @media (max-width: 520px) {
+    .b-contacts {
+      height: 660px;
+      border-top: 1px solid grey;
+      background-position: -210px 365px;
+      background-size: 800px; } }
 
 .contacts__container {
-  position: absolute;
-  top: 0;
-  left: 160px;
+  margin: 0 0 0 10vw;
   padding: 10px 60px;
   width: 310px;
-  height: 100%;
+  height: 365px;
   background: rgba(51, 51, 51, 0.6);
   font-family: "Jura-Regular", sans-serif;
   color: white; }
+  @media (max-width: 800px) {
+    .contacts__container {
+      margin: 0 2vw;
+      padding: 10px 30px;
+      width: 250px; } }
+  @media (max-width: 520px) {
+    .contacts__container {
+      margin: 0;
+      padding: 0 0 0 25vw;
+      width: 100%;
+      border-bottom: 1px solid grey;
+      background: #333333; } }
   .contacts__container h3 {
     padding: 15px 0;
     font-size: 40px; }
@@ -788,10 +951,13 @@ header {
 footer {
   padding: 10px 30px;
   width: 100%;
-  height: 80px;
+  height: 70px;
   background: #333333;
   font-family: "Jura-Regular", sans-serif;
   color: white; }
+  @media (max-width: 520px) {
+    footer {
+      padding: 10px; } }
   footer p {
     float: right;
     width: 350px;
@@ -799,3 +965,9 @@ footer {
     background: url("../img/logo-white-sm.png") no-repeat 255px 0;
     font-size: 16px;
     line-height: 3; }
+    @media (max-width: 520px) {
+      footer p {
+        width: 300px;
+        background-position-x: 220px;
+        font-size: 14px;
+        line-height: 3.4; } }

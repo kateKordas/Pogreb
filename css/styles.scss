@@ -83,8 +83,9 @@ button.callback-btn {
     margin: 5px 7vw;
   }
   @media (max-width: 930px) {
-    margin: 0;
+    margin: 5px 0;
   }
+
 }
 
 button.continue {
@@ -119,6 +120,10 @@ button.continue {
 
   @media (max-width: 930px) {
     margin: 0 0 0 55vw;
+  }
+
+  @media (max-width: 520px) {
+    display: none;
   }
 }
 
@@ -275,6 +280,7 @@ header {
     text-align: left;
 
     & .contacts__phone {
+      margin: 0;
       width: 180px;
       text-indent: 40px;
       font-size: 20px;
@@ -293,7 +299,40 @@ header {
       display: none;
     }
     & .nav-bar__order {
+      margin: 5px 0;
       font-size: 17px;
+
+      & a {
+        width: 190px;
+        height: 36px;
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .header__contacts {
+    margin: 15px 0;
+
+    & .contacts__phone {
+      width: 145px;
+      text-indent: 30px;
+      font-size: 16px;
+    }
+  }
+
+  .nav-bar .nav-bar__order {
+    background: rgb(250,149,30);
+    font-size: 14px;
+    text-indent: 0;
+
+    &:hover, &:active {
+      background: rgb(247,194,5);
+    }
+
+    & a {
+      width: 147px;
+      height: 33px;
     }
   }
 }
@@ -402,7 +441,7 @@ header {
     left: 0;
     display: inline-block;
     width: inherit;
-    height:inherit;
+    height: inherit;
   }
 }
 
@@ -435,10 +474,11 @@ header {
       display: none;
     }
 
-    .jumbotron__title_descr-mobile {
+    & .jumbotron__title_descr-mobile {
       display: block;
       margin: 2.5vw 0;
-      height: 13vw;
+      width: 95vw;
+      height: 20vw;
       background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 70vw 5vw /50px;
       font-size: 22px;
     }
@@ -446,6 +486,51 @@ header {
 
   .jumbotron__order {
     display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .media-container {
+    background-position-x: -150px;
+  }
+
+  .jumbotron__title {
+    & .jumbotron__title_logo {
+      padding: 1vw 0 0 35vw;
+      background: url("../img/logo-white.png") no-repeat 0 0 /30vw;
+      font-size: 7vw;
+    }
+
+    & h1 {
+      margin: 10vw 0;
+      font-size: 17vw;
+    }
+
+    & .jumbotron__title_descr-mobile {
+      margin: 6vw 0;
+      background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 80vw 7vw /50px;
+      font-size: 25px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .media-container {
+    height: 500px;
+    background-position-x: -250px;
+  }
+
+  .jumbotron__title {
+    & h1 {
+      font-size: 18vw;
+    }
+
+    & .jumbotron__title_descr-mobile {
+      height: 50vw;
+      margin: 6vw 0;
+      background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 77vw 16vw /50px;
+      font-size: 23px;
+    }
   }
 }
 
@@ -462,7 +547,7 @@ header {
     background: rgb(204,204,204);
     text-align: center;
     font-family: "Orbitron-Light", sans-serif;
-    font-size: 5vw;
+    font-size: 35px;
     color: $color-graphite;
   }
 }
@@ -474,6 +559,7 @@ header {
 
 .quest,
 .oth-serv {
+  padding: 5vw 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -488,7 +574,6 @@ header {
 
 .quest__img,
 .oth-serv__img {
-  margin: 5vw 0;
   width: 43vw;
   height: 28vw;
 
@@ -496,6 +581,11 @@ header {
     margin: 2vw auto;
     width: 53vw;
     height: 50vw;
+  }
+
+  @media (max-width: 520px) {
+    width: 85vw;
+    height: 80vw;
   }
 }
 
@@ -574,7 +664,7 @@ header {
   .quest__info,
   .oth-serv__info {
     margin: 0 auto;
-    width: 80vw;
+    width: 95vw;
   }
 
   .quest__info.ventilation {
@@ -603,20 +693,26 @@ header {
   }
 
   @media (max-width: 930px) {
-    white-space: normal;
     text-align: center;
     font-size: 45px;
+  }
+}
+
+.quest__info_title.ventilation {
+  @media (max-width: 520px) {
+    font-size: 35px;
   }
 }
 
 .oth-serv__info_title {
   margin: 30px 0;
   line-height: .7;
+
+  @media (max-width: 520px) {
+    line-height: 1;
+  }
 }
 
-@media (max-width: 930px) {
-  text-align: center;
-}
 
 /*============================================================================*\
     @@QUEST ROOM & OTHER SERVICES - BRIEF
@@ -632,6 +728,10 @@ header {
   justify-content: space-around;
   align-items: stretch;
 
+  @media (max-width: 930px) {
+    margin: 15px 0;
+  }
+
   & .quest__info_brief-cost,
   & .quest__info_brief-team,
   & .oth-serv__info_brief-cost,
@@ -646,7 +746,24 @@ header {
     & span {
       font-size: 16px;
     }
+
+    @media (max-width: 520px) {
+      text-align: center;
+    }
   }
+
+  & .oth-serv__info_brief-duration {
+    @media (max-width: 520px) {
+      display: none;
+    }
+  }
+
+  & .oth-serv__info_brief-cost.cars {
+    @media (max-width: 520px) {
+      width: 100%;
+    }
+  }
+
 
   & .quest__info_brief-level {
     width: 17vw;
@@ -654,6 +771,10 @@ header {
     white-space: pre-wrap;
     font-size: 16px;
     line-height: 2;
+
+    @media (max-width: 520px) {
+     display: none;
+    }
   }
 
   & .quest__info_brief-level.safe,
@@ -668,6 +789,13 @@ header {
                   url("../img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
                   url("../img/b-quest-rooms/level-0.5.png") no-repeat 16vw 38px /7vw;
     }
+
+    @media (max-width: 670px) {
+      width: 30vw;
+      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
+                  url("../img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
+                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 18vw 38px /9vw;
+    }
   }
 
   & .quest__info_brief-level.control-center {
@@ -680,6 +808,13 @@ header {
       background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
                   url("../img/b-quest-rooms/level-0.5.png") no-repeat 8vw 38px /7vw,
                   url("../img/b-quest-rooms/level-0.png") no-repeat 16vw 38px /7vw;
+    }
+
+    @media (max-width: 670px) {
+      width: 30vw;
+      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
+                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 9vw 38px /9vw,
+                  url("../img/b-quest-rooms/level-0.png") no-repeat 18vw 38px /9vw;
     }
   }
 
@@ -694,11 +829,22 @@ header {
                   url("../img/b-quest-rooms/level-0.png") no-repeat 8vw 38px /7vw,
                   url("../img/b-quest-rooms/level-0.png") no-repeat 16vw 38px /7vw;
     }
+
+    @media (max-width: 670px) {
+      width: 30vw;
+      background: url("../img/b-quest-rooms/level-0.png") no-repeat 0 38px /9vw,
+                  url("../img/b-quest-rooms/level-0.png") no-repeat 9vw 38px /9vw,
+                  url("../img/b-quest-rooms/level-0.png") no-repeat 18vw 38px /9vw;
+    }
   }
 
   & .quest__info_brief-fn {
     margin: 8px 0;
     font-size: 13px;
+
+    @media (max-width: 930px) {
+      text-align: center;
+    }
   }
 }
 
@@ -717,6 +863,12 @@ header {
     padding: 5px 4vw 5px 0;
     vertical-align: top;
     font-size: 16px;
+
+    @media (max-width: 930px) {
+      display: block;
+      padding: 10px 0;
+      text-align: center;
+    }
   }
 
   & .quest__info_descr-text,
@@ -727,7 +879,10 @@ header {
     line-height: 1.4;
 
     @media (max-width: 930px) {
-      width: 64vw;
+      display: block;
+      padding: 10px;
+      width: 95vw;
+      text-align: center;
     }
   }
 
@@ -743,7 +898,7 @@ header {
 
 .quest__info_form,
 .oth-serv__info_form {
-  margin: 10px 0 30px 0;
+  margin: 10px 0;
 
   & div {
     display: inline-block;
@@ -768,11 +923,15 @@ header {
       font-size: 14px;
       color: rgb(128,128,128);
       overflow: hidden;
+
+      @media (max-width: 930px) {
+        width: 165px;
+      }
     }
   }
 
   @media (max-width: 930px) {
-    margin: 10px 0 30px 13vw;
+    text-align: center;
   }
 }
 
@@ -789,8 +948,12 @@ header {
     background: rgb(204,204,204);
     text-align: center;
     font-family: "Orbitron-Light", sans-serif;
-    font-size: 3vw;
+    font-size: 35px;
     color: $color-graphite;
+
+    @media (max-width: 520px) {
+      font-size: 25px;
+    }
   }
 }
 
@@ -807,7 +970,7 @@ header {
     background: rgb(204,204,204);
     text-align: center;
     font-family: "Orbitron-Light", sans-serif;
-    font-size: 2.5vw;
+    font-size: 35px;
     color: $color-graphite;
   }
 }
@@ -826,7 +989,7 @@ header {
     background: rgb(204,204,204);
     text-align: center;
     font-family: "Orbitron-Light", sans-serif;
-    font-size: 3vw;
+    font-size: 35px;
     color: $color-graphite;
   }
 }
@@ -889,6 +1052,10 @@ header {
   background: $color-graphite;
   font-family: "Jura-Regular", sans-serif;
   color: rgb(255, 255, 255);
+
+  @media (max-width: 520px) {
+    border-top: 1px solid grey;
+  }
 }
 
 
@@ -916,6 +1083,10 @@ header {
 
 .b-callback__form {
   width: 300px;
+
+  @media (max-width: 520px) {
+    text-align: center;
+  }
 
   & label {
     display: block;
@@ -966,18 +1137,46 @@ header {
   width: 100%;
   height: 365px;
   background: url("../img/b-contacts/map.png") 120px -50px;
+  
+  @media (max-width: 1000px) {
+    background-position-x: -10px;
+  }
+  @media (max-width: 800px) {
+    background-position-x: -170px;
+  }
+  @media (max-width: 650px) {
+    background-position-x: -250px;
+  }
+
+  @media (max-width: 520px) {
+    height: 660px;
+    border-top: 1px solid grey;
+    background-position: -210px 365px;
+    background-size: 800px;
+  }
 }
 
 .contacts__container {
-  position: absolute;
-  top: 0;
-  left: 160px;
+  margin: 0 0 0 10vw;
   padding: 10px 60px;
   width: 310px;
-  height: 100%;
+  height: 365px;
   background: rgba($color-graphite,.6);
   font-family: "Jura-Regular", sans-serif;
   color: rgb(255,255,255);
+
+  @media (max-width: 800px) {
+    margin: 0 2vw;
+    padding: 10px 30px;
+    width: 250px;
+  }
+  @media (max-width: 520px) {
+    margin: 0;
+    padding: 0 0 0 25vw;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    background: $color-graphite;
+  }
 
   & h3 {
     padding: 15px 0;
@@ -1032,10 +1231,14 @@ header {
 footer {
   padding: 10px 30px;
   width: 100%;
-  height: 80px;
+  height: 70px;
   background: $color-graphite;
   font-family: "Jura-Regular", sans-serif;
   color: rgb(255,255,255);
+
+  @media (max-width: 520px) {
+    padding: 10px;
+  }
 
   & p {
     float: right;
@@ -1044,6 +1247,13 @@ footer {
     background: url("../img/logo-white-sm.png") no-repeat 255px 0;
     font-size: 16px;
     line-height: 3;
+
+    @media (max-width: 520px) {
+      width: 300px;
+      background-position-x: 220px;
+      font-size: 14px;
+      line-height: 3.4;
+    }
   }
 }
 
