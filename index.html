@@ -75,6 +75,7 @@
 
 
   <!--QUEST-ROOMS-->
+
   <section class="b-quest-rooms">
     <a name="b-quest-rooms" class="tag"></a>
     <h2>Квест-комнаты</h2>
@@ -104,7 +105,7 @@
             <br>Только представьте...
           </p>
 
-          <button class="continue">Продолжение</button>
+          <button class="continue" id="questSafe">Продолжение</button>
         </div>
 
         <form class="quest__info_form safe">
@@ -149,7 +150,7 @@
               вокруг которого ходит много легенд и историй. "77 завод” - таинственное старое здание, в котором ни Вы,
               ни Ваши друзья никогда не были. Любопытство сильнее.
               <br>Что же находится внутри...</p>
-            <button class="continue">Продолжение</button>
+            <button class="continue" id="questVentilation">Продолжение</button>
           </div>
 
           <form class="quest__info_form ventilation">
@@ -194,7 +195,7 @@
             <p class="quest__info_descr-text control-center">Это продолжение квеста "77-й завод" - 2-я серия.
               Если Вы прошли квест-рум "Вентиляционная", Вы знаете часть истории про рабочих, которые оставили массу шифров.
               <br>Но что же сподвигло...</p>
-            <button class="continue">Продолжение</button>
+            <button class="continue" id="questControlCenter">Продолжение</button>
           </div>
 
           <form class="quest__info_form control-center">
@@ -405,5 +406,8 @@
   <footer>
     <p>Лаборатория квестов "Погреб"</p>
   </footer>
+
+
+  <script src="./js/detail_view.js"></script>
 </body>
 </html>

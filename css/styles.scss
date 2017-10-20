@@ -56,6 +56,10 @@ button.callback-btn {
     color: rgb(0,0,0);
     box-shadow: inset 0 2px 5px 0 rgba(0,0,0,.25);
   }
+
+  @media (max-width: 930px) {
+    margin: 20px 0 0 0;
+  }
 }
 
 button.order {
@@ -78,14 +82,6 @@ button.callback-btn {
   &:active {
     background: rgb(247,194,5) url("../img/phone.svg") no-repeat 12px 9px /15px;
   }
-
-  @media (max-width: 1060px) {
-    margin: 5px 7vw;
-  }
-  @media (max-width: 930px) {
-    margin: 5px 0;
-  }
-
 }
 
 button.continue {
@@ -119,12 +115,21 @@ button.continue {
   }
 
   @media (max-width: 930px) {
-    margin: 0 0 0 55vw;
-  }
-
-  @media (max-width: 520px) {
     display: none;
   }
+}
+
+button.close {
+  position: absolute;
+  top: 5px;
+  left: 47vw;
+  border: none;
+  background: none;
+  font-family: "Jura-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgba(0,0,0,.4);
+  cursor: pointer;
 }
 
 div.separator {
@@ -139,7 +144,15 @@ div.separator {
 }
 
 a.tag {
-  margin: -100px 0 0 0;
+  margin: -200px 0 0 0;
+}
+
+.js-show {
+  display: block;
+}
+
+.js-not-show {
+  display: none;
 }
 
 
@@ -777,8 +790,7 @@ header {
     }
   }
 
-  & .quest__info_brief-level.safe,
-  & .quest__info_brief-level.ventilation {
+  & .quest__info_brief-level.safe {
     background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
                 url("../img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
                 url("../img/b-quest-rooms/level-0.5.png") no-repeat 10vw 38px /5vw;
@@ -798,43 +810,63 @@ header {
     }
   }
 
-  & .quest__info_brief-level.control-center {
+  & .quest__info_brief-level.ventilation {
     background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
-                url("../img/b-quest-rooms/level-0.5.png") no-repeat 5vw 38px /5vw,
-                url("../img/b-quest-rooms/level-0.png") no-repeat 10vw 38px /5vw;
+    url("../img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
+    url("../img/b-quest-rooms/level-0.png") no-repeat 10vw 38px /5vw;
 
     @media (max-width: 930px) {
       width: 23vw;
       background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
-                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 8vw 38px /7vw,
-                  url("../img/b-quest-rooms/level-0.png") no-repeat 16vw 38px /7vw;
+      url("../img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
+      url("../img/b-quest-rooms/level-0.png") no-repeat 16vw 38px /7vw;
     }
 
     @media (max-width: 670px) {
       width: 30vw;
       background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
-                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 9vw 38px /9vw,
-                  url("../img/b-quest-rooms/level-0.png") no-repeat 18vw 38px /9vw;
+      url("../img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
+      url("../img/b-quest-rooms/level-0.png") no-repeat 18vw 38px /9vw;
     }
   }
 
-  & .quest__info_brief-level.sanitary {
-    background: url("../img/b-quest-rooms/level-0.png") no-repeat 0 38px /5vw,
-                url("../img/b-quest-rooms/level-0.png") no-repeat 5vw 38px /5vw,
-                url("../img/b-quest-rooms/level-0.png") no-repeat 10vw 38px /5vw;
+  & .quest__info_brief-level.control-center {
+    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
+                url("../img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
+                url("../img/b-quest-rooms/level-0.5.png") no-repeat 10vw 38px /5vw;
 
     @media (max-width: 930px) {
       width: 23vw;
-      background: url("../img/b-quest-rooms/level-0.png") no-repeat 0 38px /7vw,
-                  url("../img/b-quest-rooms/level-0.png") no-repeat 8vw 38px /7vw,
-                  url("../img/b-quest-rooms/level-0.png") no-repeat 16vw 38px /7vw;
+      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
+                  url("../img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
+                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 16vw 38px /7vw;
     }
 
     @media (max-width: 670px) {
       width: 30vw;
-      background: url("../img/b-quest-rooms/level-0.png") no-repeat 0 38px /9vw,
-                  url("../img/b-quest-rooms/level-0.png") no-repeat 9vw 38px /9vw,
-                  url("../img/b-quest-rooms/level-0.png") no-repeat 18vw 38px /9vw;
+      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
+                  url("../img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
+                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 18vw 38px /9vw;
+    }
+  }
+
+  & .quest__info_brief-level.sanitary {
+    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
+                url("../img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
+                url("../img/b-quest-rooms/level-1.png") no-repeat 10vw 38px /5vw;
+
+    @media (max-width: 930px) {
+      width: 23vw;
+      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
+                  url("../img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
+                  url("../img/b-quest-rooms/level-1.png") no-repeat 16vw 38px /7vw;
+    }
+
+    @media (max-width: 670px) {
+      width: 30vw;
+      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
+                  url("../img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
+                  url("../img/b-quest-rooms/level-1.png") no-repeat 18vw 38px /9vw;
     }
   }
 
@@ -855,6 +887,7 @@ header {
 
 .quest__info_descr,
 .oth-serv__info_descr {
+  position: relative;
   padding: 10px 0;
 
   & .quest__info_descr-title,
@@ -888,6 +921,54 @@ header {
 
   & .oth-serv__info_descr-text.cars {
     width: auto;
+  }
+}
+
+.quest__info_descr_continue {
+  position: absolute;
+  top: -230px;
+  padding: 30px 15px;
+  width: 50vw;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 6px;
+  background: rgb(255,255,255);
+  font-family: "Jura-Regular", sans-serif;
+  color: $color-graphite;
+
+  &.safe,
+  &.control-center {
+    left: -22vw;
+  }
+  &.ventilation {
+    left: 22vw;
+  }
+
+  & .quest__info_descr_continue-title {
+    padding: 15px;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    text-align: center;
+    font-size: 24px;
+  }
+
+  & .quest__info_descr_continue-text {
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  & .quest__info_descr_continue-form {
+    text-align: center;
+
+    & input {
+      padding: 6px 12px;
+      width: 165px;
+      height: 33px;
+      border: 1px solid rgb(204,204,204);
+      border-radius: 4px;
+      font-size: 13px;
+      color: rgb(128,128,128);
+      overflow: hidden;
+    }
   }
 }
 
@@ -930,7 +1011,7 @@ header {
     }
   }
 
-  @media (max-width: 930px) {
+  @media (max-width: 1060px) {
     text-align: center;
   }
 }
