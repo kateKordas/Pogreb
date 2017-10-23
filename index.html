@@ -111,12 +111,12 @@
         <form class="quest__info_form safe">
           <div>
             <label for="quest-safe__name">Имя и Фамилия <span>*</span></label>
-            <input id="quest-safe__name" type="text" required minlength="2">
+            <input id="quest-safe__name" type="text" minlength="2" pattern="[A-zА-яЁё]+" required>
           </div>
 
           <div>
             <label for="quest-safe__phone">Ваш Телефон <span>*</span></label>
-            <input id="quest-safe__phone" type="tel" required>
+            <input id="quest-safe__phone" type="text" required>
           </div>
 
           <button class="order" type="submit">Забронировать</button>
@@ -156,12 +156,12 @@
           <form class="quest__info_form ventilation">
             <div>
               <label for="quest-ventilation__name">Имя и Фамилия <span>*</span></label>
-              <input id="quest-ventilation__name" type="text" required minlength="2">
+              <input id="quest-ventilation__name" type="text" minlength="2" pattern="[A-zА-яЁё]+" required>
             </div>
 
             <div>
               <label for="quest-ventilation__phone">Ваш Телефон <span>*</span></label>
-              <input id="quest-ventilation__phone" type="tel" required>
+              <input id="quest-ventilation__phone" type="text" required>
             </div>
             <button class="order" type="submit">Забронировать</button>
           </form>
@@ -201,11 +201,11 @@
           <form class="quest__info_form control-center">
             <div>
               <label for="control-center__name">Имя и Фамилия <span>*</span></label>
-              <input id="control-center__name" type="text" required minlength="2">
+              <input id="control-center__name" type="text" minlength="2" pattern="[A-zА-яЁё]+" required>
             </div>
             <div>
               <label for="control-center__phone">Ваш Телефон <span>*</span></label>
-              <input id="control-center__phone" type="number" required>
+              <input id="control-center__phone" type="text" required>
             </div>
             <button class="order" type="submit">Забронировать</button>
           </form>
@@ -277,11 +277,11 @@
         <form class="oth-serv__info_form child-party">
           <div>
             <label for="child-party__name">Имя и Фамилия <span>*</span></label>
-            <input id="child-party__name" type="text" required minlength="2">
+            <input id="child-party__name" type="text" minlength="2" pattern="[A-zА-яЁё]+" required>
           </div>
           <div>
             <label for="child-party__phone">Ваш Телефон <span>*</span></label>
-            <input id="child-party__phone" type="number" required>
+            <input id="child-party__phone" type="text" required>
           </div>
           <button class="callback-btn">Свяжитесь со мной</button>
         </form>
@@ -317,11 +317,11 @@
         <form class="oth-serv__info_form cars">
           <div>
             <label for="cars__name">Имя и Фамилия <span>*</span></label>
-            <input id="cars__name" type="text" required minlength="2">
+            <input id="cars__name" type="text" minlength="2" pattern="[A-zА-яЁё]+" required>
           </div>
           <div>
             <label for="cars__phone">Ваш Телефон <span>*</span></label>
-            <input id="cars__phone" type="number" required>
+            <input id="cars__phone" type="text" required>
           </div>
 
           <button class="callback-btn">Свяжитесь со мной</button>
@@ -363,10 +363,10 @@
         с Вами свяжемся наш администратор и подробно расскажет о квест-комнатах "Погреба"!</p>
     </div>
 
-    <form class="b-callback__form">
+    <form class="b-callback__form" action="/order" method="post">
       <div>
         <label for="callback__name">Имя и Фамилия <span>*</span></label>
-        <input id="callback__name" type="text" required minlength="2">
+        <input id="callback__name" type="text" minlength="2" pattern="[A-zА-яЁё]+" required>
       </div>
       <div>
         <label for="callback__phone">Ваш Телефон <span>*</span></label>
@@ -407,7 +407,13 @@
     <p>Лаборатория квестов "Погреб"</p>
   </footer>
 
+  <!--<div class="send-form-successfully">
+    <p class="send-form-successfully__title">Форма отправлена успешно!</p>
+    <p class="send-form-successfully__text">Наш менеджер свяжется с Вами в ближайшее время.</p>
+  </div>-->
+
 
   <script src="./js/detail_view.js"></script>
+  <script src="./js/order.js"></script>
 </body>
 </html>

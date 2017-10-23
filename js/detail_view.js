@@ -1,7 +1,7 @@
 "use strict";
 
 //Add container detail view
-function addDetailView(btnCont) {
+function addDetailView(btn) {
 
   var detailView = {
     safePopUp: {
@@ -32,17 +32,17 @@ function addDetailView(btnCont) {
   var containerDetailView = document.createElement("div");
   containerDetailView.classList.add("quest__info_descr_continue");
   containerDetailView.innerHTML =
-  `<p class="quest__info_descr_continue-title">${detailView[btnCont.getAttribute("id")].title}</p>
+  `<p class="quest__info_descr_continue-title">${detailView[btn.getAttribute("id")].title}</p>
    <button class="close"></button>
-   <p class="quest__info_descr_continue-text">${detailView[btnCont.getAttribute("id")].text}</p>
+   <p class="quest__info_descr_continue-text">${detailView[btn.getAttribute("id")].text}</p>
 
    <form class="quest__info_descr_continue-form">
-     <input type="text" required minlength="2" placeholder="Ваше Имя и Фамилия *">
-     <input type="tel" required placeholder="Ваш Телефон *">
+     <input type="text" placeholder="Ваше Имя и Фамилия *" minlength="2" pattern="[A-zА-яЁё]+" required>
+     <input type="text" required placeholder="Ваш Телефон *">
      <button class="order" type="submit">Забронировать</button>
    </form>`;
 
-  btnCont.parentElement.appendChild(containerDetailView);
+  btn.parentElement.appendChild(containerDetailView);
 }
 
 //Remove container detail view
@@ -58,16 +58,13 @@ function removeDetailView(el) {
 
     addDetailView(btn);
 
-    if (btn.classList.contains("close")) {
-      removeDetailView(btn);
-    }
-
     document.addEventListener("click", function (event) {
-      var containerDetailView = document.querySelector(".quest__info_descr_continue") || undefined;
-      if (containerDetailView
-          && (!containerDetailView.contains(event.target)
-          || event.target.classList.contains("close"))) {
-        removeDetailView(containerDetailView)
+      var containerDetailView = document.querySelector(".quest__info_descr_continue");
+      if (containerDetailView) {
+        if (!containerDetailView.contains(event.target)
+            || event.target.classList.contains("close")){
+          removeDetailView(containerDetailView)
+        }
       }
     });
   });
