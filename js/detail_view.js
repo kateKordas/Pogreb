@@ -1,6 +1,7 @@
 "use strict";
 
-function addDetailView(btn) {
+//Add container detail view
+function addDetailView(btnCont) {
 
   var detailView = {
     safePopUp: {
@@ -29,34 +30,46 @@ function addDetailView(btn) {
   };
 
   var containerDetailView = document.createElement("div");
+  containerDetailView.classList.add("quest__info_descr_continue");
   containerDetailView.innerHTML =
-  `<div class="quest__info_descr_continue ${btn.getAttribute("id")}">
-    <p class="quest__info_descr_continue-title">${detailView[btn.getAttribute("id")].title}</p>
-    <button class="close"></button>
-    <p class="quest__info_descr_continue-text">${detailView[btn.getAttribute("id")].text}</p>
+  `<p class="quest__info_descr_continue-title">${detailView[btnCont.getAttribute("id")].title}</p>
+   <button class="close"></button>
+   <p class="quest__info_descr_continue-text">${detailView[btnCont.getAttribute("id")].text}</p>
 
-    <form class="quest__info_descr_continue-form">
-      <input type="text" required minlength="2" placeholder="Ваше Имя и Фамилия *">
-      <input type="tel" required placeholder="Ваш Телефон *">
-      <button class="order" type="submit">Забронировать</button>
-    </form>
-  </div>`;
+   <form class="quest__info_descr_continue-form">
+     <input type="text" required minlength="2" placeholder="Ваше Имя и Фамилия *">
+     <input type="tel" required placeholder="Ваш Телефон *">
+     <button class="order" type="submit">Забронировать</button>
+   </form>`;
 
-  btn.parentElement.appendChild(containerDetailView);
+  btnCont.parentElement.appendChild(containerDetailView);
 }
 
-function removeDetailView(btn) {
-  var containerDetailView = document.querySelector(".quest__info_descr_continue");
-  btn.parentElement.removeChild(containerDetailView);
+//Remove container detail view
+function removeDetailView(el) {
+  el.parentElement.removeChild(el);
 }
-
 
 
 [].forEach.call(document.querySelectorAll(".continue"), function (element) {
   element.addEventListener("click", function (event) {
+    event.stopPropagation();
     var btn = event.target;
 
     addDetailView(btn);
 
+    if (btn.classList.contains("close")) {
+      removeDetailView(btn);
+    }
+
+    document.addEventListener("click", function (event) {
+      var containerDetailView = document.querySelector(".quest__info_descr_continue") || undefined;
+      if (containerDetailView
+          && (!containerDetailView.contains(event.target)
+          || event.target.classList.contains("close"))) {
+        removeDetailView(containerDetailView)
+      }
+    });
   });
 });
+
