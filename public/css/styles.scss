@@ -355,7 +355,7 @@ header {
   position: absolute;
   top: 115px;
   left: 3vw;
-  margin: 2vw 5vw;
+  margin: 2vw 0 2vw 5vw ;
   font-family: "Jura-Regular", sans-serif;
   color: #ffffff;
 
@@ -380,6 +380,12 @@ header {
     font-size: 2vw;
     font-weight: 700;
 
+    @media (max-width: 930px) {
+      background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 91% 6.5vw /37px;
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
     & span {
       font-size: 1.5vw;
       font-weight: 500;
@@ -387,12 +393,6 @@ header {
       @media (max-width: 930px) {
         font-size: 17px;
       }
-    }
-
-    @media (max-width: 930px) {
-      background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 91% 6.5vw /37px;
-      font-size: 20px;
-      line-height: 1.1;
     }
   }
 
@@ -466,9 +466,9 @@ header {
     & .jumbotron__title_descr-mobile {
       display: block;
       margin: 2.5vw 0;
-      width: 95vw;
+      width: 80vw;
       height: 20vw;
-      background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 70vw 5vw /50px;
+      background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 70vw 50px /50px;
       font-size: 22px;
     }
   }
@@ -497,13 +497,14 @@ header {
 
     & .jumbotron__title_descr-mobile {
       margin: 6vw 0;
-      background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 80vw 7vw /50px;
+      width: 80vw;
+      height: 22vw;
       font-size: 25px;
     }
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .media-container {
     height: 500px;
     background-position-x: -250px;
@@ -511,13 +512,15 @@ header {
 
   .jumbotron__title {
     & h1 {
+      margin: 8vw 0;
       font-size: 18vw;
     }
 
     & .jumbotron__title_descr-mobile {
-      height: 50vw;
       margin: 6vw 0;
-      background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 77vw 16vw /50px;
+      width: 88vw;
+      height: 120px;
+      background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 72vw 53px /50px;
       font-size: 23px;
     }
   }
@@ -683,7 +686,7 @@ header {
 
   @media (max-width: 930px) {
     text-align: center;
-    font-size: 45px;
+    font-size: 43px;
   }
 }
 
@@ -1116,6 +1119,10 @@ header {
     font-size: 21px;
     color: rgb(128,128,128);
     overflow: hidden;
+
+    @media (max-width: 430px) {
+      width: 280px;
+    }
   }
 
   & .callback-btn_big {
@@ -1132,6 +1139,10 @@ header {
     }
     &:active {
       background: rgb(247,194,5);
+    }
+
+    @media (max-width: 430px) {
+      width: 280px;
     }
   }
 }
@@ -1181,7 +1192,7 @@ header {
   }
   @media (max-width: 520px) {
     margin: 0;
-    padding: 0 0 0 25vw;
+    padding: 0 0 0 20vw;
     width: 100%;
     border-bottom: 1px solid grey;
     background: $color-graphite;

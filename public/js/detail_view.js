@@ -1,8 +1,10 @@
 "use strict";
 
-//Add container detail view
-function addDetailView(btn) {
+/**
+ * Add container detail view.
+ */
 
+function addDetailView(btn) {
   var detailView = {
     safePopUp: {
       title: "Квест-комната \"Сейф Банкира\"",
@@ -45,12 +47,18 @@ function addDetailView(btn) {
   btn.parentElement.appendChild(containerDetailView);
 }
 
-//Remove container detail view
+
+/**
+ * Remove container detail view.
+ */
 function removeDetailView(el) {
   el.parentElement.removeChild(el);
 }
 
 
+/**
+ * Button-click handler for render container detail view.
+ */
 [].forEach.call(document.querySelectorAll(".continue"), function (element) {
   element.addEventListener("click", function (event) {
     event.stopPropagation();

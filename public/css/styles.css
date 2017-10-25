@@ -260,7 +260,7 @@ header {
   position: absolute;
   top: 115px;
   left: 3vw;
-  margin: 2vw 5vw;
+  margin: 2vw 0 2vw 5vw;
   font-family: "Jura-Regular", sans-serif;
   color: #ffffff; }
   .jumbotron__title .jumbotron__title_logo {
@@ -279,17 +279,17 @@ header {
     background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 47vw 5vw/3.5vw;
     font-size: 2vw;
     font-weight: 700; }
+    @media (max-width: 930px) {
+      .jumbotron__title .jumbotron__title_descr {
+        background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 91% 6.5vw/37px;
+        font-size: 20px;
+        line-height: 1.1; } }
     .jumbotron__title .jumbotron__title_descr span {
       font-size: 1.5vw;
       font-weight: 500; }
       @media (max-width: 930px) {
         .jumbotron__title .jumbotron__title_descr span {
           font-size: 17px; } }
-    @media (max-width: 930px) {
-      .jumbotron__title .jumbotron__title_descr {
-        background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 91% 6.5vw/37px;
-        font-size: 20px;
-        line-height: 1.1; } }
   .jumbotron__title .jumbotron__title_descr-mobile {
     display: none; }
 
@@ -341,9 +341,9 @@ header {
     .jumbotron__title .jumbotron__title_descr-mobile {
       display: block;
       margin: 2.5vw 0;
-      width: 95vw;
+      width: 80vw;
       height: 20vw;
-      background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 70vw 5vw/50px;
+      background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 70vw 50px/50px;
       font-size: 22px; }
   .jumbotron__order {
     display: none; } }
@@ -360,19 +360,22 @@ header {
     font-size: 17vw; }
   .jumbotron__title .jumbotron__title_descr-mobile {
     margin: 6vw 0;
-    background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 80vw 7vw/50px;
+    width: 80vw;
+    height: 22vw;
     font-size: 25px; } }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .media-container {
     height: 500px;
     background-position-x: -250px; }
   .jumbotron__title h1 {
+    margin: 8vw 0;
     font-size: 18vw; }
   .jumbotron__title .jumbotron__title_descr-mobile {
-    height: 50vw;
     margin: 6vw 0;
-    background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 77vw 16vw/50px;
+    width: 88vw;
+    height: 120px;
+    background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 72vw 53px/50px;
     font-size: 23px; } }
 
 /*============================================================================*    @@QUEST-ROOMS
@@ -504,7 +507,7 @@ header {
     .quest__info_title,
     .oth-serv__info_title {
       text-align: center;
-      font-size: 45px; } }
+      font-size: 43px; } }
 
 @media (max-width: 520px) {
   .quest__info_title.ventilation {
@@ -864,6 +867,9 @@ header {
     font-size: 21px;
     color: gray;
     overflow: hidden; }
+    @media (max-width: 430px) {
+      .b-callback__form input {
+        width: 280px; } }
   .b-callback__form .callback-btn_big {
     margin: 0;
     width: 300px;
@@ -876,6 +882,9 @@ header {
       background: #f7c205; }
     .b-callback__form .callback-btn_big:active {
       background: #f7c205; }
+    @media (max-width: 430px) {
+      .b-callback__form .callback-btn_big {
+        width: 280px; } }
 
 /*============================================================================*    @@CONTACTS
 \*============================================================================*/
@@ -916,7 +925,7 @@ header {
   @media (max-width: 520px) {
     .contacts__container {
       margin: 0;
-      padding: 0 0 0 25vw;
+      padding: 0 0 0 20vw;
       width: 100%;
       border-bottom: 1px solid grey;
       background: #333333; } }
