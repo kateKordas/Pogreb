@@ -168,10 +168,10 @@ header {
       cursor: pointer; }
       .nav-bar .nav-bar__list .nav-bar__item:hover {
         background: rgba(255, 255, 255, 0.2); }
-      @media (max-width: 910px) {
+      @media (max-width: 930px) {
         .nav-bar .nav-bar__list .nav-bar__item {
-          margin: 5px 1vw;
-          font-size: 12px; } }
+          margin: 5px .5vw;
+          font-size: 13px; } }
       .nav-bar .nav-bar__list .nav-bar__item a {
         position: absolute;
         top: 0;
@@ -179,12 +179,13 @@ header {
         display: inline-block;
         width: 120px;
         height: 30px; }
-        @media (max-width: 910px) {
+        @media (max-width: 930px) {
           .nav-bar .nav-bar__list .nav-bar__item a {
             width: 106px;
             height: 28px; } }
   .nav-bar .nav-bar__order {
-    position: relative; }
+    position: relative;
+    margin: 0; }
     .nav-bar .nav-bar__order a {
       position: absolute;
       top: 0;
@@ -192,9 +193,6 @@ header {
       display: inline-block;
       width: 167px;
       height: 33px; }
-    @media (max-width: 910px) {
-      .nav-bar .nav-bar__order {
-        margin: 5px 0 5px 1vw; } }
 
 @media (max-width: 840px) {
   header {

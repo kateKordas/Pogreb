@@ -219,9 +219,9 @@ header {
         background: rgba(255,255,255,.2);
       }
 
-      @media (max-width: 910px) {
-        margin: 5px 1vw;
-        font-size: 12px;
+      @media (max-width: 930px) {
+        margin: 5px .5vw;
+        font-size: 13px;
       }
 
       & a {
@@ -232,7 +232,7 @@ header {
         width: 120px;
         height: 30px;
 
-        @media (max-width: 910px) {
+        @media (max-width: 930px) {
           width: 106px;
           height: 28px;
         }
@@ -242,6 +242,7 @@ header {
 
   .nav-bar__order {
     position: relative;
+    margin: 0;
 
     & a {
       position: absolute;
@@ -250,10 +251,6 @@ header {
       display: inline-block;
       width: 167px;
       height: 33px;
-    }
-
-    @media (max-width: 910px) {
-      margin: 5px 0 5px 1vw;
     }
   }
 }
