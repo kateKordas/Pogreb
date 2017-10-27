@@ -33,6 +33,8 @@ button.callback-btn {
   display: inline-block;
   margin: 10px auto;
   padding: 7px 20px;
+  width: auto;
+  height: 33px;
   border: 1px solid $color-graphite;
   border-radius: 5px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
@@ -289,11 +291,13 @@ header {
     }
     & .nav-bar__order {
       margin: 5px 0;
+      width: 190px;
+      height: 36px;
       font-size: 17px;
 
       & a {
-        width: 190px;
-        height: 36px;
+        width: inherit;
+        height: inherit;
       }
     }
   }
@@ -312,6 +316,8 @@ header {
 
   .nav-bar .nav-bar__order {
     background: rgb(250,149,30);
+    width: 147px;
+    height: 33px;
     font-size: 14px;
     text-indent: 0;
 
@@ -320,8 +326,8 @@ header {
     }
 
     & a {
-      width: 147px;
-      height: 33px;
+      width: inherit;
+      height: inherit;
     }
   }
 }
@@ -1357,17 +1363,16 @@ footer {
   }
 }
 
-.send-form-successfully {
+.status-send-form {
   position: fixed;
   top: 30%;
   left: 50%;
   margin: 0 0 0 -175px;
   padding: 160px 15px 30px 15px;
   width: 400px;
-  height: 300px;
+  height: 350px;
   border: 1px solid rgba(0,0,0,.2);
   border-radius: 6px;
-  background: rgb(255,255,255) url("../img/check-form.svg") no-repeat 50% 25px /125px;
   font-family: "Jura-Regular", sans-serif;
   color: $color-graphite;
   text-align: center;
@@ -1375,13 +1380,21 @@ footer {
   z-index: 20;
   animation: popup .5s ease-in-out;
 
-  & .send-form-successfully__title {
+  &.success {
+    background: rgb(255,255,255) url("../img/form-success.svg") no-repeat 50% 25px /125px;
+  }
+
+  &.error {
+    background: rgb(255,255,255) url("../img/form-error.svg") no-repeat 50% 25px /125px;
+  }
+
+  & .status-send-form__title {
     margin: 10px 0;
     font-size: 25px;
     font-weight: 700;
   }
 
-  & .send-form-successfully__text {
+  & .status-send-form__text {
     font-size: 20px;
   }
 

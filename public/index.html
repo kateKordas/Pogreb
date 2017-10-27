@@ -108,15 +108,15 @@
           <button class="continue" id="safePopUp">Продолжение</button>
         </div>
 
-        <form class="quest__info_form safe">
+        <form class="quest__info_form safe" name="Заявка с формы Сейф">
           <div>
             <label for="quest-safe__name">Имя и Фамилия <span>*</span></label>
-            <input id="quest-safe__name" type="text" minlength="2" pattern="[A-zА-яЁё]+" required>
+            <input id="quest-safe__name" name="nameUser" type="text" minlength="2" pattern="[A-zА-яЁё \s]+" required>
           </div>
 
           <div>
             <label for="quest-safe__phone">Ваш Телефон <span>*</span></label>
-            <input id="quest-safe__phone" type="text" required>
+            <input id="quest-safe__phone" name="phoneUser" type="tel" required>
           </div>
 
           <button class="order" type="submit">Забронировать</button>
@@ -153,15 +153,15 @@
             <button class="continue" id="ventilationPopUp">Продолжение</button>
           </div>
 
-          <form class="quest__info_form ventilation">
+          <form class="quest__info_form ventilation" name="Заявка с формы Вентиляционная">
             <div>
               <label for="quest-ventilation__name">Имя и Фамилия <span>*</span></label>
-              <input id="quest-ventilation__name" type="text" minlength="2" pattern="[A-zА-яЁё]+" required>
+              <input id="quest-ventilation__name" name="nameUser" type="text" minlength="2" pattern="[A-zА-яЁё \s]+" required>
             </div>
 
             <div>
               <label for="quest-ventilation__phone">Ваш Телефон <span>*</span></label>
-              <input id="quest-ventilation__phone" type="text" required>
+              <input id="quest-ventilation__phone" name="phoneUser" type="tel" required>
             </div>
             <button class="order" type="submit">Забронировать</button>
           </form>
@@ -198,14 +198,14 @@
             <button class="continue" id="controlCenterPopUp">Продолжение</button>
           </div>
 
-          <form class="quest__info_form control-center">
+          <form class="quest__info_form control-center" name="Заявка с формы Центр управления">
             <div>
               <label for="control-center__name">Имя и Фамилия <span>*</span></label>
-              <input id="control-center__name" type="text" minlength="2" pattern="[A-zА-яЁё]+" required>
+              <input id="control-center__name" name="nameUser" type="text" minlength="2" pattern="[A-zА-яЁё s]+" required>
             </div>
             <div>
               <label for="control-center__phone">Ваш Телефон <span>*</span></label>
-              <input id="control-center__phone" type="text" required>
+              <input id="control-center__phone" name="phoneUser" type="tel" required>
             </div>
             <button class="order" type="submit">Забронировать</button>
           </form>
@@ -274,14 +274,14 @@
             Мы точно можем сказать, что 70% наших клиентов приходят по рекомендации. Приходите и Вы!</p>
         </div>
 
-        <form class="oth-serv__info_form child-party">
+        <form class="oth-serv__info_form child-party" name="Заявка с формы Детский праздник">
           <div>
             <label for="child-party__name">Имя и Фамилия <span>*</span></label>
-            <input id="child-party__name" type="text" minlength="2" pattern="[A-zА-яЁё]+" required>
+            <input id="child-party__name" name="nameUser" type="text" minlength="2" pattern="[A-zА-яЁё \s]+" required>
           </div>
           <div>
             <label for="child-party__phone">Ваш Телефон <span>*</span></label>
-            <input id="child-party__phone" type="text" required>
+            <input id="child-party__phone" name="phoneUser" type="tel" required>
           </div>
           <button class="callback-btn">Свяжитесь со мной</button>
         </form>
@@ -314,14 +314,14 @@
           </ol>
         </div>
 
-        <form class="oth-serv__info_form cars">
+        <form class="oth-serv__info_form cars" name="Заявка с формы Машинки">
           <div>
             <label for="cars__name">Имя и Фамилия <span>*</span></label>
-            <input id="cars__name" type="text" minlength="2" pattern="[A-zА-яЁё]+" required>
+            <input id="cars__name" name="nameUser" type="text" minlength="2" pattern="[A-zА-яЁё \s]+" required>
           </div>
           <div>
             <label for="cars__phone">Ваш Телефон <span>*</span></label>
-            <input id="cars__phone" type="text" required>
+            <input id="cars__phone" name="phoneUser" type="tel" required>
           </div>
 
           <button class="callback-btn">Свяжитесь со мной</button>
@@ -363,14 +363,14 @@
         с Вами свяжемся наш администратор и подробно расскажет о квест-комнатах "Погреба"!</p>
     </div>
 
-    <form class="b-callback__form" method="post">
+    <form class="b-callback__form" name="Заявка из общей формы">
       <div>
         <label for="callback__name">Имя и Фамилия <span>*</span></label>
-        <input id="callback__name" type="text" minlength="2" pattern="[A-zА-яЁё]+" required>
+        <input id="callback__name" name="nameUser" type="text" minlength="2" pattern="[A-zА-яЁё \s]+" required>
       </div>
       <div>
         <label for="callback__phone">Ваш Телефон <span>*</span></label>
-        <input id="callback__phone" type="text" required>
+        <input id="callback__phone" name="phoneUser" type="tel" required>
       </div>
       <button class="callback-btn callback-btn_big">Свяжитесь со мной</button>
     </form>
@@ -407,13 +407,9 @@
     <p>Лаборатория квестов "Погреб"</p>
   </footer>
 
-  <!--<div class="send-form-successfully">
-    <p class="send-form-successfully__title">Форма отправлена успешно!</p>
-    <p class="send-form-successfully__text">Наш менеджер свяжется с Вами в ближайшее время.</p>
-  </div>-->
 
-
-  <script src="./js/detail_view.js"></script>
-  <script src="./js/post_form.js"></script>
+  <script src="./js/containerDetailView.js"></script>
+  <script src="./js/containerMsgSendForm.js"></script>
+  <script src="./js/onSubmit.js"></script>
 </body>
 </html>

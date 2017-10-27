@@ -22,6 +22,8 @@ button.callback-btn {
   display: inline-block;
   margin: 10px auto;
   padding: 7px 20px;
+  width: auto;
+  height: 33px;
   border: 1px solid #333333;
   border-radius: 5px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
@@ -217,10 +219,12 @@ header {
     display: none; }
   .nav-bar .nav-bar__order {
     margin: 5px 0;
+    width: 190px;
+    height: 36px;
     font-size: 17px; }
     .nav-bar .nav-bar__order a {
-      width: 190px;
-      height: 36px; } }
+      width: inherit;
+      height: inherit; } }
 
 @media (max-width: 520px) {
   .header__contacts {
@@ -231,13 +235,15 @@ header {
       font-size: 16px; }
   .nav-bar .nav-bar__order {
     background: #fa951e;
+    width: 147px;
+    height: 33px;
     font-size: 14px;
     text-indent: 0; }
     .nav-bar .nav-bar__order:hover, .nav-bar .nav-bar__order:active {
       background: #f7c205; }
     .nav-bar .nav-bar__order a {
-      width: 147px;
-      height: 33px; } }
+      width: inherit;
+      height: inherit; } }
 
 /*============================================================================*    @@JUMBOTRON
 \*============================================================================*/
@@ -1042,35 +1048,38 @@ footer {
       color: gray;
       overflow: hidden; }
 
-.send-form-successfully {
+.status-send-form {
   position: fixed;
   top: 30%;
   left: 50%;
   margin: 0 0 0 -175px;
   padding: 160px 15px 30px 15px;
   width: 400px;
-  height: 300px;
+  height: 350px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  background: white url("../img/check-form.svg") no-repeat 50% 25px/125px;
   font-family: "Jura-Regular", sans-serif;
   color: #333333;
   text-align: center;
   line-height: 1.4;
   z-index: 20;
   animation: popup .5s ease-in-out; }
-  .send-form-successfully .send-form-successfully__title {
+  .status-send-form.success {
+    background: white url("../img/form-success.svg") no-repeat 50% 25px/125px; }
+  .status-send-form.error {
+    background: white url("../img/form-error.svg") no-repeat 50% 25px/125px; }
+  .status-send-form .status-send-form__title {
     margin: 10px 0;
     font-size: 25px;
     font-weight: 700; }
-  .send-form-successfully .send-form-successfully__text {
+  .status-send-form .status-send-form__text {
     font-size: 20px; }
   @media (max-width: 530px) {
-    .send-form-successfully {
+    .status-send-form {
       left: 45%;
       transform: scale(0.8);
       animation: none; } }
   @media (max-width: 400px) {
-    .send-form-successfully {
+    .status-send-form {
       left: 42.5%;
       animation: none; } }

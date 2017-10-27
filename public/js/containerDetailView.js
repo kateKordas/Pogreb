@@ -4,7 +4,7 @@
  * Add container detail view.
  */
 
-function addDetailView(btn) {
+function addDetailView(btn, nameForm) {
   var detailView = {
     safePopUp: {
       title: "Квест-комната \"Сейф Банкира\"",
@@ -34,37 +34,41 @@ function addDetailView(btn) {
   var containerDetailView = document.createElement("div");
   containerDetailView.classList.add("quest__info_descr_continue");
   containerDetailView.innerHTML =
-  `<p class="quest__info_descr_continue-title">${detailView[btn.getAttribute("id")].title}</p>
+  `<p class="quest__info_descr_continue-title">${detailView[btn.id].title}</p>
    <button class="close"></button>
-   <p class="quest__info_descr_continue-text">${detailView[btn.getAttribute("id")].text}</p>
+   <p class="quest__info_descr_continue-text">${detailView[btn.id].text}</p>
 
-   <form class="quest__info_descr_continue-form">
-     <input type="text" placeholder="Ваше Имя и Фамилия *" minlength="2" pattern="[A-zА-яЁё]+" required>
-     <input type="text" required placeholder="Ваш Телефон *">
+   <form class="quest__info_descr_continue-form" name="${nameForm}">
+     <input type="text" name="nameUser" placeholder="Ваше Имя и Фамилия *" minlength="2" pattern="[A-zА-яЁё \s]+" required>
+     <input type="tel" name="phoneUser" required placeholder="Ваш Телефон *">
      <button class="order" type="submit">Забронировать</button>
    </form>`;
 
   btn.parentElement.appendChild(containerDetailView);
-}
 
+  var form = containerDetailView.lastElementChild;
+  form.addEventListener("submit", (event) => handlerForSubmitEvent(event));
+}
 
 /**
  * Remove container detail view.
  */
+
 function removeDetailView(el) {
   el.parentElement.removeChild(el);
 }
 
-
 /**
  * Button-click handler for render container detail view.
  */
+
 [].forEach.call(document.querySelectorAll(".continue"), function (element) {
   element.addEventListener("click", function (event) {
     event.stopPropagation();
     var btn = event.target;
+    var nameForm = btn.parentElement.nextElementSibling.name;
 
-    addDetailView(btn);
+    addDetailView(btn, nameForm);
 
     document.addEventListener("click", function (event) {
       var containerDetailView = document.querySelector(".quest__info_descr_continue");
