@@ -4,7 +4,7 @@
  * Add container detail view.
  */
 
-function addDetailView(btn, nameForm) {
+var addDetailView = (btn, nameForm) => {
   var detailView = {
     safePopUp: {
       title: "Квест-комната \"Сейф Банкира\"",
@@ -48,29 +48,27 @@ function addDetailView(btn, nameForm) {
 
   var form = containerDetailView.lastElementChild;
   form.addEventListener("submit", (event) => handlerForSubmitEvent(event));
-}
+};
 
 /**
  * Remove container detail view.
  */
 
-function removeDetailView(el) {
-  el.parentElement.removeChild(el);
-}
+var removeDetailView = (el) => el.parentElement.removeChild(el);
 
 /**
  * Button-click handler for render container detail view.
  */
 
-[].forEach.call(document.querySelectorAll(".continue"), function (element) {
-  element.addEventListener("click", function (event) {
+[].forEach.call(document.querySelectorAll(".continue"), (element) => {
+  element.addEventListener("click", (event) => {
     event.stopPropagation();
     var btn = event.target;
     var nameForm = btn.parentElement.nextElementSibling.name;
 
     addDetailView(btn, nameForm);
 
-    document.addEventListener("click", function (event) {
+    document.addEventListener("click", (event) => {
       var containerDetailView = document.querySelector(".quest__info_descr_continue");
       if (containerDetailView) {
         if (!containerDetailView.contains(event.target)

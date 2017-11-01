@@ -58,10 +58,6 @@ button.callback-btn {
     color: rgb(0,0,0);
     box-shadow: inset 0 2px 5px 0 rgba(0,0,0,.25);
   }
-
-  @media (max-width: 930px) {
-    margin: 20px 0 0 0;
-  }
 }
 
 button.order {
@@ -159,31 +155,39 @@ header {
   text-align: right;
   font-size: 18px;
   color: #ffffff;
+}
 
-  & .contacts__phone {
-    display: inline-block;
-    margin: 0 60px 0 0;
-    padding: 2px 0;
-    width: 170px;
-    height: 35px;
-    background: url("../img/b-jumbotron/icon-phone.png") no-repeat;
+.contacts__phone {
+  display: inline-block;
+  margin: 0 60px 0 0;
+  padding: 2px 0;
+  width: 170px;
+  height: 35px;
+  background: url("../img/b-jumbotron/icon-phone.png") no-repeat;
 
-    @media (max-width: 910px) {
-      width: 160px;
-      font-size: 16px;
-    }
+  @media (max-width: 910px) {
+    width: 160px;
+    font-size: 16px;
   }
 
-  & .contacts__address {
-    display: inline-block;
-    width: 170px;
-    height: 35px;
-    background: url("../img/b-jumbotron/icon-address.png") no-repeat;
+  & a {
+    color: rgba(255, 255, 255, 1);
 
-    @media (max-width: 910px) {
-      width: 160px;
-      font-size: 16px;
+    &:active {
+      color: rgba(255, 255, 255, .5);
     }
+  }
+}
+
+.contacts__address {
+  display: inline-block;
+  width: 170px;
+  height: 35px;
+  background: url("../img/b-jumbotron/icon-address.png") no-repeat;
+
+  @media (max-width: 910px) {
+    width: 160px;
+    font-size: 16px;
   }
 }
 
@@ -199,61 +203,59 @@ header {
 
 .nav-bar {
   display: inline-block;
-  margin: 5px 0;
   float: right;
+}
 
+.nav-bar__list {
+  display: inline-block;
+}
 
-  & .nav-bar__list {
-    display: inline-block;
+.nav-bar__item {
+  position: relative;
+  display: inline-block;
+  margin: 5px 2vw;
+  padding: 8px 10px;
+  border-radius: 5px;
+  background: rgba(255,255,255,.05);
+  font-size: 14px;
+  color: #ffffff;
+  cursor: pointer;
 
-    & .nav-bar__item {
-      position: relative;
-      display: inline-block;
-      margin: 5px 2vw;
-      padding: 8px 10px;
-      border-radius: 5px;
-      background: rgba(255,255,255,.05);
-      font-size: 14px;
-      color: #ffffff;
-      cursor: pointer;
-
-      &:hover {
-        background: rgba(255,255,255,.2);
-      }
-
-      @media (max-width: 930px) {
-        margin: 5px .5vw;
-        font-size: 13px;
-      }
-
-      & a {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: inline-block;
-        width: 120px;
-        height: 30px;
-
-        @media (max-width: 930px) {
-          width: 106px;
-          height: 28px;
-        }
-      }
-    }
+  &:hover {
+    background: rgba(255,255,255,.2);
   }
 
-  .nav-bar__order {
-    position: relative;
-    margin: 0;
+  @media (max-width: 930px) {
+    margin: 5px .5vw;
+    font-size: 13px;
+  }
 
-    & a {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: inline-block;
-      width: 167px;
-      height: 33px;
+  & a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+
+    @media (max-width: 930px) {
+      width: 106px;
+      height: 28px;
     }
+  }
+}
+
+.nav-bar__order {
+  position: relative;
+  margin: 0;
+
+  & a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 167px;
+    height: 33px;
   }
 }
 
@@ -269,52 +271,53 @@ header {
     margin: 15px;
     display: inline-block;
     text-align: left;
+  }
 
-    & .contacts__phone {
-      margin: 0;
-      width: 180px;
-      text-indent: 40px;
-      font-size: 20px;
-    }
-    & .contacts__address {
-      display: none;
-    }
+  .contacts__phone {
+    margin: 0;
+    width: 180px;
+    text-indent: 40px;
+    font-size: 20px;
+  }
+
+  .contacts__address {
+    display: none;
   }
 
   .logo {
     display: none;
   }
 
-  .nav-bar {
-    & .nav-bar__list .nav-bar__item {
+  .nav-bar__item {
       display: none;
-    }
-    & .nav-bar__order {
-      margin: 5px 0;
-      width: 190px;
-      height: 36px;
-      font-size: 17px;
+  }
 
-      & a {
-        width: inherit;
-        height: inherit;
-      }
+  .nav-bar__order {
+    margin: 5px 0;
+    width: 190px;
+    height: 36px;
+    font-size: 17px;
+
+    & a {
+      width: inherit;
+      height: inherit;
     }
   }
 }
 
+
 @media (max-width: 520px) {
   .header__contacts {
     margin: 15px 0;
-
-    & .contacts__phone {
-      width: 145px;
-      text-indent: 30px;
-      font-size: 16px;
-    }
   }
 
-  .nav-bar .nav-bar__order {
+  .contacts__phone {
+    width: 145px;
+    text-indent: 30px;
+    font-size: 16px;
+  }
+
+  .nav-bar__order {
     background: rgb(250,149,30);
     width: 147px;
     height: 33px;
@@ -347,7 +350,7 @@ header {
     vertical-align: bottom;
   }
 
-  & .media-container__opacity {
+  & .media-container_opacity {
     position: absolute;
     top: 0;
     left: 0;
@@ -365,46 +368,46 @@ header {
   font-family: "Jura-Regular", sans-serif;
   color: #ffffff;
 
-  & .jumbotron__title_logo {
-    padding: 1vw 0 0 15vw;
-    white-space: pre-wrap;
-    background: url("../img/logo-white.png") no-repeat 0 0 /13vw;
-    font-size: 2.5vw;
-  }
-
   & h1 {
     padding: .5vw 0;
     text-transform: uppercase;
     font-family: "Orbitron-Light", sans-serif;
     font-size: 10vw;
   }
+}
 
-  & .jumbotron__title_descr {
-    padding: 0 0 1vw 0;
-    white-space: pre-wrap;
-    background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 47vw 5vw /3.5vw;
-    font-size: 2vw;
-    font-weight: 700;
+.jumbotron__title_logo {
+  padding: 1vw 0 0 15vw;
+  white-space: pre-wrap;
+  background: url("../img/logo-white.png") no-repeat 0 0 /13vw;
+  font-size: 2.5vw;
+}
+
+.jumbotron__title_descr {
+  padding: 0 0 1vw 0;
+  white-space: pre-wrap;
+  background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 47vw 5vw /3.5vw;
+  font-size: 2vw;
+  font-weight: 700;
+
+  @media (max-width: 930px) {
+    background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 91% 6.5vw /37px;
+    font-size: 20px;
+    line-height: 1.1;
+  }
+
+  & span {
+    font-size: 1.5vw;
+    font-weight: 500;
 
     @media (max-width: 930px) {
-      background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 91% 6.5vw /37px;
-      font-size: 20px;
-      line-height: 1.1;
-    }
-
-    & span {
-      font-size: 1.5vw;
-      font-weight: 500;
-
-      @media (max-width: 930px) {
-        font-size: 17px;
-      }
+      font-size: 17px;
     }
   }
+}
 
-  & .jumbotron__title_descr-mobile {
-    display: none;
-  }
+.jumbotron__title_descr-mobile {
+  display: none;
 }
 
 .jumbotron__order {
@@ -454,29 +457,29 @@ header {
   .jumbotron__title {
     left: 0;
 
-    & .jumbotron__title_logo {
-      padding: 1vw 0 0 35vw;
-      background: url("../img/logo-white.png") no-repeat 0 0 /25vw;
-      font-size: 5vw;
-    }
-
     & h1 {
       margin: 5vw 0;
       font-size: 15vw;
     }
+  }
 
-    & .jumbotron__title_descr {
-      display: none;
-    }
+  .jumbotron__title_logo {
+    padding: 1vw 0 0 35vw;
+    background: url("../img/logo-white.png") no-repeat 0 0 /25vw;
+    font-size: 5vw;
+  }
 
-    & .jumbotron__title_descr-mobile {
-      display: block;
-      margin: 2.5vw 0;
-      width: 80vw;
-      height: 20vw;
-      background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 70vw 50px /50px;
-      font-size: 22px;
-    }
+  .jumbotron__title_descr {
+    display: none;
+  }
+
+  .jumbotron__title_descr-mobile {
+    display: block;
+    margin: 2.5vw 0;
+    width: 80vw;
+    height: 20vw;
+    background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 70vw 50px /50px;
+    font-size: 22px;
   }
 
   .jumbotron__order {
@@ -489,26 +492,25 @@ header {
     background-position-x: -150px;
   }
 
-  .jumbotron__title {
-    & .jumbotron__title_logo {
-      padding: 1vw 0 0 35vw;
-      background: url("../img/logo-white.png") no-repeat 0 0 /30vw;
-      font-size: 7vw;
-    }
-
-    & h1 {
+  .jumbotron__title h1 {
       margin: 10vw 0;
       font-size: 17vw;
-    }
+  }
 
-    & .jumbotron__title_descr-mobile {
-      margin: 6vw 0;
-      width: 80vw;
-      height: 22vw;
-      font-size: 25px;
-    }
+  .jumbotron__title_logo {
+    padding: 1vw 0 0 35vw;
+    background: url("../img/logo-white.png") no-repeat 0 0 /30vw;
+    font-size: 7vw;
+  }
+
+  .jumbotron__title_descr-mobile {
+    margin: 6vw 0;
+    width: 80vw;
+    height: 22vw;
+    font-size: 25px;
   }
 }
+
 
 @media (max-width: 480px) {
   .media-container {
@@ -516,19 +518,17 @@ header {
     background-position-x: -250px;
   }
 
-  .jumbotron__title {
-    & h1 {
+  .jumbotron__title h1 {
       margin: 8vw 0;
       font-size: 18vw;
-    }
+  }
 
-    & .jumbotron__title_descr-mobile {
-      margin: 6vw 0;
-      width: 88vw;
-      height: 120px;
-      background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 72vw 53px /50px;
-      font-size: 23px;
-    }
+  .jumbotron__title_descr-mobile {
+    margin: 6vw 0;
+    width: 88vw;
+    height: 120px;
+    background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 72vw 53px /50px;
+    font-size: 23px;
   }
 }
 
@@ -596,6 +596,7 @@ header {
     background-size: cover;
   }
 }
+
 .quest__img.ventilation {
   background: url("../img/b-quest-rooms/img-ventilation.png");
   background-size: cover;
@@ -606,6 +607,7 @@ header {
     order: 0;
   }
 }
+
 .quest__img.control-center {
   background: url("../img/b-quest-rooms/img-control-center.png");
   background-size: cover;
@@ -615,6 +617,7 @@ header {
     background-size: cover;
   }
 }
+
 .quest__img.sanitary {
   background: url("../img/b-quest-rooms/img-sanitary.png");
   background-size: cover;
@@ -625,6 +628,7 @@ header {
     order: 0;
   }
 }
+
 .oth-serv__img.child-party {
   background: url("../img/b-other-servises/img-ch-party.png");
   background-size: cover;
@@ -634,6 +638,7 @@ header {
     background-size: cover;
   }
 }
+
 .oth-serv__img.cars {
   background: url("../img/b-other-servises/img-cars.png");
   background-size: cover;
@@ -665,12 +670,8 @@ header {
     width: 95vw;
   }
 
-  .quest__info.ventilation {
-    order: 1;
-  }
-  .quest__info.sanitary {
-    order: 1;
-  }
+  .quest__info.ventilation,
+  .quest__info.sanitary,
   .oth-serv__info.cars {
     order: 1;
   }
@@ -683,16 +684,16 @@ header {
   font-weight: 700;
   text-transform: uppercase;
 
+  @media (max-width: 930px) {
+    text-align: center;
+    font-size: 43px;
+  }
+
   & span {
     font-size: 16px;
     font-weight: 500;
     text-transform: none;
     line-height: 2.5;
-  }
-
-  @media (max-width: 930px) {
-    text-align: center;
-    font-size: 43px;
   }
 }
 
@@ -729,139 +730,123 @@ header {
   @media (max-width: 930px) {
     margin: 15px 0;
   }
+}
 
-  & .quest__info_brief-cost,
-  & .quest__info_brief-team,
-  & .oth-serv__info_brief-cost,
-  & .oth-serv__info_brief-cost1.cars,
-  & .oth-serv__info_brief-cost2.cars,
-  & .oth-serv__info_brief-team,
-  & .oth-serv__info_brief-duration {
-    white-space: pre-wrap;
-    font-size: 21px;
-    line-height: 1.5;
+.quest__info_brief-cost,
+.quest__info_brief-team,
+.oth-serv__info_brief-cost,
+.oth-serv__info_brief-cost1.cars,
+.oth-serv__info_brief-cost2.cars,
+.oth-serv__info_brief-team,
+.oth-serv__info_brief-duration {
+  white-space: pre-wrap;
+  font-size: 21px;
+  line-height: 1.5;
 
-    & span {
-      font-size: 16px;
-    }
-
-    @media (max-width: 520px) {
-      text-align: center;
-    }
-  }
-
-  & .oth-serv__info_brief-duration {
-    @media (max-width: 520px) {
-      display: none;
-    }
-  }
-
-  & .oth-serv__info_brief-cost.cars {
-    @media (max-width: 520px) {
-      width: 100%;
-    }
-  }
-
-
-  & .quest__info_brief-level {
-    width: 17vw;
-    height: 70px;
-    white-space: pre-wrap;
+  & span {
     font-size: 16px;
-    line-height: 2;
-
-    @media (max-width: 520px) {
-     display: none;
-    }
   }
+}
 
-  & .quest__info_brief-level.safe {
-    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
-                url("../img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
-                url("../img/b-quest-rooms/level-0.5.png") no-repeat 10vw 38px /5vw;
+.quest__info_brief-level {
+  width: 17vw;
+  height: 70px;
+  white-space: pre-wrap;
+  font-size: 16px;
+  line-height: 2;
+}
 
-    @media (max-width: 930px) {
-      width: 23vw;
-      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
-                  url("../img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
-                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 16vw 38px /7vw;
-    }
+.quest__info_brief-fn {
+  margin: 8px 0;
+  font-size: 13px;
 
-    @media (max-width: 670px) {
-      width: 30vw;
-      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
-                  url("../img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
-                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 18vw 38px /9vw;
-    }
+  @media (max-width: 930px) {
+    text-align: center;
   }
+}
 
-  & .quest__info_brief-level.ventilation {
-    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
-    url("../img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
-    url("../img/b-quest-rooms/level-0.png") no-repeat 10vw 38px /5vw;
-
-    @media (max-width: 930px) {
-      width: 23vw;
-      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
-      url("../img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
-      url("../img/b-quest-rooms/level-0.png") no-repeat 16vw 38px /7vw;
-    }
-
-    @media (max-width: 670px) {
-      width: 30vw;
-      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
-      url("../img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
-      url("../img/b-quest-rooms/level-0.png") no-repeat 18vw 38px /9vw;
-    }
-  }
-
-  & .quest__info_brief-level.control-center {
-    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
-                url("../img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
-                url("../img/b-quest-rooms/level-0.5.png") no-repeat 10vw 38px /5vw;
-
-    @media (max-width: 930px) {
-      width: 23vw;
-      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
-                  url("../img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
-                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 16vw 38px /7vw;
-    }
-
-    @media (max-width: 670px) {
-      width: 30vw;
-      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
-                  url("../img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
-                  url("../img/b-quest-rooms/level-0.5.png") no-repeat 18vw 38px /9vw;
-    }
-  }
-
-  & .quest__info_brief-level.sanitary {
-    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
-                url("../img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
-                url("../img/b-quest-rooms/level-1.png") no-repeat 10vw 38px /5vw;
-
-    @media (max-width: 930px) {
-      width: 23vw;
-      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
-                  url("../img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
-                  url("../img/b-quest-rooms/level-1.png") no-repeat 16vw 38px /7vw;
-    }
-
-    @media (max-width: 670px) {
-      width: 30vw;
-      background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
-                  url("../img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
-                  url("../img/b-quest-rooms/level-1.png") no-repeat 18vw 38px /9vw;
-    }
-  }
-
-  & .quest__info_brief-fn {
-    margin: 8px 0;
-    font-size: 13px;
-
-    @media (max-width: 930px) {
+@media (max-width: 520px) {
+  .quest__info_brief-cost,
+  .quest__info_brief-team,
+  .oth-serv__info_brief-cost,
+  .oth-serv__info_brief-cost1.cars,
+  .oth-serv__info_brief-cost2.cars,
+  .oth-serv__info_brief-team,
+  .oth-serv__info_brief-duration {
       text-align: center;
-    }
+  }
+
+  .oth-serv__info_brief-duration {
+    display: none;
+  }
+
+  .oth-serv__info_brief-cost.cars {
+    width: 100%;
+  }
+
+  .quest__info_brief-level {
+    display: none;
+  }
+}
+
+.quest__info_brief-level.safe,
+.quest__info_brief-level.control-center {
+  background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
+              url("../img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
+              url("../img/b-quest-rooms/level-0.5.png") no-repeat 10vw 38px /5vw;
+
+  @media (max-width: 930px) {
+    width: 23vw;
+    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
+                url("../img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
+                url("../img/b-quest-rooms/level-0.5.png") no-repeat 16vw 38px /7vw;
+  }
+
+  @media (max-width: 670px) {
+    width: 30vw;
+    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
+                url("../img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
+                url("../img/b-quest-rooms/level-0.5.png") no-repeat 18vw 38px /9vw;
+  }
+}
+
+.quest__info_brief-level.ventilation {
+  background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
+              url("../img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
+              url("../img/b-quest-rooms/level-0.png") no-repeat 10vw 38px /5vw;
+
+  @media (max-width: 930px) {
+    width: 23vw;
+    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
+                url("../img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
+                url("../img/b-quest-rooms/level-0.png") no-repeat 16vw 38px /7vw;
+  }
+
+  @media (max-width: 670px) {
+    width: 30vw;
+    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
+                url("../img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
+                url("../img/b-quest-rooms/level-0.png") no-repeat 18vw 38px /9vw;
+  }
+}
+
+.quest__info_brief-level.sanitary {
+  background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
+              url("../img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
+              url("../img/b-quest-rooms/level-1.png") no-repeat 10vw 38px /5vw;
+
+  @media (max-width: 930px) {
+    width: 23vw;
+    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
+                url("../img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
+                url("../img/b-quest-rooms/level-1.png") no-repeat 16vw 38px /7vw;
+  }
+
+  @media (max-width: 670px) {
+    width: 30vw;
+    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
+                url("../img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
+                url("../img/b-quest-rooms/level-1.png") no-repeat 18vw 38px /9vw;
   }
 }
 
@@ -874,38 +859,42 @@ header {
 .oth-serv__info_descr {
   position: relative;
   padding: 10px 0;
+}
 
-  & .quest__info_descr-title,
-  & .oth-serv__info_descr-title {
-    display: inline-block;
-    padding: 5px 4vw 5px 0;
-    vertical-align: top;
-    font-size: 16px;
+.quest__info_descr-title,
+.oth-serv__info_descr-title {
+  display: inline-block;
+  padding: 5px 4vw 5px 0;
+  vertical-align: top;
+  font-size: 16px;
+}
 
-    @media (max-width: 930px) {
-      display: block;
-      padding: 10px 0;
-      text-align: center;
-    }
+.quest__info_descr-text,
+.oth-serv__info_descr-text {
+  display: inline-block;
+  width: 36vw;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.oth-serv__info_descr-text.cars {
+  width: auto;
+}
+
+@media (max-width: 930px) {
+  .quest__info_descr-title,
+  .oth-serv__info_descr-title {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
   }
 
-  & .quest__info_descr-text,
-  & .oth-serv__info_descr-text {
-    display: inline-block;
-    width: 36vw;
-    font-size: 15px;
-    line-height: 1.4;
-
-    @media (max-width: 930px) {
-      display: block;
-      padding: 10px;
-      width: 95vw;
-      text-align: center;
-    }
-  }
-
-  & .oth-serv__info_descr-text.cars {
-    width: auto;
+  .quest__info_descr-text,
+  .oth-serv__info_descr-text {
+    display: block;
+    padding: 10px;
+    width: 95vw;
+    text-align: center;
   }
 }
 
@@ -917,6 +906,10 @@ header {
 .quest__info_form,
 .oth-serv__info_form {
   margin: 10px 0;
+
+  @media (max-width: 1060px) {
+    text-align: center;
+  }
 
   & div {
     display: inline-block;
@@ -930,26 +923,23 @@ header {
         color: rgb(153,51,51);
       }
     }
-
-    & input {
-      margin: 3px 5px 0 0;
-      padding: 6px 12px;
-      width: 16vw;
-      height: 32px;
-      border: 1px solid rgb(204,204,204);
-      border-radius: 4px;
-      font-size: 14px;
-      color: rgb(128,128,128);
-      overflow: hidden;
-
-      @media (max-width: 930px) {
-        width: 165px;
-      }
-    }
   }
+}
 
-  @media (max-width: 1060px) {
-    text-align: center;
+.quest__info_form input,
+.oth-serv__info_form input {
+  margin: 3px 5px 0 0;
+  padding: 6px 12px;
+  width: 16vw;
+  height: 32px;
+  border: 1px solid rgb(204,204,204);
+  border-radius: 4px;
+  font-size: 14px;
+  color: rgb(128,128,128);
+  overflow: hidden;
+
+  @media (max-width: 930px) {
+    width: 165px;
   }
 }
 
@@ -1019,25 +1009,25 @@ header {
   justify-content: space-around;
   align-items: stretch;
   background: $color-graphite;
+}
 
-  .discounts__birthday,
-  .discounts__2nd-room {
-    display: inline-block;
-    width: 48vw;
-    text-align: center;
+.discounts__birthday,
+.discounts__2nd-room {
+  display: inline-block;
+  width: 48vw;
+  text-align: center;
 
-    & p {
-      white-space: pre-wrap;
-      font-size: 23px;
+  & p {
+    white-space: pre-wrap;
+    font-size: 23px;
 
-      & span {
-        font-size: 18px;
-      }
+    & span {
+      font-size: 18px;
     }
+  }
 
-    & img {
-      width: 43vw;
-    }
+  & img {
+    width: 43vw;
   }
 }
 
@@ -1111,45 +1101,44 @@ header {
     font-size: 21px;
 
     & span {
-      color: rgb(153,51,51);
+      color: rgb(153, 51, 51);
     }
   }
+}
 
-  & input {
-    margin: 10px 0;
-    padding: 10px 12px;
-    width: 300px;
-    height: 44px;
-    border: 2px solid rgb(204,204,204);
-    border-radius: 6px;
-    font-size: 21px;
-    color: rgb(128,128,128);
-    overflow: hidden;
+.b-callback__form input {
+  margin: 10px 0;
+  padding: 10px 12px;
+  width: 300px;
+  height: 44px;
+  border: 2px solid rgb(204,204,204);
+  border-radius: 6px;
+  font-size: 21px;
+  color: rgb(128,128,128);
+  overflow: hidden;
+}
 
-    @media (max-width: 430px) {
-      width: 280px;
-    }
+.callback-btn.callback-btn_big {
+  margin: 0;
+  width: 300px;
+  height: 44px;
+  border-radius: 6px;
+  background: rgb(250,149,30);
+  text-indent: 0;
+  font-size: 18px;
+
+  &:hover {
+    background: rgb(247,194,5);
   }
+  &:active {
+    background: rgb(247,194,5);
+  }
+}
 
-  & .callback-btn_big {
-    margin: 0;
-    width: 300px;
-    height: 44px;
-    border-radius: 6px;
-    background: rgb(250,149,30);
-    text-indent: 0;
-    font-size: 18px;
-
-    &:hover {
-      background: rgb(247,194,5);
-    }
-    &:active {
-      background: rgb(247,194,5);
-    }
-
-    @media (max-width: 430px) {
-      width: 280px;
-    }
+@media (max-width: 430px) {
+  .b-callback__form input,
+  .callback-btn_big {
+    width: 280px;
   }
 }
 
@@ -1167,18 +1156,20 @@ header {
   @media (max-width: 1000px) {
     background-position-x: -10px;
   }
+
   @media (max-width: 800px) {
     background-position-x: -170px;
   }
+
   @media (max-width: 650px) {
     background-position-x: -250px;
   }
 
   @media (max-width: 520px) {
-    height: 660px;
+    height: 700px;
     border-top: 1px solid grey;
-    background-position: -210px 365px;
-    background-size: 800px;
+    background-position: -243px 365px;
+    background-size: 900px;
   }
 }
 
@@ -1214,39 +1205,47 @@ header {
     line-height: 1.2;
     font-size: 15px;
 
+    & a {
+      color: #ffffff;
+
+      &:active {
+        color: rgba(255,255,255,.5);
+      }
+    }
+
     & span {
       font-size: 17px;
     }
   }
+}
 
-  .contacts__social-media {
-    & div {
-      display: inline-block;
-      margin: 0 12px 0 0 ;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      cursor: pointer;
+.contacts__social-media_vk,
+.contacts__social-media_fb,
+.contacts__social-media_insta {
+  display: inline-block;
+  margin: 0 12px 0 0 ;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
 
-      & a {
-        display: inline-block;
-        width: inherit;
-        height: inherit;
-      }
-    }
-
-    & .contacts__social-media_vk {
-      background: rgb(255,255,255) url("../img/b-contacts/vk-social-media.svg") no-repeat 5px 7px/28px;
-    }
-
-    & .contacts__social-media_fb {
-      background: rgb(255,255,255) url("../img/b-contacts/facebook-social-media.svg") no-repeat 6px 7px/28px;
-    }
-
-    & .contacts__social-media_insta {
-      background: rgb(255,255,255) url("../img/b-contacts/instagram-social-media.svg") no-repeat 6px 6px/28px;
-    }
+  & a {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
   }
+}
+
+.contacts__social-media_vk {
+  background: rgb(255,255,255) url("../img/b-contacts/vk-social-media.svg") no-repeat 5px 7px/28px;
+}
+
+.contacts__social-media_fb {
+  background: rgb(255,255,255) url("../img/b-contacts/facebook-social-media.svg") no-repeat 6px 7px/28px;
+}
+
+.contacts__social-media_insta {
+  background: rgb(255,255,255) url("../img/b-contacts/instagram-social-media.svg") no-repeat 6px 6px/28px;
 }
 
 
@@ -1262,10 +1261,6 @@ footer {
   font-family: "Jura-Regular", sans-serif;
   color: rgb(255,255,255);
 
-  @media (max-width: 520px) {
-    padding: 10px;
-  }
-
   & p {
     float: right;
     width: 350px;
@@ -1273,8 +1268,14 @@ footer {
     background: url("../img/logo-white-sm.png") no-repeat 255px 0;
     font-size: 16px;
     line-height: 3;
+  }
+}
 
-    @media (max-width: 520px) {
+@media (max-width: 520px) {
+  footer {
+    padding: 10px;
+
+    & p {
       width: 300px;
       background-position-x: 220px;
       font-size: 14px;
@@ -1287,7 +1288,6 @@ footer {
 /*============================================================================*\
     @@POPUPS
 \*============================================================================*/
-
 
 .quest__info_descr_continue,
 .send-form-successfully {
@@ -1322,44 +1322,44 @@ footer {
   font-family: "Jura-Regular", sans-serif;
   color: $color-graphite;
   z-index: 20;
+}
 
-  button.close {
-    position: absolute;
-    top: 16px;
-    left: 670px;
-    width: 10px;
-    height: 10px;
-    border: none;
-    background: url("../img/close.svg") no-repeat 0 0 /10px;
-    cursor: pointer;
-  }
+.quest__info_descr_continue .close {
+  position: absolute;
+  top: 16px;
+  left: 670px;
+  width: 10px;
+  height: 10px;
+  border: none;
+  background: url("../img/close.svg") no-repeat 0 0 /10px;
+  cursor: pointer;
+}
 
-  & .quest__info_descr_continue-title {
-    padding: 15px;
-    border-bottom: 1px solid rgba(0,0,0,.2);
-    text-align: center;
-    font-size: 24px;
-  }
+.quest__info_descr_continue-title {
+  padding: 15px;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  text-align: center;
+  font-size: 24px;
+}
 
-  & .quest__info_descr_continue-text {
-    padding: 15px;
-    font-size: 16px;
-    line-height: 1.5;
-  }
+.quest__info_descr_continue-text {
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+}
 
-  & .quest__info_descr_continue-form {
-    text-align: center;
+.quest__info_descr_continue-form {
+  text-align: center;
 
-    & input {
-      padding: 6px 12px;
-      width: 165px;
-      height: 33px;
-      border: 1px solid rgb(204,204,204);
-      border-radius: 4px;
-      font-size: 13px;
-      color: rgb(128,128,128);
-      overflow: hidden;
-    }
+  & input {
+    padding: 6px 12px;
+    width: 165px;
+    height: 33px;
+    border: 1px solid rgb(204,204,204);
+    border-radius: 4px;
+    font-size: 13px;
+    color: rgb(128,128,128);
+    overflow: hidden;
   }
 }
 
@@ -1388,16 +1388,6 @@ footer {
     background: rgb(255,255,255) url("../img/form-error.svg") no-repeat 50% 25px /125px;
   }
 
-  & .status-send-form__title {
-    margin: 10px 0;
-    font-size: 25px;
-    font-weight: 700;
-  }
-
-  & .status-send-form__text {
-    font-size: 20px;
-  }
-
   @media (max-width: 530px) {
     left: 45%;
     transform: scale(.8);
@@ -1408,3 +1398,14 @@ footer {
     animation: none;
   }
 }
+
+.status-send-form__title {
+  margin: 10px 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.status-send-form__text {
+  font-size: 20px;
+}
+

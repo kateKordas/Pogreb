@@ -4,11 +4,9 @@
  * Create new XMLHttpRequest for post form data to server.
  */
 
-function createRequest(nameForm, nameUser, phoneUser) {
+var createRequest = (nameForm, nameUser, phoneUser) => {
   //Handler for response event
-  function reqListener (){
-    console.log(this.responseText);
-  }
+  var reqListener = () => console.log(this.responseText);
 
   var formData = {
     nameForm: nameForm,
@@ -27,21 +25,21 @@ function createRequest(nameForm, nameUser, phoneUser) {
       ? addMsgForm("success")
       : addMsgForm("error");
   };
-}
+};
 
 /**
  * On submit form.
  */
 
-function handlerForSubmitEvent(event) {
+var handlerForSubmitEvent = (event) => {
   var form = event.target;
   console.log(`Saving values: name ${form.nameUser.value} and phone ${form.phoneUser.value}`);
   event.preventDefault();
 
   createRequest(form.name, form.nameUser.value, form.phoneUser.value);
   form.reset();
-}
+};
 
-[].forEach.call(document.querySelectorAll("form"), function (element) {
+[].forEach.call(document.querySelectorAll("form"), (element) => {
   element.addEventListener("submit", (event) => handlerForSubmitEvent(event));
 });

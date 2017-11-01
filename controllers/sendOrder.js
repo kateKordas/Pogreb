@@ -18,7 +18,7 @@ var letterSend = function (letterText) {
   //TODO FIX recipient email address
   let mailOptions = {
     from: "qlpogreb@gmail.com",
-    to: "ekaterina.gargesyan@gmail.com",
+    to: "qlpogreb@gmail.com",
     subject: "Заявка с сайта Погреб (основная) (pogreb.in.ua)",
     text: letterText
   };

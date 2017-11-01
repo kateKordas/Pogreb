@@ -134,6 +134,10 @@ header {
       .header__contacts .contacts__phone {
         width: 160px;
         font-size: 16px; } }
+    .header__contacts .contacts__phone a {
+      color: #ffffff; }
+      .header__contacts .contacts__phone a:active {
+        color: rgba(255, 255, 255, 0.5); }
   .header__contacts .contacts__address {
     display: inline-block;
     width: 170px;
@@ -910,10 +914,10 @@ header {
       background-position-x: -250px; } }
   @media (max-width: 520px) {
     .b-contacts {
-      height: 660px;
+      height: 700px;
       border-top: 1px solid grey;
-      background-position: -210px 365px;
-      background-size: 800px; } }
+      background-position: -243px 365px;
+      background-size: 900px; } }
 
 .contacts__container {
   margin: 0 0 0 10vw;
@@ -942,6 +946,10 @@ header {
     padding: 10px 0;
     line-height: 1.2;
     font-size: 15px; }
+    .contacts__container p a {
+      color: #ffffff; }
+      .contacts__container p a:active {
+        color: rgba(255, 255, 255, 0.5); }
     .contacts__container p span {
       font-size: 17px; }
   .contacts__container .contacts__social-media div {

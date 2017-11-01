@@ -4,7 +4,7 @@
  * Add container message about status form.
  */
 
-function addMsgForm(status) {
+var addMsgForm = (status) => {
   var msg = {
     success: {
       title: "Ваша заявка отправлена успешно!",
@@ -26,14 +26,14 @@ function addMsgForm(status) {
   document.body.appendChild(containerMsgForm);
 
   removeMsgForm(containerMsgForm);
-}
+};
 
 /**
  * Remove container message about status form..
  */
 
-function removeMsgForm(el) {
+var removeMsgForm = (el) => {
   setTimeout(function () {
     document.body.removeChild(el);
   }, 3000);
-}
+};
