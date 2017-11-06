@@ -110,7 +110,11 @@
           <button class="continue" id="safePopUp">Продолжение</button>
         </div>
 
-        <form class="quest__info_form safe" name="Заявка с формы Сейф">
+        <form class="quest__info_form safe"
+              name="Заявка с формы Сейф"
+              data-target="Banker's-Safe"
+              onsubmit="_gaq.push(['_trackEvent', 'Form','Banker\'s-Safe']); return true;"
+        >
           <div>
             <label for="quest-safe__name">Имя и Фамилия <span>*</span></label>
             <input id="quest-safe__name" name="nameUser" type="text" minlength="2" pattern="[A-zА-яЁё \s]+" required>
@@ -155,7 +159,11 @@
             <button class="continue" id="ventilationPopUp">Продолжение</button>
           </div>
 
-          <form class="quest__info_form ventilation" name="Заявка с формы Вентиляционная">
+          <form class="quest__info_form ventilation"
+                name="Заявка с формы Вентиляционная"
+                data-target="Ventilation"
+                onsubmit="_gaq.push(['_trackEvent', 'Form','Ventilation']); return true;"
+          >
             <div>
               <label for="quest-ventilation__name">Имя и Фамилия <span>*</span></label>
               <input id="quest-ventilation__name" name="nameUser" type="text" minlength="2" pattern="[A-zА-яЁё \s]+" required>
@@ -200,7 +208,11 @@
             <button class="continue" id="controlCenterPopUp">Продолжение</button>
           </div>
 
-          <form class="quest__info_form control-center" name="Заявка с формы Центр управления">
+          <form class="quest__info_form control-center"
+                name="Заявка с формы Центр управления"
+                data-target="Control-Center"
+                onsubmit="_gaq.push(['_trackEvent', 'Form','Control-Center']); return true;"
+          >
             <div>
               <label for="control-center__name">Имя и Фамилия <span>*</span></label>
               <input id="control-center__name" name="nameUser" type="text" minlength="2" pattern="[A-zА-яЁё s]+" required>
@@ -276,7 +288,11 @@
             Мы точно можем сказать, что 70% наших клиентов приходят по рекомендации. Приходите и Вы!</p>
         </div>
 
-        <form class="oth-serv__info_form child-party" name="Заявка с формы Детский праздник">
+        <form class="oth-serv__info_form child-party"
+              name="Заявка с формы Детский праздник"
+              data-target="Child-Party"
+              onsubmit="_gaq.push(['_trackEvent', 'Form','Child-Party']); return true;"
+        >
           <div>
             <label for="child-party__name">Имя и Фамилия <span>*</span></label>
             <input id="child-party__name" name="nameUser" type="text" minlength="2" pattern="[A-zА-яЁё \s]+" required>
@@ -316,7 +332,11 @@
           </ol>
         </div>
 
-        <form class="oth-serv__info_form cars" name="Заявка с формы Машинки">
+        <form class="oth-serv__info_form cars"
+              name="Заявка с формы Машинки"
+              data-target="Cars"
+              onsubmit="_gaq.push(['_trackEvent', 'Form','Cars']); return true;"
+        >
           <div>
             <label for="cars__name">Имя и Фамилия <span>*</span></label>
             <input id="cars__name" name="nameUser" type="text" minlength="2" pattern="[A-zА-яЁё \s]+" required>
@@ -367,7 +387,11 @@
         с Вами свяжемся наш администратор и подробно расскажет о квест-комнатах "Погреба"!</p>
     </div>
 
-    <form class="b-callback__form" name="Заявка из общей формы">
+    <form class="b-callback__form"
+          name="Заявка из общей формы"
+          data-target="Main-Form"
+          onsubmit="_gaq.push(['_trackEvent', 'Form','Main-Form']); return true;"
+    >
       <div>
         <label for="callback__name">Имя и Фамилия <span>*</span></label>
         <input id="callback__name" name="nameUser" type="text" minlength="2" pattern="[A-zА-яЁё \s]+" required>

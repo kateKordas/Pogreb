@@ -6,7 +6,7 @@
  * Add container detail view.
  */
 
-function addDetailView (btn, nameForm) {
+function addDetailView (btn, nameForm, targetGA) {
   var detailView = {
     safePopUp: {
       title: "Квест-комната \"Сейф Банкира\"",
@@ -40,7 +40,11 @@ function addDetailView (btn, nameForm) {
    <button class="close"></button>
    <p class="quest__info_descr_continue-text">${detailView[btn.id].text}</p>
 
-   <form class="quest__info_descr_continue-form" name="${nameForm}">
+   <form class="quest__info_descr_continue-form" 
+         name="${nameForm}"
+         data-target=${targetGA}
+         onsubmit="_gaq.push(['_trackEvent', 'FormPopup','${targetGA}']); return true;"
+   >
      <input type="text" name="nameUser" placeholder="Ваше Имя и Фамилия *" minlength="2" pattern="[A-zА-яЁё \s]+" required>
      <input type="tel" name="phoneUser" required placeholder="Ваш Телефон *">
      <button class="order" type="submit">Забронировать</button>
@@ -69,8 +73,9 @@ function removeDetailView (el) {
     event.stopPropagation();
     var btn = event.target;
     var nameForm = btn.parentElement.nextElementSibling.name;
+    var targetGA = btn.parentElement.nextElementSibling.getAttribute("data-target");
 
-    addDetailView(btn, nameForm);
+    addDetailView(btn, nameForm, targetGA);
 
     document.addEventListener("click", (event) => {
       var containerDetailView = document.querySelector(".quest__info_descr_continue");
