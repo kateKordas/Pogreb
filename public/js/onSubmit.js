@@ -1,17 +1,23 @@
 "use strict";
 
+/*import { parsingUTM } from "./parsingUTMParams";
+import { addMsgForm } from "./containerMsgSendForm";*/
+
 /**
  * Create new XMLHttpRequest for post form data to server.
  */
 
-var createRequest = (nameForm, nameUser, phoneUser) => {
+function createRequest (nameForm, nameUser, phoneUser) {
   //Handler for response event
-  var reqListener = () => console.log(this.responseText);
+  function reqListener () {
+    console.log(this.responseText);
+  }
 
   var formData = {
     nameForm: nameForm,
     nameUser: nameUser,
-    phoneUser: phoneUser
+    phoneUser: phoneUser,
+    utmParams: parsingUTM()
   };
 
   var oReq = new XMLHttpRequest();
@@ -25,20 +31,24 @@ var createRequest = (nameForm, nameUser, phoneUser) => {
       ? addMsgForm("success")
       : addMsgForm("error");
   };
-};
+}
 
 /**
- * On submit form.
+ * Handler for submit form.
  */
 
-var handlerForSubmitEvent = (event) => {
+/*export*/ function handlerForSubmitEvent (event) {
   var form = event.target;
   console.log(`Saving values: name ${form.nameUser.value} and phone ${form.phoneUser.value}`);
   event.preventDefault();
 
   createRequest(form.name, form.nameUser.value, form.phoneUser.value);
   form.reset();
-};
+}
+
+/**
+ * On submit form.
+ */
 
 [].forEach.call(document.querySelectorAll("form"), (element) => {
   element.addEventListener("submit", (event) => handlerForSubmitEvent(event));

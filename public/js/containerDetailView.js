@@ -1,10 +1,12 @@
 "use strict";
 
+/*import { handlerForSubmitEvent } from "./onSubmit";*/
+
 /**
  * Add container detail view.
  */
 
-var addDetailView = (btn, nameForm) => {
+function addDetailView (btn, nameForm) {
   var detailView = {
     safePopUp: {
       title: "Квест-комната \"Сейф Банкира\"",
@@ -48,13 +50,15 @@ var addDetailView = (btn, nameForm) => {
 
   var form = containerDetailView.lastElementChild;
   form.addEventListener("submit", (event) => handlerForSubmitEvent(event));
-};
+}
 
 /**
  * Remove container detail view.
  */
 
-var removeDetailView = (el) => el.parentElement.removeChild(el);
+function removeDetailView (el) {
+  el.parentElement.removeChild(el);
+}
 
 /**
  * Button-click handler for render container detail view.

@@ -38,7 +38,7 @@ app.use(express.static("public"));
  */
 
 app.use("/neworder", (req, res, next) => {
-  sendOrder.letterSend (mailText.text(req.body.nameForm, req.body.nameUser, req.body.phoneUser));
+  sendOrder.letterSend (mailText.text(req.body.nameForm, req.body.nameUser, req.body.phoneUser, req.body.utmParams));
   console.log(req.body);
   res.send("Succes!");
 });
