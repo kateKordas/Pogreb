@@ -10,12 +10,12 @@ $color-graphite: rgb(51,51,51);
 
 @font-face {
   font-family: "Orbitron-Light";
-  src: url("../fonts/Orbitron-Light.ttf");
+  src: url("./fonts/Orbitron-Light.ttf");
 }
 
 @font-face {
   font-family: "Jura-Regular";
-  src: url("../fonts/Jura-Regular.ttf");
+  src: url("./fonts/Jura-Regular.ttf");
 }
 
 /*============================================================================*\
@@ -46,14 +46,14 @@ button.callback-btn {
   cursor: pointer;
 
   &:hover {
-    background: rgb(247,194,5) url("../img/check.svg") no-repeat 12px 9px /15px;
+    background: rgb(247,194,5) url("./img/check.svg") no-repeat 12px 9px /15px;
     border: 1px solid rgb(42,42,42);
     color: rgb(0,0,0);
   }
 
   &:active {
     transform: scale(.99);
-    background: rgb(247,194,5) url("../img/check.svg") no-repeat 12px 9px /15px;
+    background: rgb(247,194,5) url("./img/check.svg") no-repeat 12px 9px /15px;
     border: 1px solid rgb(198,155,4);
     color: rgb(0,0,0);
     box-shadow: inset 0 2px 5px 0 rgba(0,0,0,.25);
@@ -61,24 +61,24 @@ button.callback-btn {
 }
 
 button.order {
-  background: rgb(250,149,30) url("../img/check.svg") no-repeat 12px 9px /15px;
+  background: rgb(250,149,30) url("./img/check.svg") no-repeat 12px 9px /15px;
 
   &:hover {
-    background: rgb(247,194,5) url("../img/check.svg") no-repeat 12px 9px /15px;
+    background: rgb(247,194,5) url("./img/check.svg") no-repeat 12px 9px /15px;
   }
   &:active {
-    background: rgb(247,194,5) url("../img/check.svg") no-repeat 12px 9px /15px;
+    background: rgb(247,194,5) url("./img/check.svg") no-repeat 12px 9px /15px;
   }
 }
 
 button.callback-btn {
-  background: rgb(250,149,30) url("../img/phone.svg") no-repeat 12px 9px /15px;
+  background: rgb(250,149,30) url("./img/phone.svg") no-repeat 12px 9px /15px;
 
   &:hover {
-    background: rgb(247,194,5) url("../img/phone.svg") no-repeat 12px 9px /15px;
+    background: rgb(247,194,5) url("./img/phone.svg") no-repeat 12px 9px /15px;
   }
   &:active {
-    background: rgb(247,194,5) url("../img/phone.svg") no-repeat 12px 9px /15px;
+    background: rgb(247,194,5) url("./img/phone.svg") no-repeat 12px 9px /15px;
   }
 }
 
@@ -163,7 +163,7 @@ header {
   padding: 2px 0;
   width: 170px;
   height: 35px;
-  background: url("../img/b-jumbotron/icon-phone.png") no-repeat;
+  background: url("./img/b-jumbotron/icon-phone.png") no-repeat;
 
   @media (max-width: 910px) {
     width: 160px;
@@ -183,7 +183,7 @@ header {
   display: inline-block;
   width: 170px;
   height: 35px;
-  background: url("../img/b-jumbotron/icon-address.png") no-repeat;
+  background: url("./img/b-jumbotron/icon-address.png") no-repeat;
 
   @media (max-width: 910px) {
     width: 160px;
@@ -289,7 +289,7 @@ header {
   }
 
   .nav-bar__item {
-      display: none;
+    display: none;
   }
 
   .nav-bar__order {
@@ -379,19 +379,19 @@ header {
 .jumbotron__title_logo {
   padding: 1vw 0 0 15vw;
   white-space: pre-wrap;
-  background: url("../img/logo-white.png") no-repeat 0 0 /13vw;
+  background: url("./img/logo-white.png") no-repeat 0 0 /13vw;
   font-size: 2.5vw;
 }
 
 .jumbotron__title_descr {
   padding: 0 0 1vw 0;
   white-space: pre-wrap;
-  background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 47vw 5vw /3.5vw;
+  background: url("./img/b-jumbotron/icon-arrow.png") no-repeat 47vw 5vw /3.5vw;
   font-size: 2vw;
   font-weight: 700;
 
   @media (max-width: 930px) {
-    background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 91% 6.5vw /37px;
+    background: url("./img/b-jumbotron/icon-arrow.png") no-repeat 91% 6.5vw /37px;
     font-size: 20px;
     line-height: 1.1;
   }
@@ -446,7 +446,7 @@ header {
 @media (max-width: 840px) {
   .media-container {
     height: 600px;
-    background: url("../img/b-jumbotron/background-mobile.png");
+    background: url("./img/b-jumbotron/background-mobile.png");
     background-size: cover;
 
     & video {
@@ -465,7 +465,7 @@ header {
 
   .jumbotron__title_logo {
     padding: 1vw 0 0 35vw;
-    background: url("../img/logo-white.png") no-repeat 0 0 /25vw;
+    background: url("./img/logo-white.png") no-repeat 0 0 /25vw;
     font-size: 5vw;
   }
 
@@ -478,7 +478,7 @@ header {
     margin: 2.5vw 0;
     width: 80vw;
     height: 20vw;
-    background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 70vw 50px /50px;
+    background: url("./img/b-jumbotron/icon-arrow.png") no-repeat 70vw 50px /50px;
     font-size: 22px;
   }
 
@@ -493,13 +493,13 @@ header {
   }
 
   .jumbotron__title h1 {
-      margin: 10vw 0;
-      font-size: 17vw;
+    margin: 10vw 0;
+    font-size: 17vw;
   }
 
   .jumbotron__title_logo {
     padding: 1vw 0 0 35vw;
-    background: url("../img/logo-white.png") no-repeat 0 0 /30vw;
+    background: url("./img/logo-white.png") no-repeat 0 0 /30vw;
     font-size: 7vw;
   }
 
@@ -519,15 +519,15 @@ header {
   }
 
   .jumbotron__title h1 {
-      margin: 8vw 0;
-      font-size: 18vw;
+    margin: 8vw 0;
+    font-size: 18vw;
   }
 
   .jumbotron__title_descr-mobile {
     margin: 6vw 0;
     width: 88vw;
     height: 120px;
-    background: url("../img/b-jumbotron/icon-arrow.png") no-repeat 72vw 53px /50px;
+    background: url("./img/b-jumbotron/icon-arrow.png") no-repeat 72vw 53px /50px;
     font-size: 23px;
   }
 }
@@ -588,63 +588,63 @@ header {
 }
 
 .quest__img.safe {
-  background: url("../img/b-quest-rooms/img-safe.png");
+  background: url("./img/b-quest-rooms/img-safe.png");
   background-size: cover;
 
   @media (max-width: 930px) {
-    background: url("../img/b-quest-rooms/img-safe-mobile.png") no-repeat;
+    background: url("./img/b-quest-rooms/img-safe-mobile.png") no-repeat;
     background-size: cover;
   }
 }
 
 .quest__img.ventilation {
-  background: url("../img/b-quest-rooms/img-ventilation.png");
+  background: url("./img/b-quest-rooms/img-ventilation.png");
   background-size: cover;
 
   @media (max-width: 930px) {
-    background: url("../img/b-quest-rooms/img-ventilation-mobile.png") no-repeat;
+    background: url("./img/b-quest-rooms/img-ventilation-mobile.png") no-repeat;
     background-size: cover;
     order: 0;
   }
 }
 
 .quest__img.control-center {
-  background: url("../img/b-quest-rooms/img-control-center.png");
+  background: url("./img/b-quest-rooms/img-control-center.png");
   background-size: cover;
 
   @media (max-width: 930px) {
-    background: url("../img/b-quest-rooms/img-control-center-mobile.png") no-repeat;
+    background: url("./img/b-quest-rooms/img-control-center-mobile.png") no-repeat;
     background-size: cover;
   }
 }
 
 .quest__img.sanitary {
-  background: url("../img/b-quest-rooms/img-sanitary.png");
+  background: url("./img/b-quest-rooms/img-sanitary.png");
   background-size: cover;
 
   @media (max-width: 930px) {
-    background: url("../img/b-quest-rooms/img-sanitary-mobile.png") no-repeat;
+    background: url("./img/b-quest-rooms/img-sanitary-mobile.png") no-repeat;
     background-size: cover;
     order: 0;
   }
 }
 
 .oth-serv__img.child-party {
-  background: url("../img/b-other-servises/img-ch-party.png");
+  background: url("./img/b-other-servises/img-ch-party.png");
   background-size: cover;
 
   @media (max-width: 930px) {
-    background: url("../img/b-other-servises/img-ch-party-mobile.png") no-repeat;
+    background: url("./img/b-other-servises/img-ch-party-mobile.png") no-repeat;
     background-size: cover;
   }
 }
 
 .oth-serv__img.cars {
-  background: url("../img/b-other-servises/img-cars.png");
+  background: url("./img/b-other-servises/img-cars.png");
   background-size: cover;
 
   @media (max-width: 930px) {
-    background: url("../img/b-other-servises/img-cars-mobile.png") no-repeat;
+    background: url("./img/b-other-servises/img-cars-mobile.png") no-repeat;
     background-size: cover;
     order: 0;
   }
@@ -773,7 +773,7 @@ header {
   .oth-serv__info_brief-cost2.cars,
   .oth-serv__info_brief-team,
   .oth-serv__info_brief-duration {
-      text-align: center;
+    text-align: center;
   }
 
   .oth-serv__info_brief-duration {
@@ -791,62 +791,62 @@ header {
 
 .quest__info_brief-level.safe,
 .quest__info_brief-level.control-center {
-  background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
-              url("../img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
-              url("../img/b-quest-rooms/level-0.5.png") no-repeat 10vw 38px /5vw;
+  background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
+  url("./img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
+  url("./img/b-quest-rooms/level-0.5.png") no-repeat 10vw 38px /5vw;
 
   @media (max-width: 930px) {
     width: 23vw;
-    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
-                url("../img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
-                url("../img/b-quest-rooms/level-0.5.png") no-repeat 16vw 38px /7vw;
+    background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
+    url("./img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
+    url("./img/b-quest-rooms/level-0.5.png") no-repeat 16vw 38px /7vw;
   }
 
   @media (max-width: 670px) {
     width: 30vw;
-    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
-                url("../img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
-                url("../img/b-quest-rooms/level-0.5.png") no-repeat 18vw 38px /9vw;
+    background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
+    url("./img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
+    url("./img/b-quest-rooms/level-0.5.png") no-repeat 18vw 38px /9vw;
   }
 }
 
 .quest__info_brief-level.ventilation {
-  background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
-              url("../img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
-              url("../img/b-quest-rooms/level-0.png") no-repeat 10vw 38px /5vw;
+  background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
+  url("./img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
+  url("./img/b-quest-rooms/level-0.png") no-repeat 10vw 38px /5vw;
 
   @media (max-width: 930px) {
     width: 23vw;
-    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
-                url("../img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
-                url("../img/b-quest-rooms/level-0.png") no-repeat 16vw 38px /7vw;
+    background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
+    url("./img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
+    url("./img/b-quest-rooms/level-0.png") no-repeat 16vw 38px /7vw;
   }
 
   @media (max-width: 670px) {
     width: 30vw;
-    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
-                url("../img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
-                url("../img/b-quest-rooms/level-0.png") no-repeat 18vw 38px /9vw;
+    background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
+    url("./img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
+    url("./img/b-quest-rooms/level-0.png") no-repeat 18vw 38px /9vw;
   }
 }
 
 .quest__info_brief-level.sanitary {
-  background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
-              url("../img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
-              url("../img/b-quest-rooms/level-1.png") no-repeat 10vw 38px /5vw;
+  background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px /5vw,
+  url("./img/b-quest-rooms/level-1.png") no-repeat 5vw 38px /5vw,
+  url("./img/b-quest-rooms/level-1.png") no-repeat 10vw 38px /5vw;
 
   @media (max-width: 930px) {
     width: 23vw;
-    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
-                url("../img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
-                url("../img/b-quest-rooms/level-1.png") no-repeat 16vw 38px /7vw;
+    background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px /7vw,
+    url("./img/b-quest-rooms/level-1.png") no-repeat 8vw 38px /7vw,
+    url("./img/b-quest-rooms/level-1.png") no-repeat 16vw 38px /7vw;
   }
 
   @media (max-width: 670px) {
     width: 30vw;
-    background: url("../img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
-                url("../img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
-                url("../img/b-quest-rooms/level-1.png") no-repeat 18vw 38px /9vw;
+    background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px /9vw,
+    url("./img/b-quest-rooms/level-1.png") no-repeat 9vw 38px /9vw,
+    url("./img/b-quest-rooms/level-1.png") no-repeat 18vw 38px /9vw;
   }
 }
 
@@ -1151,8 +1151,8 @@ header {
   position: relative;
   width: 100%;
   height: 365px;
-  background: url("../img/b-contacts/map.png") 120px -50px;
-  
+  background: url("./img/b-contacts/map.png") 120px -50px;
+
   @media (max-width: 1000px) {
     background-position-x: -10px;
   }
@@ -1237,15 +1237,15 @@ header {
 }
 
 .contacts__social-media_vk {
-  background: rgb(255,255,255) url("../img/b-contacts/vk-social-media.svg") no-repeat 5px 7px/28px;
+  background: rgb(255,255,255) url("./img/b-contacts/vk-social-media.svg") no-repeat 5px 7px/28px;
 }
 
 .contacts__social-media_fb {
-  background: rgb(255,255,255) url("../img/b-contacts/facebook-social-media.svg") no-repeat 6px 7px/28px;
+  background: rgb(255,255,255) url("./img/b-contacts/facebook-social-media.svg") no-repeat 6px 7px/28px;
 }
 
 .contacts__social-media_insta {
-  background: rgb(255,255,255) url("../img/b-contacts/instagram-social-media.svg") no-repeat 6px 6px/28px;
+  background: rgb(255,255,255) url("./img/b-contacts/instagram-social-media.svg") no-repeat 6px 6px/28px;
 }
 
 
@@ -1265,7 +1265,7 @@ footer {
     float: right;
     width: 350px;
     height: 50px;
-    background: url("../img/logo-white-sm.png") no-repeat 255px 0;
+    background: url("./img/logo-white-sm.png") no-repeat 255px 0;
     font-size: 16px;
     line-height: 3;
   }
@@ -1331,7 +1331,7 @@ footer {
   width: 10px;
   height: 10px;
   border: none;
-  background: url("../img/close.svg") no-repeat 0 0 /10px;
+  background: url("./img/close.svg") no-repeat 0 0 /10px;
   cursor: pointer;
 }
 
@@ -1381,11 +1381,11 @@ footer {
   animation: popup .5s ease-in-out;
 
   &.success {
-    background: rgb(255,255,255) url("../img/form-success.svg") no-repeat 50% 25px /125px;
+    background: rgb(255,255,255) url("./img/form-success.svg") no-repeat 50% 25px /125px;
   }
 
   &.error {
-    background: rgb(255,255,255) url("../img/form-error.svg") no-repeat 50% 25px /125px;
+    background: rgb(255,255,255) url("./img/form-error.svg") no-repeat 50% 25px /125px;
   }
 
   @media (max-width: 530px) {
@@ -1408,4 +1408,3 @@ footer {
 .status-send-form__text {
   font-size: 20px;
 }
-

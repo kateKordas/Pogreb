@@ -1,0 +1,1063 @@
+/*============================================================================*    @@VARIABLES
+\*============================================================================*/
+/*============================================================================*    @@FONTS
+\*============================================================================*/
+@font-face {
+  font-family: "Orbitron-Light";
+  src: url("./fonts/Orbitron-Light.ttf"); }
+
+@font-face {
+  font-family: "Jura-Regular";
+  src: url("./fonts/Jura-Regular.ttf"); }
+
+/*============================================================================*    @@COMMON PROPERTIES
+\*============================================================================*/
+* {
+  text-decoration: none;
+  outline: none;
+  box-sizing: border-box; }
+
+button.order,
+button.callback-btn {
+  display: inline-block;
+  margin: 10px auto;
+  padding: 7px 20px;
+  width: auto;
+  height: 33px;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  text-indent: 20px;
+  font-family: "Jura-Regular", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  cursor: pointer; }
+  button.order:hover,
+  button.callback-btn:hover {
+    background: #f7c205 url("./img/check.svg") no-repeat 12px 9px/15px;
+    border: 1px solid #2a2a2a;
+    color: black; }
+  button.order:active,
+  button.callback-btn:active {
+    transform: scale(0.99);
+    background: #f7c205 url("./img/check.svg") no-repeat 12px 9px/15px;
+    border: 1px solid #c69b04;
+    color: black;
+    box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.25); }
+
+button.order {
+  background: #fa951e url("./img/check.svg") no-repeat 12px 9px/15px; }
+  button.order:hover {
+    background: #f7c205 url("./img/check.svg") no-repeat 12px 9px/15px; }
+  button.order:active {
+    background: #f7c205 url("./img/check.svg") no-repeat 12px 9px/15px; }
+
+button.callback-btn {
+  background: #fa951e url("./img/phone.svg") no-repeat 12px 9px/15px; }
+  button.callback-btn:hover {
+    background: #f7c205 url("./img/phone.svg") no-repeat 12px 9px/15px; }
+  button.callback-btn:active {
+    background: #f7c205 url("./img/phone.svg") no-repeat 12px 9px/15px; }
+
+button.continue {
+  display: block;
+  margin: 0 0 0 30vw;
+  padding: 5px 12px;
+  width: 125px;
+  height: 32px;
+  vertical-align: top;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  background: #424242;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  font-family: "Jura-Regular", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ebebeb;
+  cursor: pointer; }
+  button.continue:hover {
+    background: #525252;
+    border: 1px solid #2a2a2a;
+    color: white; }
+  button.continue:active {
+    background: #cfcfcf;
+    border: 1px solid #414141;
+    color: black;
+    box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.25); }
+  @media (max-width: 930px) {
+    button.continue {
+      display: none; } }
+
+div.separator {
+  display: none; }
+  @media (max-width: 930px) {
+    div.separator {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.5); } }
+
+a.tag {
+  margin: -200px 0 0 0; }
+
+/*============================================================================*    @@HEADER
+\*============================================================================*/
+header {
+  position: fixed;
+  padding: 1vw 8vw;
+  width: 100%;
+  height: 105px;
+  background: rgba(51, 51, 51, 0.95);
+  font-family: "Jura-Regular", sans-serif;
+  z-index: 10; }
+  @media (max-width: 1150px) {
+    header {
+      padding: 1vw; } }
+
+.header__contacts {
+  text-align: right;
+  font-size: 18px;
+  color: #ffffff; }
+
+.contacts__phone {
+  display: inline-block;
+  margin: 0 60px 0 0;
+  padding: 2px 0;
+  width: 170px;
+  height: 35px;
+  background: url("./img/b-jumbotron/icon-phone.png") no-repeat; }
+  @media (max-width: 910px) {
+    .contacts__phone {
+      width: 160px;
+      font-size: 16px; } }
+  .contacts__phone a {
+    color: white; }
+    .contacts__phone a:active {
+      color: rgba(255, 255, 255, 0.5); }
+
+.contacts__address {
+  display: inline-block;
+  width: 170px;
+  height: 35px;
+  background: url("./img/b-jumbotron/icon-address.png") no-repeat; }
+  @media (max-width: 910px) {
+    .contacts__address {
+      width: 160px;
+      font-size: 16px; } }
+
+.logo {
+  display: inline-block;
+  margin: 0 4vw;
+  cursor: pointer; }
+  @media (max-width: 1150px) {
+    .logo {
+      margin: 0; } }
+
+.nav-bar {
+  display: inline-block;
+  float: right; }
+
+.nav-bar__list {
+  display: inline-block; }
+
+.nav-bar__item {
+  position: relative;
+  display: inline-block;
+  margin: 5px 2vw;
+  padding: 8px 10px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 14px;
+  color: #ffffff;
+  cursor: pointer; }
+  .nav-bar__item:hover {
+    background: rgba(255, 255, 255, 0.2); }
+  @media (max-width: 930px) {
+    .nav-bar__item {
+      margin: 5px .5vw;
+      font-size: 13px; } }
+  .nav-bar__item a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 120px;
+    height: 30px; }
+    @media (max-width: 930px) {
+      .nav-bar__item a {
+        width: 106px;
+        height: 28px; } }
+
+.nav-bar__order {
+  position: relative;
+  margin: 0; }
+  .nav-bar__order a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 167px;
+    height: 33px; }
+
+@media (max-width: 840px) {
+  header {
+    height: 70px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+  .header__contacts {
+    margin: 15px;
+    display: inline-block;
+    text-align: left; }
+  .contacts__phone {
+    margin: 0;
+    width: 180px;
+    text-indent: 40px;
+    font-size: 20px; }
+  .contacts__address {
+    display: none; }
+  .logo {
+    display: none; }
+  .nav-bar__item {
+    display: none; }
+  .nav-bar__order {
+    margin: 5px 0;
+    width: 190px;
+    height: 36px;
+    font-size: 17px; }
+    .nav-bar__order a {
+      width: inherit;
+      height: inherit; } }
+
+@media (max-width: 520px) {
+  .header__contacts {
+    margin: 15px 0; }
+  .contacts__phone {
+    width: 145px;
+    text-indent: 30px;
+    font-size: 16px; }
+  .nav-bar__order {
+    background: #fa951e;
+    width: 147px;
+    height: 33px;
+    font-size: 14px;
+    text-indent: 0; }
+    .nav-bar__order:hover, .nav-bar__order:active {
+      background: #f7c205; }
+    .nav-bar__order a {
+      width: inherit;
+      height: inherit; } }
+
+/*============================================================================*    @@JUMBOTRON
+\*============================================================================*/
+.media-container {
+  position: relative;
+  width: 100%; }
+  .media-container video {
+    width: 100%;
+    z-index: -10;
+    vertical-align: bottom; }
+  .media-container .media-container_opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); }
+
+.jumbotron__title {
+  position: absolute;
+  top: 115px;
+  left: 3vw;
+  margin: 2vw 0 2vw 5vw;
+  font-family: "Jura-Regular", sans-serif;
+  color: #ffffff; }
+  .jumbotron__title h1 {
+    padding: .5vw 0;
+    text-transform: uppercase;
+    font-family: "Orbitron-Light", sans-serif;
+    font-size: 10vw; }
+
+.jumbotron__title_logo {
+  padding: 1vw 0 0 15vw;
+  white-space: pre-wrap;
+  background: url("./img/logo-white.png") no-repeat 0 0/13vw;
+  font-size: 2.5vw; }
+
+.jumbotron__title_descr {
+  padding: 0 0 1vw 0;
+  white-space: pre-wrap;
+  background: url("./img/b-jumbotron/icon-arrow.png") no-repeat 47vw 5vw/3.5vw;
+  font-size: 2vw;
+  font-weight: 700; }
+  @media (max-width: 930px) {
+    .jumbotron__title_descr {
+      background: url("./img/b-jumbotron/icon-arrow.png") no-repeat 91% 6.5vw/37px;
+      font-size: 20px;
+      line-height: 1.1; } }
+  .jumbotron__title_descr span {
+    font-size: 1.5vw;
+    font-weight: 500; }
+    @media (max-width: 930px) {
+      .jumbotron__title_descr span {
+        font-size: 17px; } }
+
+.jumbotron__title_descr-mobile {
+  display: none; }
+
+.jumbotron__order {
+  position: relative;
+  margin: 1vw 0 0 31vw;
+  width: 235px;
+  height: 4.5vw;
+  border: none;
+  border-radius: 5px;
+  background: #fa951e;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+  font-family: "Jura-Regular", sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  color: #333333;
+  cursor: pointer; }
+  .jumbotron__order:hover {
+    background: #f7c205; }
+  .jumbotron__order:active {
+    transform: scale(0.99);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); }
+  .jumbotron__order a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: inherit;
+    height: inherit; }
+
+@media (max-width: 840px) {
+  .media-container {
+    height: 600px;
+    background: url("./img/b-jumbotron/background-mobile.png");
+    background-size: cover; }
+    .media-container video {
+      display: none; }
+  .jumbotron__title {
+    left: 0; }
+    .jumbotron__title h1 {
+      margin: 5vw 0;
+      font-size: 15vw; }
+  .jumbotron__title_logo {
+    padding: 1vw 0 0 35vw;
+    background: url("./img/logo-white.png") no-repeat 0 0/25vw;
+    font-size: 5vw; }
+  .jumbotron__title_descr {
+    display: none; }
+  .jumbotron__title_descr-mobile {
+    display: block;
+    margin: 2.5vw 0;
+    width: 80vw;
+    height: 20vw;
+    background: url("./img/b-jumbotron/icon-arrow.png") no-repeat 70vw 50px/50px;
+    font-size: 22px; }
+  .jumbotron__order {
+    display: none; } }
+
+@media (max-width: 620px) {
+  .media-container {
+    background-position-x: -150px; }
+  .jumbotron__title h1 {
+    margin: 10vw 0;
+    font-size: 17vw; }
+  .jumbotron__title_logo {
+    padding: 1vw 0 0 35vw;
+    background: url("./img/logo-white.png") no-repeat 0 0/30vw;
+    font-size: 7vw; }
+  .jumbotron__title_descr-mobile {
+    margin: 6vw 0;
+    width: 80vw;
+    height: 22vw;
+    font-size: 25px; } }
+
+@media (max-width: 480px) {
+  .media-container {
+    height: 500px;
+    background-position-x: -250px; }
+  .jumbotron__title h1 {
+    margin: 8vw 0;
+    font-size: 18vw; }
+  .jumbotron__title_descr-mobile {
+    margin: 6vw 0;
+    width: 88vw;
+    height: 120px;
+    background: url("./img/b-jumbotron/icon-arrow.png") no-repeat 72vw 53px/50px;
+    font-size: 23px; } }
+
+/*============================================================================*    @@QUEST-ROOMS
+\*============================================================================*/
+.b-quest-rooms {
+  font-family: "Jura-Regular", sans-serif; }
+  .b-quest-rooms h2 {
+    padding: 15px;
+    background: #cccccc;
+    text-align: center;
+    font-family: "Orbitron-Light", sans-serif;
+    font-size: 35px;
+    color: #333333; }
+
+/*============================================================================*    @@QUEST-ROOMS & OTHER SERVICES
+\*============================================================================*/
+.quest,
+.oth-serv {
+  padding: 5vw 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  background: #333333; }
+
+/*============================================================================*    @@QUEST ROOM & OTHER SERVICES- IMAGE
+\*============================================================================*/
+.quest__img,
+.oth-serv__img {
+  width: 43vw;
+  height: 28vw; }
+  @media (max-width: 930px) {
+    .quest__img,
+    .oth-serv__img {
+      margin: 2vw auto;
+      width: 53vw;
+      height: 50vw; } }
+  @media (max-width: 520px) {
+    .quest__img,
+    .oth-serv__img {
+      width: 85vw;
+      height: 80vw; } }
+
+.quest__img.safe {
+  background: url("./img/b-quest-rooms/img-safe.png");
+  background-size: cover; }
+  @media (max-width: 930px) {
+    .quest__img.safe {
+      background: url("./img/b-quest-rooms/img-safe-mobile.png") no-repeat;
+      background-size: cover; } }
+
+.quest__img.ventilation {
+  background: url("./img/b-quest-rooms/img-ventilation.png");
+  background-size: cover; }
+  @media (max-width: 930px) {
+    .quest__img.ventilation {
+      background: url("./img/b-quest-rooms/img-ventilation-mobile.png") no-repeat;
+      background-size: cover;
+      order: 0; } }
+
+.quest__img.control-center {
+  background: url("./img/b-quest-rooms/img-control-center.png");
+  background-size: cover; }
+  @media (max-width: 930px) {
+    .quest__img.control-center {
+      background: url("./img/b-quest-rooms/img-control-center-mobile.png") no-repeat;
+      background-size: cover; } }
+
+.quest__img.sanitary {
+  background: url("./img/b-quest-rooms/img-sanitary.png");
+  background-size: cover; }
+  @media (max-width: 930px) {
+    .quest__img.sanitary {
+      background: url("./img/b-quest-rooms/img-sanitary-mobile.png") no-repeat;
+      background-size: cover;
+      order: 0; } }
+
+.oth-serv__img.child-party {
+  background: url("./img/b-other-servises/img-ch-party.png");
+  background-size: cover; }
+  @media (max-width: 930px) {
+    .oth-serv__img.child-party {
+      background: url("./img/b-other-servises/img-ch-party-mobile.png") no-repeat;
+      background-size: cover; } }
+
+.oth-serv__img.cars {
+  background: url("./img/b-other-servises/img-cars.png");
+  background-size: cover; }
+  @media (max-width: 930px) {
+    .oth-serv__img.cars {
+      background: url("./img/b-other-servises/img-cars-mobile.png") no-repeat;
+      background-size: cover;
+      order: 0; } }
+
+/*============================================================================*    @@QUEST ROOM & OTHER SERVICES- INFO
+\*============================================================================*/
+.quest__info,
+.oth-serv__info {
+  margin: 0 0 0 3vw;
+  width: 52vw;
+  font-family: "Jura-Regular", sans-serif;
+  color: #ffffff; }
+
+@media (max-width: 930px) {
+  .quest__info,
+  .oth-serv__info {
+    margin: 0 auto;
+    width: 95vw; }
+  .quest__info.ventilation,
+  .quest__info.sanitary,
+  .oth-serv__info.cars {
+    order: 1; } }
+
+.quest__info_title,
+.oth-serv__info_title {
+  white-space: pre-wrap;
+  font-size: 4.1vw;
+  font-weight: 700;
+  text-transform: uppercase; }
+  @media (max-width: 930px) {
+    .quest__info_title,
+    .oth-serv__info_title {
+      text-align: center;
+      font-size: 43px; } }
+  .quest__info_title span,
+  .oth-serv__info_title span {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: none;
+    line-height: 2.5; }
+
+@media (max-width: 520px) {
+  .quest__info_title.ventilation {
+    font-size: 35px; } }
+
+.oth-serv__info_title {
+  margin: 30px 0;
+  line-height: .7; }
+  @media (max-width: 520px) {
+    .oth-serv__info_title {
+      line-height: 1; } }
+
+/*============================================================================*    @@QUEST ROOM & OTHER SERVICES - BRIEF
+\*============================================================================*/
+.quest__info_brief,
+.oth-serv__info_brief {
+  margin: 15px 3vw 15px 0;
+  padding: 5px 15px;
+  background: rgba(102, 102, 102, 0.25);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch; }
+  @media (max-width: 930px) {
+    .quest__info_brief,
+    .oth-serv__info_brief {
+      margin: 15px 0; } }
+
+.quest__info_brief-cost,
+.quest__info_brief-team,
+.oth-serv__info_brief-cost,
+.oth-serv__info_brief-cost1.cars,
+.oth-serv__info_brief-cost2.cars,
+.oth-serv__info_brief-team,
+.oth-serv__info_brief-duration {
+  white-space: pre-wrap;
+  font-size: 21px;
+  line-height: 1.5; }
+  .quest__info_brief-cost span,
+  .quest__info_brief-team span,
+  .oth-serv__info_brief-cost span,
+  .oth-serv__info_brief-cost1.cars span,
+  .oth-serv__info_brief-cost2.cars span,
+  .oth-serv__info_brief-team span,
+  .oth-serv__info_brief-duration span {
+    font-size: 16px; }
+
+.quest__info_brief-level {
+  width: 17vw;
+  height: 70px;
+  white-space: pre-wrap;
+  font-size: 16px;
+  line-height: 2; }
+
+.quest__info_brief-fn {
+  margin: 8px 0;
+  font-size: 13px; }
+  @media (max-width: 930px) {
+    .quest__info_brief-fn {
+      text-align: center; } }
+
+@media (max-width: 520px) {
+  .quest__info_brief-cost,
+  .quest__info_brief-team,
+  .oth-serv__info_brief-cost,
+  .oth-serv__info_brief-cost1.cars,
+  .oth-serv__info_brief-cost2.cars,
+  .oth-serv__info_brief-team,
+  .oth-serv__info_brief-duration {
+    text-align: center; }
+  .oth-serv__info_brief-duration {
+    display: none; }
+  .oth-serv__info_brief-cost.cars {
+    width: 100%; }
+  .quest__info_brief-level {
+    display: none; } }
+
+.quest__info_brief-level.safe,
+.quest__info_brief-level.control-center {
+  background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px/5vw, url("./img/b-quest-rooms/level-1.png") no-repeat 5vw 38px/5vw, url("./img/b-quest-rooms/level-0.5.png") no-repeat 10vw 38px/5vw; }
+  @media (max-width: 930px) {
+    .quest__info_brief-level.safe,
+    .quest__info_brief-level.control-center {
+      width: 23vw;
+      background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px/7vw, url("./img/b-quest-rooms/level-1.png") no-repeat 8vw 38px/7vw, url("./img/b-quest-rooms/level-0.5.png") no-repeat 16vw 38px/7vw; } }
+  @media (max-width: 670px) {
+    .quest__info_brief-level.safe,
+    .quest__info_brief-level.control-center {
+      width: 30vw;
+      background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px/9vw, url("./img/b-quest-rooms/level-1.png") no-repeat 9vw 38px/9vw, url("./img/b-quest-rooms/level-0.5.png") no-repeat 18vw 38px/9vw; } }
+
+.quest__info_brief-level.ventilation {
+  background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px/5vw, url("./img/b-quest-rooms/level-1.png") no-repeat 5vw 38px/5vw, url("./img/b-quest-rooms/level-0.png") no-repeat 10vw 38px/5vw; }
+  @media (max-width: 930px) {
+    .quest__info_brief-level.ventilation {
+      width: 23vw;
+      background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px/7vw, url("./img/b-quest-rooms/level-1.png") no-repeat 8vw 38px/7vw, url("./img/b-quest-rooms/level-0.png") no-repeat 16vw 38px/7vw; } }
+  @media (max-width: 670px) {
+    .quest__info_brief-level.ventilation {
+      width: 30vw;
+      background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px/9vw, url("./img/b-quest-rooms/level-1.png") no-repeat 9vw 38px/9vw, url("./img/b-quest-rooms/level-0.png") no-repeat 18vw 38px/9vw; } }
+
+.quest__info_brief-level.sanitary {
+  background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px/5vw, url("./img/b-quest-rooms/level-1.png") no-repeat 5vw 38px/5vw, url("./img/b-quest-rooms/level-1.png") no-repeat 10vw 38px/5vw; }
+  @media (max-width: 930px) {
+    .quest__info_brief-level.sanitary {
+      width: 23vw;
+      background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px/7vw, url("./img/b-quest-rooms/level-1.png") no-repeat 8vw 38px/7vw, url("./img/b-quest-rooms/level-1.png") no-repeat 16vw 38px/7vw; } }
+  @media (max-width: 670px) {
+    .quest__info_brief-level.sanitary {
+      width: 30vw;
+      background: url("./img/b-quest-rooms/level-1.png") no-repeat 0 38px/9vw, url("./img/b-quest-rooms/level-1.png") no-repeat 9vw 38px/9vw, url("./img/b-quest-rooms/level-1.png") no-repeat 18vw 38px/9vw; } }
+
+/*============================================================================*    @@QUEST ROOM & OTHER SERVICES - DESCRIPTION
+\*============================================================================*/
+.quest__info_descr,
+.oth-serv__info_descr {
+  position: relative;
+  padding: 10px 0; }
+
+.quest__info_descr-title,
+.oth-serv__info_descr-title {
+  display: inline-block;
+  padding: 5px 4vw 5px 0;
+  vertical-align: top;
+  font-size: 16px; }
+
+.quest__info_descr-text,
+.oth-serv__info_descr-text {
+  display: inline-block;
+  width: 36vw;
+  font-size: 15px;
+  line-height: 1.4; }
+
+.oth-serv__info_descr-text.cars {
+  width: auto; }
+
+@media (max-width: 930px) {
+  .quest__info_descr-title,
+  .oth-serv__info_descr-title {
+    display: block;
+    padding: 10px 0;
+    text-align: center; }
+  .quest__info_descr-text,
+  .oth-serv__info_descr-text {
+    display: block;
+    padding: 10px;
+    width: 95vw;
+    text-align: center; } }
+
+/*============================================================================*    @@QUEST ROOM & OTHER SERVICES - FORM
+\*============================================================================*/
+.quest__info_form,
+.oth-serv__info_form {
+  margin: 10px 0; }
+  @media (max-width: 1060px) {
+    .quest__info_form,
+    .oth-serv__info_form {
+      text-align: center; } }
+  .quest__info_form div,
+  .oth-serv__info_form div {
+    display: inline-block; }
+    .quest__info_form div label,
+    .oth-serv__info_form div label {
+      display: block;
+      font-size: 15.5px; }
+      .quest__info_form div label span,
+      .oth-serv__info_form div label span {
+        font-size: 17px;
+        color: #993333; }
+
+.quest__info_form input,
+.oth-serv__info_form input {
+  margin: 3px 5px 0 0;
+  padding: 6px 12px;
+  width: 16vw;
+  height: 32px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: gray;
+  overflow: hidden; }
+  @media (max-width: 930px) {
+    .quest__info_form input,
+    .oth-serv__info_form input {
+      width: 165px; } }
+
+/*============================================================================*    @@QUEST-ROOMS GROUP - 77-th FACTORY
+\*============================================================================*/
+.quest-rooms-group-77th-factory {
+  font-family: "Jura-Regular", sans-serif; }
+  .quest-rooms-group-77th-factory h3 {
+    padding: 23px;
+    background: #cccccc;
+    text-align: center;
+    font-family: "Orbitron-Light", sans-serif;
+    font-size: 35px;
+    color: #333333; }
+    @media (max-width: 520px) {
+      .quest-rooms-group-77th-factory h3 {
+        font-size: 25px; } }
+
+/*============================================================================*    @@OTHER SERVICES
+\*============================================================================*/
+.b-other-services {
+  font-family: "Jura-Regular", sans-serif; }
+  .b-other-services h2 {
+    padding: 23px;
+    background: #cccccc;
+    text-align: center;
+    font-family: "Orbitron-Light", sans-serif;
+    font-size: 35px;
+    color: #333333; }
+
+/*============================================================================*    @@DISCOUNTS
+\*============================================================================*/
+.b-discounts {
+  font-family: "Jura-Regular", sans-serif;
+  color: white; }
+  .b-discounts h2 {
+    padding: 23px;
+    background: #cccccc;
+    text-align: center;
+    font-family: "Orbitron-Light", sans-serif;
+    font-size: 35px;
+    color: #333333; }
+
+.b-discounts__container {
+  padding: 40px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  background: #333333; }
+
+.discounts__birthday,
+.discounts__2nd-room {
+  display: inline-block;
+  width: 48vw;
+  text-align: center; }
+  .discounts__birthday p,
+  .discounts__2nd-room p {
+    white-space: pre-wrap;
+    font-size: 23px; }
+    .discounts__birthday p span,
+    .discounts__2nd-room p span {
+      font-size: 18px; }
+  .discounts__birthday img,
+  .discounts__2nd-room img {
+    width: 43vw; }
+
+@media (max-width: 840px) {
+  .b-discounts__container .discounts__birthday,
+  .b-discounts__container .discounts__2nd-room {
+    width: 80vw; }
+    .b-discounts__container .discounts__birthday p,
+    .b-discounts__container .discounts__2nd-room p {
+      font-size: 27px; }
+    .b-discounts__container .discounts__birthday img,
+    .b-discounts__container .discounts__2nd-room img {
+      width: 70vw; } }
+
+/*============================================================================*    @@CALLBACK
+\*============================================================================*/
+.b-callback {
+  padding: 50px 0 100px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  background: #333333;
+  font-family: "Jura-Regular", sans-serif;
+  color: white; }
+  @media (max-width: 520px) {
+    .b-callback {
+      border-top: 1px solid grey; } }
+
+.b-callback__text {
+  padding: 0 5vw 0 0;
+  width: 55vw;
+  text-align: center; }
+  @media (max-width: 840px) {
+    .b-callback__text {
+      padding: 0 0 30px 0;
+      width: 80vw; } }
+  .b-callback__text h3 {
+    margin: 20px 0;
+    font-size: 40px;
+    font-weight: 700; }
+  .b-callback__text p {
+    font-size: 18px;
+    line-height: 1.3; }
+
+.b-callback__form {
+  width: 300px; }
+  @media (max-width: 520px) {
+    .b-callback__form {
+      text-align: center; } }
+  .b-callback__form label {
+    display: block;
+    font-size: 21px; }
+    .b-callback__form label span {
+      color: #993333; }
+
+.b-callback__form input {
+  margin: 10px 0;
+  padding: 10px 12px;
+  width: 300px;
+  height: 44px;
+  border: 2px solid #cccccc;
+  border-radius: 6px;
+  font-size: 21px;
+  color: gray;
+  overflow: hidden; }
+
+.callback-btn.callback-btn_big {
+  margin: 0;
+  width: 300px;
+  height: 44px;
+  border-radius: 6px;
+  background: #fa951e;
+  text-indent: 0;
+  font-size: 18px; }
+  .callback-btn.callback-btn_big:hover {
+    background: #f7c205; }
+  .callback-btn.callback-btn_big:active {
+    background: #f7c205; }
+
+@media (max-width: 430px) {
+  .b-callback__form input,
+  .callback-btn_big {
+    width: 280px; } }
+
+/*============================================================================*    @@CONTACTS
+\*============================================================================*/
+.b-contacts {
+  position: relative;
+  width: 100%;
+  height: 365px;
+  background: url("./img/b-contacts/map.png") 120px -50px; }
+  @media (max-width: 1000px) {
+    .b-contacts {
+      background-position-x: -10px; } }
+  @media (max-width: 800px) {
+    .b-contacts {
+      background-position-x: -170px; } }
+  @media (max-width: 650px) {
+    .b-contacts {
+      background-position-x: -250px; } }
+  @media (max-width: 520px) {
+    .b-contacts {
+      height: 700px;
+      border-top: 1px solid grey;
+      background-position: -243px 365px;
+      background-size: 900px; } }
+
+.contacts__container {
+  margin: 0 0 0 10vw;
+  padding: 10px 60px;
+  width: 310px;
+  height: 365px;
+  background: rgba(51, 51, 51, 0.6);
+  font-family: "Jura-Regular", sans-serif;
+  color: white; }
+  @media (max-width: 800px) {
+    .contacts__container {
+      margin: 0 2vw;
+      padding: 10px 30px;
+      width: 250px; } }
+  @media (max-width: 520px) {
+    .contacts__container {
+      margin: 0;
+      padding: 0 0 0 20vw;
+      width: 100%;
+      border-bottom: 1px solid grey;
+      background: #333333; } }
+  .contacts__container h3 {
+    padding: 15px 0;
+    font-size: 40px; }
+  .contacts__container p {
+    padding: 10px 0;
+    line-height: 1.2;
+    font-size: 15px; }
+    .contacts__container p a {
+      color: #ffffff; }
+      .contacts__container p a:active {
+        color: rgba(255, 255, 255, 0.5); }
+    .contacts__container p span {
+      font-size: 17px; }
+
+.contacts__social-media_vk,
+.contacts__social-media_fb,
+.contacts__social-media_insta {
+  display: inline-block;
+  margin: 0 12px 0 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer; }
+  .contacts__social-media_vk a,
+  .contacts__social-media_fb a,
+  .contacts__social-media_insta a {
+    display: inline-block;
+    width: inherit;
+    height: inherit; }
+
+.contacts__social-media_vk {
+  background: white url("./img/b-contacts/vk-social-media.svg") no-repeat 5px 7px/28px; }
+
+.contacts__social-media_fb {
+  background: white url("./img/b-contacts/facebook-social-media.svg") no-repeat 6px 7px/28px; }
+
+.contacts__social-media_insta {
+  background: white url("./img/b-contacts/instagram-social-media.svg") no-repeat 6px 6px/28px; }
+
+/*============================================================================*    @@FOOTER
+\*============================================================================*/
+footer {
+  padding: 10px 30px;
+  width: 100%;
+  height: 70px;
+  background: #333333;
+  font-family: "Jura-Regular", sans-serif;
+  color: white; }
+  footer p {
+    float: right;
+    width: 350px;
+    height: 50px;
+    background: url("./img/logo-white-sm.png") no-repeat 255px 0;
+    font-size: 16px;
+    line-height: 3; }
+
+@media (max-width: 520px) {
+  footer {
+    padding: 10px; }
+    footer p {
+      width: 300px;
+      background-position-x: 220px;
+      font-size: 14px;
+      line-height: 3.4; } }
+
+/*============================================================================*    @@POPUPS
+\*============================================================================*/
+.quest__info_descr_continue,
+.send-form-successfully {
+  animation: popup .5s ease-in-out; }
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+    transform: scale(0); }
+  80% {
+    opacity: .8;
+    transform: scale(1.1); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
+.quest__info_descr_continue {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  margin: 0 0 0 -350px;
+  padding: 15px 15px 30px 15px;
+  width: 700px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background: white;
+  font-family: "Jura-Regular", sans-serif;
+  color: #333333;
+  z-index: 20; }
+
+.quest__info_descr_continue .close {
+  position: absolute;
+  top: 16px;
+  left: 670px;
+  width: 10px;
+  height: 10px;
+  border: none;
+  background: url("./img/close.svg") no-repeat 0 0/10px;
+  cursor: pointer; }
+
+.quest__info_descr_continue-title {
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 24px; }
+
+.quest__info_descr_continue-text {
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.5; }
+
+.quest__info_descr_continue-form {
+  text-align: center; }
+  .quest__info_descr_continue-form input {
+    padding: 6px 12px;
+    width: 165px;
+    height: 33px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 13px;
+    color: gray;
+    overflow: hidden; }
+
+.status-send-form {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  margin: 0 0 0 -175px;
+  padding: 160px 15px 30px 15px;
+  width: 400px;
+  height: 350px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  font-family: "Jura-Regular", sans-serif;
+  color: #333333;
+  text-align: center;
+  line-height: 1.4;
+  z-index: 20;
+  animation: popup .5s ease-in-out; }
+  .status-send-form.success {
+    background: white url("./img/form-success.svg") no-repeat 50% 25px/125px; }
+  .status-send-form.error {
+    background: white url("./img/form-error.svg") no-repeat 50% 25px/125px; }
+  @media (max-width: 530px) {
+    .status-send-form {
+      left: 45%;
+      transform: scale(0.8);
+      animation: none; } }
+  @media (max-width: 400px) {
+    .status-send-form {
+      left: 42.5%;
+      animation: none; } }
+
+.status-send-form__title {
+  margin: 10px 0;
+  font-size: 25px;
+  font-weight: 700; }
+
+.status-send-form__text {
+  font-size: 20px; }

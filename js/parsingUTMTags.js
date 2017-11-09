@@ -4,7 +4,7 @@
  * Parsing UTM tags.
  */
 
-function parsingUTM () {
+export var parsingUTM = () => {
   
   var path = window.location.href.split("?");
 
@@ -13,4 +13,4 @@ function parsingUTM () {
   } else {
     return null;
   }
-}
+};
